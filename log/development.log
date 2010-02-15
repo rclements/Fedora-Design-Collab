@@ -1,0 +1,8 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-15 16:16:25) [GET]
+
+ActionController::RoutingError (No route matches "/snippets/87" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
