@@ -9,15 +9,6 @@ config.cache_classes = true
 # Log error messages when you accidentally call methods on nil.
 config.whiny_nils = true
 
-# These gems are required for the testing environment.
-config.gem "rspec",             :lib => false, :version => "= 1.2.9"
-config.gem "rspec-rails",       :lib => false, :version => "= 1.2.9"
-config.gem "remarkable",        :lib => false, :version => "= 3.1.12"
-config.gem "remarkable_rails",  :lib => false, :version => "= 3.1.10"
-config.gem "machinist",         :lib => false, :version => "= 1.0.6"
-config.gem "faker",             :lib => false, :version => "= 0.3.1"
-config.gem 'blueprints', :source => 'http://gemcutter.org'
-
 # Show full error reports and disable caching
 config.action_controller.consider_all_requests_local = true
 config.action_controller.perform_caching             = false

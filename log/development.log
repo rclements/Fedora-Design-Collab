@@ -38,3 +38,2983 @@ Migrating to CreateProjects (20100216140421)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100216140421)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100216140421)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("projects")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (122.2ms)[0m   [0mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "slug" varchar(255), "creator_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (109.3ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (99.7ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (50.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100216140421')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (101.0ms)[0m   [0;1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "slug" varchar(255), "creator_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (82.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (85.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (58.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100216140421')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("projects")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (118.1ms)[0m   [0mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "slug" varchar(255), "creator_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (90.8ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (100.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (60.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100216140421')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (120.9ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (224.7ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100216140421)
+  [4;36;1mSQL (146.1ms)[0m   [0;1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `slug` varchar(255), `creator_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (49.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100216140421')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `projects`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `projects`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `projects`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `projects`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `projects`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `projects`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (92.9ms)[0m   [0;1mDROP DATABASE IF EXISTS `fedora_collab_test`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE DATABASE `fedora_collab_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (117.8ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (218.9ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (40.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('0')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (49.8ms)[0m   [0;1mDROP DATABASE IF EXISTS `fedora_collab_test`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE DATABASE `fedora_collab_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (110.7ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (216.5ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (48.9ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('0')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (147.2ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (224.8ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100216140421)
+  [4;36;1mSQL (132.2ms)[0m   [0;1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `slug` varchar(255), `creator_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (41.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100216140421')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `projects`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `projects`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `projects`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `projects`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (39.3ms)[0m   [0;1mDROP DATABASE IF EXISTS `fedora_collab_test`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE DATABASE `fedora_collab_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (93.7ms)[0m   [0;1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `slug` varchar(255), `creator_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (94.6ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (208.1ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (40.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100216140421')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-02-16 10:59:31) [GET]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM `projects` [0m
+  [4;36;1mProject Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+
+ActionView::MissingTemplate (Missing template projects/new.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-02-16 11:00:24) [GET]
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM `projects` [0m
+
+ActionView::MissingTemplate (Missing template projects/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-02-16 11:03:08) [GET]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM `projects` [0m
+
+ActionView::MissingTemplate (Missing template projects/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-02-16 11:03:12) [GET]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM `projects` [0m
+
+ActionView::MissingTemplate (Missing template projects/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-02-16 11:03:33) [GET]
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering projects/index
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/projects/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-02-16 11:04:50) [GET]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering projects/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/projects/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-02-16 11:44:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"projects"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/projects/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:44:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `login' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.haml:
+3: - form_for @user_session, :url => user_session_path do |f|
+4:   = f.error_messages
+5:   = f.label :login
+6:   = f.text_field :login
+7:   = f.label :password
+8:   = f.password_field :password
+9:   = f.check_box :remember_me
+
+    app/views/user_sessions/new.html.haml:6:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.html.haml:3:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (45.6ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-02-16 11:46:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"projects"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/projects/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:46:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `login' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.haml:
+3: - form_for @user_session, :url => user_session_path do |f|
+4:   = f.error_messages
+5:   = f.label :login
+6:   = f.text_field :login
+7:   = f.label :password
+8:   = f.password_field :password
+9:   = f.check_box :remember_me
+
+    app/views/user_sessions/new.html.haml:6:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.html.haml:3:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-02-16 11:46:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"projects"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/projects/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:46:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `login' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.haml:
+3: - form_for @user_session, :url => user_session_path do |f|
+4:   = f.error_messages
+5:   = f.label :login
+6:   = f.text_field :login
+7:   = f.label :password
+8:   = f.password_field :password
+9:   = f.check_box :remember_me
+
+    app/views/user_sessions/new.html.haml:6:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.html.haml:3:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (97.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-02-16 11:46:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"projects"}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM `projects` [0m
+  [4;36;1mProject Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+Rendering projects/new
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/projects/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-02-16 11:46:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"projects"}
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM `projects` [0m
+  [4;35;1mProject Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+Rendering projects/new
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/projects/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-02-16 11:46:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"projects"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/projects/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:46:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `login' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.haml:
+3: - form_for @user_session, :url => user_session_path do |f|
+4:   = f.error_messages
+5:   = f.label :login
+6:   = f.text_field :login
+7:   = f.label :password
+8:   = f.password_field :password
+9:   = f.check_box :remember_me
+
+    app/views/user_sessions/new.html.haml:6:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.html.haml:3:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (47.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-02-16 11:46:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"projects"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/projects/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:46:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `login' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.haml:
+3: - form_for @user_session, :url => user_session_path do |f|
+4:   = f.error_messages
+5:   = f.label :login
+6:   = f.text_field :login
+7:   = f.label :password
+8:   = f.password_field :password
+9:   = f.check_box :remember_me
+
+    app/views/user_sessions/new.html.haml:6:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.html.haml:3:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (96.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:46:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `login' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.haml:
+3: - form_for @user_session, :url => user_session_path do |f|
+4:   = f.error_messages
+5:   = f.label :login
+6:   = f.text_field :login
+7:   = f.label :password
+8:   = f.password_field :password
+9:   = f.check_box :remember_me
+
+    app/views/user_sessions/new.html.haml:6:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.html.haml:3:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:47:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `login' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.haml:
+3: - form_for @user_session, :url => user_session_path do |f|
+4:   = f.error_messages
+5:   = f.label :username
+6:   = f.text_field :login
+7:   = f.label :password
+8:   = f.password_field :password
+9:   = f.check_box :remember_me
+
+    app/views/user_sessions/new.html.haml:6:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.html.haml:3:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (45.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:47:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `login' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.haml:
+3: - form_for @user_session, :url => user_session_path do |f|
+4:   = f.error_messages
+5:   = f.label :login
+6:   = f.text_field :login
+7:   = f.label :password
+8:   = f.password_field :password
+9:   = f.check_box :remember_me
+
+    app/views/user_sessions/new.html.haml:6:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.html.haml:3:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (109.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:47:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mMysql::Error: Table 'fedora_collab_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `username' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.haml:
+3: - form_for @user_session, :url => user_session_path do |f|
+4:   = f.error_messages
+5:   = f.label :login
+6:   = f.text_field :username
+7:   = f.label :password
+8:   = f.password_field :password
+9:   = f.check_box :remember_me
+
+    app/views/user_sessions/new.html.haml:6:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.html.haml:3:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100216140421)
+Migrating to CreateUsers (20100216173416)
+  [4;35;1mSQL (136.1ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (49.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100216173416')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `projects`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `projects`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:47:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+Completed in 65ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-02-16 11:47:44) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "username"=>"rclements", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.username) = 'rclements') LIMIT 1[0m
+Rendering user_sessions/new
+Completed in 94ms (View: 5, DB: 1) | 200 OK [http://localhost/user_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:47:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `login' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.haml:
+3: - form_for @user_session, :url => user_session_path do |f|
+4:   = f.error_messages
+5:   = f.label :login
+6:   = f.text_field :login
+7:   = f.label :password
+8:   = f.password_field :password
+9:   = f.check_box :remember_me
+
+    app/views/user_sessions/new.html.haml:6:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.html.haml:3:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (48.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 11:48:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (5.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+Completed in 67ms (View: 9, DB: 6) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 11:48:19) [GET]
+
+ActionController::RoutingError (No route matches "/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-16 11:48:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+
+ActionView::TemplateError (undefined method `login' for #<User:0xb66bb26c>) on line #6 of app/views/users/new.html.haml:
+3: - form_for @user do |f|
+4:     = f.error_messages
+5:     = f.label :login
+6:     = f.text_field :login
+7:     = f.label :email
+8:     = f.text_field :email
+9:     = f.label :password
+
+    app/views/users/new.html.haml:6:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/users/new.html.haml:3:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-16 11:48:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-16 11:49:06) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements", "password"=>"[FILTERED]", "email"=>"rclements@gmail.com"}}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'rclements@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'rclements') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `email`) VALUES('2010-02-16 17:49:06', '6cd5627a8d90f60b749b282cd0dfc51c060f674d8156db89812bef0a98c2a2f316cdb99d415b996715a5130f9e4722dbed83dd27127bf51525a4a1e198405789', '2010-02-16 17:49:06', 'rclements', 'viGoTHY7C6iW5WEINkBY', '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9', 'rclements@gmail.com')[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mCOMMIT[0m
+
+NameError (undefined local variable or method `root_url' for #<UsersController:0xb67299d8>):
+  app/controllers/users_controller.rb:13:in `create'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (95.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-16 11:50:18) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements", "password"=>"[FILTERED]", "email"=>"rclements@gmail.com"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 15ms (DB: 2) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 11:50:19) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Rendering users/show
+
+ActionView::TemplateError (undefined method `login' for #<User:0xb673d604>) on line #2 of app/views/users/show.html.haml:
+1: %b Login:
+2: = @user.login
+3:  
+4: %b Login count:
+5: = @user.login_count
+
+    app/views/users/show.html.haml:2:in `_run_haml_app47views47users47show46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (101.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-16 11:51:00) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements", "password"=>"[FILTERED]", "email"=>"rclements@gmail.com"}}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 11:51:01) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (11.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (23.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Rendering users/show
+
+ActionView::TemplateError (undefined method `login_count' for #<User:0xb6820788>) on line #5 of app/views/users/show.html.haml:
+2: = @user.username
+3:  
+4: %b Login count:
+5: = @user.login_count
+6:  
+7: %b Last request at:
+8: = @user.last_request_at
+
+    app/views/users/show.html.haml:5:in `_run_haml_app47views47users47show46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-16 11:51:16) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements", "password"=>"[FILTERED]", "email"=>"rclements@gmail.com"}}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 11:51:17) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Rendering users/show
+
+ActionView::TemplateError (undefined method `username_count' for #<User:0xb699fa78>) on line #5 of app/views/users/show.html.haml:
+2: = @user.username
+3:  
+4: %b Login count:
+5: = @user.username_count
+6:  
+7: %b Last request at:
+8: = @user.last_request_at
+
+    app/views/users/show.html.haml:5:in `_run_haml_app47views47users47show46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-16 11:51:43) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements", "password"=>"[FILTERED]", "email"=>"rclements@gmail.com"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 11:51:43) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Rendering users/show
+Completed in 33ms (View: 5, DB: 1) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-16 11:51:59) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements", "password"=>"[FILTERED]", "email"=>"rclements@gmail.com"}}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 17ms (DB: 2) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 11:51:59) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (12.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Rendering users/show
+Completed in 36ms (View: 6, DB: 13) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-16 11:52:01) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Rendering users/edit
+
+ActionView::TemplateError (undefined method `login' for #<User:0xb6807760>) on line #2 of app/views/users/_form.html.haml:
+1: = form.label :login
+2: = form.text_field :login
+3: 
+4: = form.label :password, form.object.new_record? ? nil : "Change password"
+5: = form.password_field :password
+
+    app/views/users/_form.html.haml:2:in `_run_haml_app47views47users47_form46html46haml_locals_form_object'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.17) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/users/edit.html.haml:5:in `_run_haml_app47views47users47edit46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/users/edit.html.haml:3:in `_run_haml_app47views47users47edit46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (123.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-16 11:52:24) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+Rendering users/edit
+Rendered users/_form (3.3ms)
+Completed in 29ms (View: 9, DB: 1) | 200 OK [http://localhost/account/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-02-16 11:52:34) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements", "password"=>"[FILTERED]"}}
+  [4;35;1mUser Columns (13.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '75289d4d0650b8d0e5f514520510bc13a0e753e3cdc5da475c28645c173fc1b8b13edb619410be75bf827c631310d9e712a2fbd7f7693614eeb132ef406f7682' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering users/edit
+Rendered users/_form (3.3ms)
+Completed in 39ms (View: 7, DB: 14) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-02-16 11:52:44) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements", "password"=>"[FILTERED]"}}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+  [4;35;1mSQL (18.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'bf50a1c83f9cd8cb36a15667b07dec37d7a3786da1c928d5161190bd1f406939e1152fbcbcc94f2a52db0e665fc037993b30eefdb3c5ecc044c9ed2ac2609504' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '2138123e2553ef3efee8932fd04f5e4be9fce74c3d303f8c89351d1324203b9d68aec67726a57b570e94750bce2d1a73ad07decfe2cb9da93755b9701c8555e9') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-02-16 17:52:44', `crypted_password` = '87907703cdf631d3888422b6717c9330cc81f05e5f91e702b4cf3655dd1f79ddf4e24c6fea33d4021f7b963f62691857d8196f3e74801e362f35e745d3c8a743', `password_salt` = 'VQC-09otozPe1jxqhVi8', `persistence_token` = 'bf50a1c83f9cd8cb36a15667b07dec37d7a3786da1c928d5161190bd1f406939e1152fbcbcc94f2a52db0e665fc037993b30eefdb3c5ecc044c9ed2ac2609504' WHERE `id` = 1[0m
+  [4;35;1mSQL (69.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 110ms (DB: 90) | 302 Found [http://localhost/account]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 11:55:38) [GET]
+
+ActionController::RoutingError (No route matches "/home" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-02-16 11:55:46) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements", "password"=>"[FILTERED]"}}
+  [4;36;1mUser Columns (13.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '50c40f24a95bb0582e5e6a605e56fadb4c78a666fdc45f0610b3fd515bdf24674efd1bb8f6d5f0302626b697cc44444d09f02f2d9f3af25dcbff762f93e0f3cb' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering users/edit
+Rendered users/_form (46.5ms)
+Completed in 105ms (View: 58, DB: 16) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-02-16 11:55:51) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements", "password"=>"[FILTERED]"}}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c8381832af1782a6297adeb2d91dbd8bde970b6221f5870f8a51b77bd6dd2699bcb9d8fa71a33d4a192ccba52479b2af39ea993e4f0c7e05e952de9627969964' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-02-16 17:55:51', `crypted_password` = '28bb206ed30f4d61904b94ca36147482d4f89f5b201c9d94f56abc485004323e18604ad9582176bd3b98b152239979eeeb6445a69ff201df76ff307ad5b72690', `password_salt` = 'nlRGX-2-LYG92Wt82oEv', `persistence_token` = 'c8381832af1782a6297adeb2d91dbd8bde970b6221f5870f8a51b77bd6dd2699bcb9d8fa71a33d4a192ccba52479b2af39ea993e4f0c7e05e952de9627969964' WHERE `id` = 1[0m
+  [4;36;1mSQL (53.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 77ms (DB: 55) | 302 Found [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-02-16 11:56:17) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements", "password"=>"[FILTERED]"}}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '189d15289c1becdd8a94c4fb0f55f8fb8416e83a0042fe2d4d2152ae4f63ae9b063e37e31a0839e23675eef5b8201c6912412f70b270c267e979399fa2f04815' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-02-16 17:56:17', `crypted_password` = 'fa721d7743c3fba7663befeb6c116a0d5c5eec8efa33d28b0488ba1eefee8749c375ca5c1c25334f56dc977df87b39fc78f0c58bb199e6a936c584528519f7c0', `password_salt` = 'jbDZb3lcB0rXPmR-AWSD', `persistence_token` = '189d15289c1becdd8a94c4fb0f55f8fb8416e83a0042fe2d4d2152ae4f63ae9b063e37e31a0839e23675eef5b8201c6912412f70b270c267e979399fa2f04815' WHERE `id` = 1[0m
+  [4;36;1mSQL (55.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 79ms (DB: 58) | 302 Found [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#home (for 127.0.0.1 at 2010-02-16 11:57:43) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+
+NameError (uninitialized constant PagesController):
+  
+
+Rendered rescues/_trace (26.1ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 11:58:49) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering pages/home
+Completed in 21ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 13:17:30) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (Inconsistent indentation: 7 spaces were used for indentation, but the rest of the document was indented using 2 spaces.) on line #8 of app/views/layouts/application.html.haml:
+5:   %body
+6:     #wrapper
+7:       #header
+8:        %ul.utility-nav
+9:           -if current_user
+10:             %li= link_to "Edit Profile", edit_user_path(:current)
+11:             %li= link_to "Logout", logout_path
+
+    app/views/layouts/application.html.haml:8
+    haml (2.2.17) lib/haml/precompiler.rb:150:in `tabs'
+    haml (2.2.17) lib/haml/precompiler.rb:132:in `instance_eval'
+    haml (2.2.17) lib/haml/precompiler.rb:132:in `tabs'
+    haml (2.2.17) lib/haml/precompiler.rb:988:in `block_opened?'
+    haml (2.2.17) lib/haml/precompiler.rb:739:in `render_tag'
+    haml (2.2.17) lib/haml/precompiler.rb:805:in `render_div'
+    haml (2.2.17) lib/haml/precompiler.rb:212:in `process_line'
+    haml (2.2.17) lib/haml/precompiler.rb:177:in `precompile'
+    haml (2.2.17) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.17) rails/./lib/haml/template/plugin.rb:24:in `new'
+    haml (2.2.17) rails/./lib/haml/template/plugin.rb:24:in `compile'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 13:18:38) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 23ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-02-16 13:18:43) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 61ms (DB: 1) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 13:18:43) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:18:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:18:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-16 13:18:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:18:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:19:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (Missing template shared/_nav.erb in view path app/views) on line #23 of app/views/layouts/application.html.haml:
+20:           - else 
+21:             %li= link_to "Register", new_user_path
+22:             %li= link_to "Login", login_path
+23:         = render :partial => "shared/nav"
+24:       -if flash[:error]
+25:         .error= flash[:error]
+26:       -if flash[:notice]
+
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.17) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/application.html.haml:23:in `_run_haml_app47views47layouts47application46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:19:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 24ms (View: 11, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:19:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 13:19:39) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:19:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:19:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:20:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:20:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:20:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:20:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-16 13:20:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 18ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:20:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:20:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:20:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-02-16 13:20:27) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "username"=>"rclements", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.username) = 'rclements') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 129ms (DB: 1) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 13:20:27) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 18ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:20:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-02-16 13:20:30) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 13:20:30) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:20:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:20:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 13:21:22) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:21:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:21:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 13:21:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:21:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-02-16 13:21:28) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "username"=>"rclements", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.username) = 'rclements') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 41ms (DB: 1) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 13:21:28) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:21:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-16 13:21:29) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (1.8ms)
+Completed in 22ms (View: 5, DB: 1) | 200 OK [http://localhost/users/current/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:21:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 13:21:32) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 25ms (View: 8, DB: 3) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:21:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-16 13:21:34) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (1.6ms)
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:21:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 13:22:20) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 81ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 13:22:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActionController::Base#show (for 127.0.0.1 at 2010-02-16 14:09:17) [GET]
+  Parameters: {"id"=>"show"}
+
+NameError (uninitialized constant AvatarHelper::Avatar):
+  app/helpers/avatar_helper.rb:2
+  app/controllers/application_controller.rb:6
+  app/controllers/users_controller.rb:1
+
+Rendered rescues/_trace (43.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActionController::Base#show (for 127.0.0.1 at 2010-02-16 14:14:01) [GET]
+  Parameters: {"id"=>"show"}
+
+NameError (uninitialized constant AvatarHelper::Avatar):
+  app/helpers/avatar_helper.rb:2
+  app/controllers/application_controller.rb:6
+  app/controllers/users_controller.rb:1
+
+Rendered rescues/_trace (107.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActionController::Base#show (for 127.0.0.1 at 2010-02-16 14:14:03) [GET]
+  Parameters: {"id"=>"show"}
+
+NameError (uninitialized constant AvatarHelper::Avatar):
+  app/helpers/avatar_helper.rb:2
+  app/controllers/application_controller.rb:6
+  app/controllers/users_controller.rb:1
+
+Rendered rescues/_trace (42.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActionController::Base#show (for 127.0.0.1 at 2010-02-16 14:14:07) [GET]
+  Parameters: {"id"=>"show"}
+
+NameError (uninitialized constant AvatarHelper::Avatar):
+  app/helpers/avatar_helper.rb:2
+  app/controllers/application_controller.rb:6
+  app/controllers/users_controller.rb:1
+
+Rendered rescues/_trace (39.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActionController::Base#show (for 127.0.0.1 at 2010-02-16 14:14:10) [GET]
+  Parameters: {"id"=>"show"}
+
+NameError (uninitialized constant AvatarHelper::Avatar):
+  app/helpers/avatar_helper.rb:2
+  app/controllers/application_controller.rb:6
+  app/controllers/users_controller.rb:1
+
+Rendered rescues/_trace (43.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 14:14:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 14, DB: 1) | 200 OK [http://localhost/users/show]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 14:14:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100216140421)
+Migrating to CreateUsers (20100216173416)
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `projects`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `projects`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 15:11:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+
+NoMethodError (undefined method `is_gravtastic!' for #<Class:0xb6823bf4>):
+  /home/robby/.gem/ruby/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/models/user.rb:3
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:24:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/controllers/application_controller.rb:15:in `authenticate'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.8ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 15:12:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"users"}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+NoMethodError (undefined method `is_gravtastic!' for #<Class:0xb69c2438>):
+  /home/robby/.gem/ruby/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/models/user.rb:2
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:24:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/controllers/application_controller.rb:15:in `authenticate'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 15:12:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"users"}
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+NoMethodError (undefined method `is_gravtastic!' for #<Class:0xb6828118>):
+  /home/robby/.gem/ruby/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/models/user.rb:2
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:24:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/controllers/application_controller.rb:15:in `authenticate'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 15:12:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"users"}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+NoMethodError (undefined method `is_gravtastic!' for #<Class:0xb69ba29c>):
+  /home/robby/.gem/ruby/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/models/user.rb:2
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:24:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/controllers/application_controller.rb:15:in `authenticate'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (45.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 15:12:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"users"}
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+NoMethodError (undefined method `is_gravtastic!' for #<Class:0xb681c944>):
+  /home/robby/.gem/ruby/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/models/user.rb:2
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:24:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/controllers/application_controller.rb:15:in `authenticate'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (14.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 15:14:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+
+NoMethodError (undefined method `is_gravtastic' for #<Class:0xb69ad060>):
+  /home/robby/.gem/ruby/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/models/user.rb:3
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:24:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/controllers/application_controller.rb:15:in `authenticate'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 15:14:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+
+NoMethodError (undefined method `is_gravtastic' for #<Class:0xb6800668>):
+  /home/robby/.gem/ruby/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/models/user.rb:3
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:24:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/controllers/application_controller.rb:15:in `authenticate'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (92.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 15:22:02) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (3.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 33ms (View: 13, DB: 4) | 200 OK [http://localhost/users/show]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:22:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (12.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-16 15:22:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (5.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 66ms (View: 1, DB: 20) | 200 OK [http://localhost/users/show]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:22:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-16 15:22:42) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (13.8ms)
+Completed in 39ms (View: 23, DB: 2) | 200 OK [http://localhost/users/current/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:22:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-02-16 15:22:46) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:22:46) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 15:22:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:22:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-16 15:22:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:22:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-16 15:23:00) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"rclements@gmail.com", "password"=>"[FILTERED]", "email"=>"test"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'test') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'rclements@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '4b9d8390a8362b93a2698ea465d92017702103fb89a451827f006221bdfdf40b52d022316ee2c1211e9afe6d4f07ab3035c7433932b8bc4abcea14fbf280dc9f') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 154ms (View: 10, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:23:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-16 15:23:25) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "email"=>"rclements@gmail.com"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'rclements@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'test') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'a7e939db57d9589fae0cbdf81e26450a115cd429f567e28afea2e14a2472c0f5a955adacb521d46dbc432c894ea9a2b75f9874b0429af0c579ce8d510a7adaee') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 26ms (View: 7, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:23:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:23:32) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 15:23:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (5.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 22ms (View: 4, DB: 5) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:23:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 15:23:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:23:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-02-16 15:23:35) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "username"=>"rclements", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (6.6ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.username) = 'rclements') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 24ms (DB: 7) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:23:35) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 23ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:23:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:25:05) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 23ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:25:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:25:06) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 17ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:25:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-02-16 15:25:23) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 20ms (DB: 3) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:25:23) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 15:25:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:25:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 15:25:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:25:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 15:25:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 68ms (View: 5, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:25:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-02-16 15:25:30) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "username"=>"rclements", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"5/plLSd44KE94hPw76rA/1EFGY7TEsJROz4Mf4o9cBQ=", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.username) = 'rclements') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 2) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:25:30) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 17ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:25:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:25:32) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 17ms (View: 1, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:25:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:25:37) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:25:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:27:19) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (Inconsistent indentation: 3 spaces were used for indentation, but the rest of the document was indented using 2 spaces.) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4:    = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4
+    haml (2.2.17) lib/haml/precompiler.rb:150:in `tabs'
+    haml (2.2.17) lib/haml/precompiler.rb:132:in `instance_eval'
+    haml (2.2.17) lib/haml/precompiler.rb:132:in `tabs'
+    haml (2.2.17) lib/haml/precompiler.rb:988:in `block_opened?'
+    haml (2.2.17) lib/haml/precompiler.rb:342:in `push_plain'
+    haml (2.2.17) lib/haml/precompiler.rb:276:in `process_line'
+    haml (2.2.17) lib/haml/precompiler.rb:177:in `precompile'
+    haml (2.2.17) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.17) rails/./lib/haml/template/plugin.rb:24:in `new'
+    haml (2.2.17) rails/./lib/haml/template/plugin.rb:24:in `compile'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.8ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:27:27) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4:   = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:27:37) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (Invalid tag: "%= image_tag @user.gravatar_url".) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4:   %= image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4
+    haml (2.2.17) lib/haml/precompiler.rb:547:in `parse_tag'
+    haml (2.2.17) lib/haml/precompiler.rb:675:in `render_tag'
+    haml (2.2.17) lib/haml/precompiler.rb:213:in `process_line'
+    haml (2.2.17) lib/haml/precompiler.rb:177:in `precompile'
+    haml (2.2.17) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.17) rails/./lib/haml/template/plugin.rb:24:in `new'
+    haml (2.2.17) rails/./lib/haml/template/plugin.rb:24:in `compile'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (106.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:27:58) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4:   = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:28:28) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (12.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:32:39) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (106.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:32:40) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:32:43) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (12.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (102.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:33:04) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (37.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:35:19) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_for' for #<ActionView::Base:0xb665a6ec>) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = gravatar_for @user
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:36:07) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_for' for #<ActionView::Base:0xb68852c8>) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = gravatar_for @user
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (86.1ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:36:08) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_for' for #<ActionView::Base:0xb69dee58>) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = gravatar_for @user
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:36:09) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_for' for #<ActionView::Base:0xb6804cf4>) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = gravatar_for @user
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:39:58) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (94.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:47:42) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:47:43) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (87.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:47:43) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:47:46) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:49:04) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:55:18) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:58:21) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined method `gravatar_url' for nil:NilClass) on line #4 of app/views/pages/home.html.haml:
+1: .copy-container
+2:   %h2
+3:     Welcome to the homepage.
+4: = image_tag @user.gravatar_url
+
+    app/views/pages/home.html.haml:4:in `_run_haml_app47views47pages47home46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (87.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:58:33) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 66ms (View: 49, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:58:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:58:35) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 18ms (View: 1, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:58:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:58:36) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 69ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:58:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-02-16 15:58:38) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:58:38) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 15:58:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:58:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-16 15:58:40) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-16 15:58:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-16 15:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

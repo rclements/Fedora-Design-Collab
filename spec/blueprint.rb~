@@ -1,0 +1,3 @@
+blueprint :project do
+  Project.create!(:title => "this is a project", :description => "Like I said, a project.")
+

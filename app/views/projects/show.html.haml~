@@ -1,0 +1,4 @@
+%h2 Show
+
+% = avatar_tag(@current_user, :size => 40, :default => default_avatar_url(:small) %>
+

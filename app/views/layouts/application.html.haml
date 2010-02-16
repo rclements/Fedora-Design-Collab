@@ -1,0 +1,28 @@
+!!! Strict
+%html
+  %head
+    %meta{ :content => "text/html; charset=UTF-8", "http-equiv" => "content-type" }
+    %meta{ :content => "application/xhtml+xml; charset=UTF-8", "http-equiv" => "content-type" }
+    %title Fedora Design Collab
+    %link{ :href => "/stylesheets/base.css", :rel => "stylesheet", :type => "text/css" }
+    = javascript_include_tag "prototype"
+  %body
+    #wrapper
+      #header
+        %h1
+          %a{ :href => '/'}
+            %span
+              Fedora Design Collab
+        %ul.utility-nav
+          -if current_user
+            %li= link_to "Edit Profile", edit_user_path(:current)
+            %li= link_to "Logout", logout_path
+          - else 
+            %li= link_to "Register", new_user_path
+            %li= link_to "Login", login_path
+      -if flash[:error]
+        .error= flash[:error]
+      -if flash[:notice]
+        .notice= flash[:notice]
+      #content
+        = yield
