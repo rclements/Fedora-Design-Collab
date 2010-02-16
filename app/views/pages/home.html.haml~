@@ -1,4 +1,9 @@
 .copy-container
   %h2
     Welcome to the homepage.
-= image_tag @user.gravatar_url
+= link_to "Start New Project", { :controller => "projects", :action => "new" }
+%br
+= link_to "Projects List", { :controller => "projects", :action => "index" }
+/= image_tag @user.gravatar_url
+
+

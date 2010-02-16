@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>app/controllers/projects_controller.rb</title>
+    <title>app/controllers/inspirations_controller.rb</title>
     <link href="screen.css" media="all" rel="stylesheet" type="text/css" />
     <link href="print.css" media="print" rel="stylesheet" type="text/css" />
     
@@ -10,7 +10,7 @@
   </head>
   <body>
     <h1>Fedora Collab C0 Coverage Information - RCov</h1>
-    <h2>app/controllers/projects_controller.rb</h2>
+    <h2>app/controllers/inspirations_controller.rb</h2>
 
     
 
@@ -27,7 +27,7 @@
         </thead>
         <tbody>
           <tr>
-            <td class="left_align"><a href="app-controllers-projects_controller_rb.html">app/controllers/projects_controller.rb</a></td>
+            <td class="left_align"><a href="app-controllers-inspirations_controller_rb.html">app/controllers/inspirations_controller.rb</a></td>
             <td class='right_align'><tt>61</tt></td>
             <td class='right_align'><tt>51</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>50.82%</tt></div>
@@ -57,25 +57,25 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line1">1</a> class ProjectsController &lt; ApplicationController</pre></td>
+            <td><pre><a name="line1">1</a> class InspirationsController &lt; ApplicationController</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line2">2</a>   before_filter :load_projects</pre></td>
+            <td><pre><a name="line2">2</a>   before_filter :load_inspiration</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line3">3</a>   before_filter :load_project, :only =&gt; [:show, :edit, :update, :destroy]</pre></td>
+            <td><pre><a name="line3">3</a>   before_filter :load_inspiration, :only =&gt; [:show, :edit, :update, :destroy]</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line4">4</a>   before_filter :load_new_project, :only =&gt; [:new, :create]</pre></td>
+            <td><pre><a name="line4">4</a>   before_filter :load_new_inspiration, :only =&gt; [:new, :create]</pre></td>
           </tr>
         
           
@@ -93,13 +93,13 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line7">7</a>   def load_projects</pre></td>
+            <td><pre><a name="line7">7</a>   def load_inspirations</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line8">8</a>     @projects = Project.all</pre></td>
+            <td><pre><a name="line8">8</a>     @inspirations = Inspirations.all</pre></td>
           </tr>
         
           
@@ -117,13 +117,13 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line11">11</a>   def load_project</pre></td>
+            <td><pre><a name="line11">11</a>   def load_inspiration</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line12">12</a>     @project = Project.find(params[:id])</pre></td>
+            <td><pre><a name="line12">12</a>     @inspiration = Inspiration.find(params[:id])</pre></td>
           </tr>
         
           
@@ -141,13 +141,13 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line15">15</a>   def load_new_project</pre></td>
+            <td><pre><a name="line15">15</a>   def load_new_inspiration</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line16">16</a>     @project = Project.new(params[:project])</pre></td>
+            <td><pre><a name="line16">16</a>     @inspiration = Inspiration.new(params[:inspiration])</pre></td>
           </tr>
         
           
@@ -213,19 +213,19 @@
           
           
           <tr class="uncovered">
-            <td><pre><a name="line27">27</a>     if @project.save</pre></td>
+            <td><pre><a name="line27">27</a>     if @inspiration.save</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line28">28</a>       flash[:notice] = &quot;Project created successfully.&quot;</pre></td>
+            <td><pre><a name="line28">28</a>       flash[:notice] = &quot;Inspiration created successfully.&quot;</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line29">29</a>       redirect_to @project</pre></td>
+            <td><pre><a name="line29">29</a>       redirect_to @inspiration</pre></td>
           </tr>
         
           
@@ -237,7 +237,7 @@
           
           
           <tr class="uncovered">
-            <td><pre><a name="line31">31</a>       flash.now[:error] = &quot;There was a problem creating the project.&quot;</pre></td>
+            <td><pre><a name="line31">31</a>       flash.now[:error] = &quot;There was a problem creating the inspiration.&quot;</pre></td>
           </tr>
         
           
@@ -291,19 +291,19 @@
           
           
           <tr class="uncovered">
-            <td><pre><a name="line40">40</a>     if @project.update_attributes(params[:project])</pre></td>
+            <td><pre><a name="line40">40</a>     if @inspiration.update_attributes(params[:inspiration])</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line41">41</a>       flash[:notice] = &quot;The project was successfully edited.&quot;</pre></td>
+            <td><pre><a name="line41">41</a>       flash[:notice] = &quot;The inspiration was successfully edited.&quot;</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line42">42</a>       redirect_to :action =&gt; 'show', :id =&gt; @project</pre></td>
+            <td><pre><a name="line42">42</a>       redirect_to :action =&gt; 'show', :id =&gt; @inspiration</pre></td>
           </tr>
         
           
@@ -315,7 +315,7 @@
           
           
           <tr class="uncovered">
-            <td><pre><a name="line44">44</a>       flash.now[:notice] = &quot;There was a problem updating the project.&quot;</pre></td>
+            <td><pre><a name="line44">44</a>       flash.now[:notice] = &quot;There was a problem updating the inspiration.&quot;</pre></td>
           </tr>
         
           
@@ -351,19 +351,19 @@
           
           
           <tr class="uncovered">
-            <td><pre><a name="line50">50</a>     if @project.destroy</pre></td>
+            <td><pre><a name="line50">50</a>     if @inspiration.destroy</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line51">51</a>       flash[:notice] = &quot;The project was deleted.&quot;</pre></td>
+            <td><pre><a name="line51">51</a>       flash[:notice] = &quot;The inspiration was deleted.&quot;</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line52">52</a>       redirect_to projects_path</pre></td>
+            <td><pre><a name="line52">52</a>       redirect_to inspirations_path</pre></td>
           </tr>
         
           
@@ -375,7 +375,7 @@
           
           
           <tr class="uncovered">
-            <td><pre><a name="line54">54</a>       flash.now[:error] = &quot;There was a problem deleting the project.&quot;</pre></td>
+            <td><pre><a name="line54">54</a>       flash.now[:error] = &quot;There was a problem deleting the inspiration.&quot;</pre></td>
           </tr>
         
           
