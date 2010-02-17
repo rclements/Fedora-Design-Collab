@@ -5,7 +5,11 @@ describe ProjectsController do
   describe "Authenticated examples" do
     before(:each) do
       activate_authlogic
-      UserSession.make User.make
+      
+      @username = "bob"
+      @password = "bobby"
+      @user = User.make(:username => @username, :password => @password, :password_confirmation => @password)
+      create_user_session(@user)
     end
 
     describe "hitting #index" do
@@ -22,7 +26,7 @@ describe ProjectsController do
 
     describe "hitting #show with an id" do
       before(:each) do
-        build :project
+        @project = Project.make
         get :show, { :id => @project.id }
       end
 
@@ -74,8 +78,7 @@ describe ProjectsController do
 
       describe "with invalid parameters" do
         before(:each) do
-          post :create, { :project => { :title => "foo", :description => "bar" } }
-          @new_project_count = Project.count
+          post :create, { :project => {:description => "bar" } }
         end
 
         it { response.should render_template("projects/new") }
@@ -88,7 +91,7 @@ describe ProjectsController do
 
     describe "PUTing to #update" do
       before(:each) do
-        build :project
+        @project = Project.make
       end
 
       describe "successfully" do
@@ -110,7 +113,7 @@ describe ProjectsController do
 
     describe "DELETEing to #destroy" do
       before(:each) do
-        build :project
+        @project = Project.make
       end
 
       describe "successfully" do

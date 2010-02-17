@@ -30,15 +30,15 @@
             <td class="left_align"><a href="app-controllers-application_controller_rb.html">app/controllers/application_controller.rb</a></td>
             <td class='right_align'><tt>59</tt></td>
             <td class='right_align'><tt>46</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>45.76%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>67.80%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:46px"></div>
-            <div class="uncovered" style="width:54px"></div>
+            <div class="covered" style="width:68px"></div>
+            <div class="uncovered" style="width:32px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>30.43%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>58.70%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:30px"></div>
-            <div class="uncovered" style="width:70px"></div>
+            <div class="covered" style="width:59px"></div>
+            <div class="uncovered" style="width:41px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -140,37 +140,37 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line15">15</a>     unless current_user</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line16">16</a>       flash[:notice] = &quot;You must be logged in first.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line17">17</a>       redirect_to(login_url)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line18">18</a>       return false</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line19">19</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line20">20</a>   end</pre></td>
           </tr>
         
@@ -188,19 +188,19 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line23">23</a>     return @current_user_session if defined?(@current_user_session)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line24">24</a>     @current_user_session = UserSession.find</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line25">25</a>   end</pre></td>
           </tr>
         
@@ -218,19 +218,19 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line28">28</a>     return @current_user if defined?(@current_user)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line29">29</a>     @current_user = current_user_session &amp;&amp; current_user_session.record</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line30">30</a>   end</pre></td>
           </tr>
         
@@ -302,7 +302,7 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line42">42</a>     if current_user</pre></td>
           </tr>
         
@@ -411,7 +411,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Tue Feb 16 16:38:26 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Wed Feb 17 12:51:07 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>

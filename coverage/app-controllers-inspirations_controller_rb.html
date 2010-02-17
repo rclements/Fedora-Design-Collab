@@ -30,15 +30,15 @@
             <td class="left_align"><a href="app-controllers-inspirations_controller_rb.html">app/controllers/inspirations_controller.rb</a></td>
             <td class='right_align'><tt>61</tt></td>
             <td class='right_align'><tt>51</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>50.82%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>83.61%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:51px"></div>
-            <div class="uncovered" style="width:49px"></div>
+            <div class="covered" style="width:84px"></div>
+            <div class="uncovered" style="width:16px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>41.18%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>80.39%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:41px"></div>
-            <div class="uncovered" style="width:59px"></div>
+            <div class="covered" style="width:80px"></div>
+            <div class="uncovered" style="width:20px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -122,13 +122,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line12">12</a>     @inspiration = Inspiration.find(params[:id])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line13">13</a>   end</pre></td>
           </tr>
         
@@ -146,13 +146,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line16">16</a>     @inspiration = Inspiration.new(params[:inspiration])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line17">17</a>   end</pre></td>
           </tr>
         
@@ -176,7 +176,7 @@
         
           
           
-          <tr class="inferred">
+          <tr class="marked">
             <td><pre><a name="line21">21</a>   end</pre></td>
           </tr>
         
@@ -194,7 +194,7 @@
         
           
           
-          <tr class="inferred">
+          <tr class="marked">
             <td><pre><a name="line24">24</a>   end</pre></td>
           </tr>
         
@@ -212,49 +212,49 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line27">27</a>     if @inspiration.save</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line28">28</a>       flash[:notice] = &quot;Inspiration created successfully.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line29">29</a>       redirect_to @inspiration</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line30">30</a>     else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line31">31</a>       flash.now[:error] = &quot;There was a problem creating the inspiration.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line32">32</a>       render :action =&gt; :new</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line33">33</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line34">34</a>   end</pre></td>
           </tr>
         
@@ -290,49 +290,49 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line40">40</a>     if @inspiration.update_attributes(params[:inspiration])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line41">41</a>       flash[:notice] = &quot;The inspiration was successfully edited.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line42">42</a>       redirect_to :action =&gt; 'show', :id =&gt; @inspiration</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line43">43</a>     else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line44">44</a>       flash.now[:notice] = &quot;There was a problem updating the inspiration.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line45">45</a>       render :action =&gt; 'edit'</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line46">46</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line47">47</a>   end</pre></td>
           </tr>
         
@@ -410,7 +410,7 @@
         
           
           
-          <tr class="inferred">
+          <tr class="marked">
             <td><pre><a name="line60">60</a>   end</pre></td>
           </tr>
         
@@ -423,7 +423,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Tue Feb 16 16:38:26 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Wed Feb 17 12:51:07 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>

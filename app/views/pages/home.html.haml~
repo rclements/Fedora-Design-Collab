@@ -3,6 +3,7 @@
     Welcome to the homepage.
 = link_to "Start New Project", { :controller => "projects", :action => "new" }
 %br
+  %br
 = link_to "Projects List", { :controller => "projects", :action => "index" }
 /= image_tag @user.gravatar_url
 

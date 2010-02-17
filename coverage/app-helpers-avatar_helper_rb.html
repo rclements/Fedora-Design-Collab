@@ -29,16 +29,16 @@
           <tr>
             <td class="left_align"><a href="app-helpers-avatar_helper_rb.html">app/helpers/avatar_helper.rb</a></td>
             <td class='right_align'><tt>9</tt></td>
-            <td class='right_align'><tt>7</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>55.56%</tt></div>
+            <td class='right_align'><tt>2</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:56px"></div>
-            <div class="uncovered" style="width:44px"></div>
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>42.86%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:43px"></div>
-            <div class="uncovered" style="width:57px"></div>
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -62,8 +62,8 @@
         
           
           
-          <tr class="marked">
-            <td><pre><a name="line2">2</a>   include Avatar::View::ActionViewSupport</pre></td>
+          <tr class="inferred">
+            <td><pre><a name="line2">2</a> #  include Avatar::View::ActionViewSupport</pre></td>
           </tr>
         
           
@@ -74,31 +74,31 @@
         
           
           
-          <tr class="marked">
-            <td><pre><a name="line4">4</a>   def default_avatar_url(size)</pre></td>
+          <tr class="inferred">
+            <td><pre><a name="line4">4</a> #  def default_avatar_url(size)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
-            <td><pre><a name="line5">5</a>     req = controller.request</pre></td>
+          <tr class="inferred">
+            <td><pre><a name="line5">5</a> #    req = controller.request</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
-            <td><pre><a name="line6">6</a>     &quot;#{req.protocol}#{req.host_with_port}#{image_path(&quot;/images/avatar_default_#{size}.png&quot;)}&quot;</pre></td>
+          <tr class="inferred">
+            <td><pre><a name="line6">6</a> #    &quot;#{req.protocol}#{req.host_with_port}#{image_path(&quot;/images/avatar_default_#{size}.png&quot;)}&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
-            <td><pre><a name="line7">7</a>   end</pre></td>
+          <tr class="inferred">
+            <td><pre><a name="line7">7</a> #  end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line8">8</a> end</pre></td>
           </tr>
         
@@ -111,7 +111,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Tue Feb 16 16:38:26 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Wed Feb 17 12:51:07 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>

@@ -1,0 +1,9 @@
+%h2 Show
+
+.project-container
+  .main-container
+    %h2= @project.to_s
+    %textarea.code-container{ :readonly => "readonly" }
+      = @project.description
+    = link_to "Edit", { :controller => "projects", :action => "edit" }
+

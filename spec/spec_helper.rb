@@ -7,6 +7,7 @@ require 'spec/rails'
 require 'remarkable_rails'
 require "authlogic/test_case"
 require "machinist"
+require "blueprint"
 
 # Uncomment the next line to use webrat's matchers
 #require 'webrat/integrations/rspec-rails'
@@ -53,5 +54,10 @@ Spec::Runner.configure do |config|
   # == Notes
   #
   # For more information take a look at Spec::Runner::Configuration and Spec::Runner
-  config.enable_blueprints
+end
+def create_user_session(_user = nil)
+  unless _user
+    _user = User.make
+  end
+  UserSession.create(:username => _user.username, :password => 'password')
 end

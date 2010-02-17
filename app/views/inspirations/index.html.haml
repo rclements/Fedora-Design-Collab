@@ -1,0 +1,5 @@
+%h2 Index
+
+%ul.project-lister
+  - @projects.each do |project|
+    %li.project= link_to(project.to_s, project_path(project))

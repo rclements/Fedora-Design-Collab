@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100216173416) do
+ActiveRecord::Schema.define(:version => 20100217221315) do
+
+  create_table "inspirations", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "url"
+    t.string   "image_file_file_name"
+    t.string   "image_file_content_type"
+    t.integer  "image_file_file_size"
+    t.datetime "image_file_updated_at"
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "title"
@@ -18,6 +28,13 @@ ActiveRecord::Schema.define(:version => 20100216173416) do
     t.integer  "creator_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "proposals", :force => true do |t|
+    t.integer "product_id"
+    t.integer "version_number"
+    t.integer "project_id"
+    t.text    "content"
   end
 
   create_table "users", :force => true do |t|
