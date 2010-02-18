@@ -12,20 +12,6 @@ describe CommentsController do
       create_user_session(@user)
     end
 
-
-    describe "hitting #show with an id" do
-      before(:each) do
-        @comment = Comment.make
-        get :show, { :id => @comment.id }
-      end
-
-      it { response.should be_success }
-      it { response.should render_template("comments/show") }
-      it "should assign @comment" do
-        assigns(:comment).should be_a(Comment)
-      end
-    end
-
     describe "hitting #new" do
       before(:each) do
         get :new
@@ -115,7 +101,7 @@ describe CommentsController do
           delete :destroy, { :id => @comment.id }
         end
 
-        it { response.should redirect_to(comments_path) }
+        it { response.should redirect_to(projects_path) }
       end
 
       describe "unsuccessfully" do
@@ -128,7 +114,7 @@ describe CommentsController do
           delete :destroy, { :id => @comment.id }
         end
 
-        it { response.should render_template("comments/show") }
+        it { response.should render_template("comments.project_path") }
       end
     end
   end

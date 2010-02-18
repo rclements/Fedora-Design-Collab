@@ -30,15 +30,15 @@
             <td class="left_align"><a href="app-controllers-comments_controller_rb.html">app/controllers/comments_controller.rb</a></td>
             <td class='right_align'><tt>65</tt></td>
             <td class='right_align'><tt>55</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>43.08%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>80.00%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:43px"></div>
-            <div class="uncovered" style="width:57px"></div>
+            <div class="covered" style="width:80px"></div>
+            <div class="uncovered" style="width:20px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>32.73%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>76.36%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:33px"></div>
-            <div class="uncovered" style="width:67px"></div>
+            <div class="covered" style="width:76px"></div>
+            <div class="uncovered" style="width:24px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -98,13 +98,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line8">8</a>     @comment = Comment.find(params[:id])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line9">9</a>   end</pre></td>
           </tr>
         
@@ -152,7 +152,7 @@
         
           
           
-          <tr class="inferred">
+          <tr class="marked">
             <td><pre><a name="line17">17</a>   end</pre></td>
           </tr>
         
@@ -170,13 +170,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line20">20</a>     @commentable = find_commentable</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line21">21</a>     @comment = @commentable.comments.build(params[:comment])</pre></td>
           </tr>
         
@@ -260,19 +260,19 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line35">35</a>     if @comment.update_attributes(params[:comment])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line36">36</a>       flash[:notice] = &quot;The comment was successfully edited.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line37">37</a>       redirect_to @comment</pre></td>
           </tr>
         
@@ -320,55 +320,55 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line45">45</a>     @comment = Comment.find(params[:id])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line46">46</a>     if @comment.destroy</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line47">47</a>       flash[:notice] = &quot;The comment was deleted.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line48">48</a>       redirect_to @project</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line49">49</a>     else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line50">50</a>       flash.now[:error] = &quot;There was a problem deleting the comment.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line51">51</a>       render :action =&gt; '/'</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line52">52</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line53">53</a>   end</pre></td>
           </tr>
         
@@ -398,56 +398,56 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line58">58</a>     params.each do |name, value|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line59">59</a>       if name =~ /(.+)_id$/</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line60">60</a>         return $1.classify.constantize.find(value)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line61">61</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line62">62</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line63">63</a>     nil</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line64">64</a>   end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line65">65</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Thu Feb 18 15:43:15 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Thu Feb 18 16:34:29 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>
