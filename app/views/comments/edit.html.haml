@@ -1,0 +1,10 @@
+%h2 Edit Comment
+
+.form-container
+  - form_for :comment, @comment, :url => comment_path(@comment), :html => { :method => :put }  do |form|
+    .main-container
+      %label{ :for => 'conment'}
+      Comment
+      = form.text_area :content, :class => 'comment-box'
+
+      = submit_tag "Update"

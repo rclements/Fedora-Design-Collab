@@ -20,3 +20,6 @@ User.blueprint do
   password_confirmation { 'password' }
   email { 'email@email.com' }
 end
+Comment.blueprint do
+  comment { "blah blah blah" }
+end

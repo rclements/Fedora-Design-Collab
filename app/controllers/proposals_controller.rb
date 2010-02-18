@@ -1,5 +1,5 @@
 class ProposalsController < ApplicationController
- # before_filter :ensure_project_id, :only => [:new, :create]
+  before_filter :ensure_project_id, :only => [:new, :create]
   before_filter :load_proposal, :only => [:edit, :update, :destroy]
   before_filter :load_new_proposal, :only => [:new, :create]
 
@@ -27,7 +27,6 @@ class ProposalsController < ApplicationController
   def create
     if @proposal.save
       flash[:notice] = "Proposal created successfully."
-      debugger
       redirect_to @proposal.project
     else
       flash.now[:error] = "There was a problem creating the proposal."

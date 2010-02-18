@@ -6,14 +6,8 @@
     = link_to "Edit", { :controller => "projects", :action => "edit" }
     
     %h3 Proposals
-    .proposal-container
-      .main-container
-        - @project.proposals.each do |proposal|
-          %h2= proposal.to_s
-          %textarea.content-container{ :readonly => "readonly" }
-          = link_to "Edit", edit_proposal_path(proposal)
-          = link_to "Delete", proposal(proposal), :confirm => "Are you sure?", :method => :delete    
+    - @project.proposals.each do |proposal|
+      = render :partial => "proposals/proposal", :locals => { :proposal => proposal }
     %br
       %br
     = link_to 'Create New Proposal', new_proposal_path(:project_id => @project.id)
-.clear

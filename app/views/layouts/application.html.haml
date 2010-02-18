@@ -13,16 +13,17 @@
           %a{ :href => '/'}
             %span
               Fedora Design Collab
+        = show_gravatar_for(current_user)
         %ul.utility-nav
-          -if current_user
+          - if current_user
             %li= link_to "Edit Profile", edit_user_path(:current)
             %li= link_to "Logout", logout_path
           - else 
             %li= link_to "Register", new_user_path
             %li= link_to "Login", login_path
-      -if flash[:error]
+      - if flash[:error]
         .error= flash[:error]
-      -if flash[:notice]
+      - if flash[:notice]
         .notice= flash[:notice]
       #content
         = yield

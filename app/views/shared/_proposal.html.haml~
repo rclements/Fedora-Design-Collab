@@ -1,0 +1,12 @@
+.proposal-container
+  .main-container
+    - @project.proposals.each do |proposal|
+      %textarea.content-container{ :readonly => "readonly" }
+        = proposal.content
+      = link_to "Edit", edit_proposal_path(proposal)
+      = link_to "Delete", proposal_path(proposal), :confirm => "Are you sure?", :method => :delete 
+      %br   
+    %br
+      %br
+    = link_to 'Create New Proposal', new_proposal_path(:project_id => @project.id)
+.clear

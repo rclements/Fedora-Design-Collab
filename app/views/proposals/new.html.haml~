@@ -1,6 +1,10 @@
 %h1 New Proposal
-.form_for(@proposal.project) do |f|
-  = f.error_messages
-  = f.label.content
-  = f.text_area :content
-  = f.submit "Post"
+
+.form-container
+  - form_for :proposal, @proposal, :url => proposals_url do |f|
+    .main-container
+      = f.error_messages
+      = f.label :content
+      = f.text_area :content
+      = hidden_field_tag "project_id", params[:project_id]
+      = f.submit "Post"

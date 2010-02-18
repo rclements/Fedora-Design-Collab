@@ -1,0 +1,5 @@
+- form_for :comment, Comment.new, :url => comments_path do |f|
+  = f.text_area :comment
+  = hidden_field_tag commentable_field, commentable_id
+  = hidden_field_tag :refurl, refurl
+  = submit_tag "Post Comment"

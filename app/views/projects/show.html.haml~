@@ -1,5 +1,3 @@
-%h2 Show
-
 .project-container
   .main-container
     %h2= @project.to_s
@@ -8,14 +6,4 @@
     = link_to "Edit", { :controller => "projects", :action => "edit" }
     
     %h3 Proposals
-    - @project.proposals.each do |proposal|
-      .code-block
-        %em= proposal.to_s
-        %br
-        %proposal.code_html
-        = link_to "Edit", edit_proposal_path(proposal.id)
-        = link_to "Delete", proposal_path(proposal.id), :confirm => "Are you sure?", :method => :delete
-    %br
-      %br
-    = link_to 'Create New Proposal', new_proposal_path(:project_id => @project.id)
-.clear
+    = render :partial => "shared/_proposal"

@@ -28,17 +28,17 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-controllers-application_controller_rb.html">app/controllers/application_controller.rb</a></td>
-            <td class='right_align'><tt>59</tt></td>
-            <td class='right_align'><tt>46</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>67.80%</tt></div>
+            <td class='right_align'><tt>58</tt></td>
+            <td class='right_align'><tt>47</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>67.24%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:68px"></div>
-            <div class="uncovered" style="width:32px"></div>
+            <div class="covered" style="width:67px"></div>
+            <div class="uncovered" style="width:33px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>58.70%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>59.57%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:59px"></div>
-            <div class="uncovered" style="width:41px"></div>
+            <div class="covered" style="width:60px"></div>
+            <div class="uncovered" style="width:40px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -105,13 +105,13 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line9">9</a>   helper_method :current_user_session, :current_user</pre></td>
+            <td><pre><a name="line9">9</a>   helper_method :current_user_session, :current_user, :redirect_to_ref_url</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
-            <td><pre><a name="line10">10</a>   </pre></td>
+          <tr class="marked">
+            <td><pre><a name="line10">10</a>   include RefurlHelper</pre></td>
           </tr>
         
           
@@ -128,290 +128,284 @@
         
           
           
-          <tr class="inferred">
-            <td><pre><a name="line13">13</a> </pre></td>
+          <tr class="marked">
+            <td><pre><a name="line13">13</a>   def authenticate</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line14">14</a>   def authenticate</pre></td>
+            <td><pre><a name="line14">14</a>     unless current_user</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line15">15</a>     unless current_user</pre></td>
+            <td><pre><a name="line15">15</a>       flash[:notice] = &quot;You must be logged in first.&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line16">16</a>       flash[:notice] = &quot;You must be logged in first.&quot;</pre></td>
+            <td><pre><a name="line16">16</a>       redirect_to(login_url)</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line17">17</a>       redirect_to(login_url)</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line18">18</a>       return false</pre></td>
+            <td><pre><a name="line17">17</a>       return false</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line19">19</a>     end</pre></td>
+            <td><pre><a name="line18">18</a>     end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line20">20</a>   end</pre></td>
+            <td><pre><a name="line19">19</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line21">21</a> </pre></td>
+            <td><pre><a name="line20">20</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line22">22</a>   def current_user_session</pre></td>
+            <td><pre><a name="line21">21</a>   def current_user_session</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line23">23</a>     return @current_user_session if defined?(@current_user_session)</pre></td>
+            <td><pre><a name="line22">22</a>     return @current_user_session if defined?(@current_user_session)</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line24">24</a>     @current_user_session = UserSession.find</pre></td>
+            <td><pre><a name="line23">23</a>     @current_user_session = UserSession.find</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line25">25</a>   end</pre></td>
+            <td><pre><a name="line24">24</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line26">26</a> </pre></td>
+            <td><pre><a name="line25">25</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line27">27</a>   def current_user</pre></td>
+            <td><pre><a name="line26">26</a>   def current_user</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line28">28</a>     return @current_user if defined?(@current_user)</pre></td>
+            <td><pre><a name="line27">27</a>     return @current_user if defined?(@current_user)</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line29">29</a>     @current_user = current_user_session &amp;&amp; current_user_session.record</pre></td>
+            <td><pre><a name="line28">28</a>     @current_user = current_user_session &amp;&amp; current_user_session.record</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line30">30</a>   end</pre></td>
+            <td><pre><a name="line29">29</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line31">31</a> </pre></td>
+            <td><pre><a name="line30">30</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line32">32</a>   def require_user</pre></td>
+            <td><pre><a name="line31">31</a>   def require_user</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line33">33</a>     unless current_user</pre></td>
+            <td><pre><a name="line32">32</a>     unless current_user</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line34">34</a>       store_location</pre></td>
+            <td><pre><a name="line33">33</a>       store_location</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line35">35</a>       flash[:notice] = &quot;You must be logged in to access this page&quot;</pre></td>
+            <td><pre><a name="line34">34</a>       flash[:notice] = &quot;You must be logged in to access this page&quot;</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line36">36</a>       redirect_to new_user_session_url</pre></td>
+            <td><pre><a name="line35">35</a>       redirect_to new_user_session_url</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line37">37</a>       return false</pre></td>
+            <td><pre><a name="line36">36</a>       return false</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line38">38</a>     end</pre></td>
+            <td><pre><a name="line37">37</a>     end</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line39">39</a>   end</pre></td>
+            <td><pre><a name="line38">38</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line40">40</a> </pre></td>
+            <td><pre><a name="line39">39</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line41">41</a>   def require_no_user</pre></td>
+            <td><pre><a name="line40">40</a>   def require_no_user</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line42">42</a>     if current_user</pre></td>
+            <td><pre><a name="line41">41</a>     if current_user</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line43">43</a>       store_location</pre></td>
+            <td><pre><a name="line42">42</a>       store_location</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line44">44</a>       flash[:notice] = &quot;You must be logged out to access this page&quot;</pre></td>
+            <td><pre><a name="line43">43</a>       flash[:notice] = &quot;You must be logged out to access this page&quot;</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line45">45</a>       redirect_to account_url</pre></td>
+            <td><pre><a name="line44">44</a>       redirect_to account_url</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line46">46</a>       return false</pre></td>
+            <td><pre><a name="line45">45</a>       return false</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line47">47</a>     end</pre></td>
+            <td><pre><a name="line46">46</a>     end</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line48">48</a>   end</pre></td>
+            <td><pre><a name="line47">47</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line49">49</a> </pre></td>
+            <td><pre><a name="line48">48</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line50">50</a>   def store_location</pre></td>
+            <td><pre><a name="line49">49</a>   def store_location</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line51">51</a>     session[:return_to] = request.request_uri</pre></td>
+            <td><pre><a name="line50">50</a>     session[:return_to] = request.request_uri</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line52">52</a>   end</pre></td>
+            <td><pre><a name="line51">51</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line53">53</a> </pre></td>
+            <td><pre><a name="line52">52</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line54">54</a>   def redirect_back_or_default(default)</pre></td>
+            <td><pre><a name="line53">53</a>   def redirect_back_or_default(default)</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line55">55</a>     redirect_to(session[:return_to] || default)</pre></td>
+            <td><pre><a name="line54">54</a>     redirect_to(session[:return_to] || default)</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line56">56</a>     session[:return_to] = nil</pre></td>
+            <td><pre><a name="line55">55</a>     session[:return_to] = nil</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line57">57</a>   end</pre></td>
+            <td><pre><a name="line56">56</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line58">58</a> end</pre></td>
+            <td><pre><a name="line57">57</a> end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line59">59</a> </pre></td>
+            <td><pre><a name="line58">58</a> </pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Wed Feb 17 12:51:07 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Thu Feb 18 15:43:15 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>

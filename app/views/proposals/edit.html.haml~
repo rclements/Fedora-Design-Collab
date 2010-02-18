@@ -1,14 +1,10 @@
-%h2 Edit
+%h2 Edit Proposal
+
 .form-container
-  - form_for :project, @project, :url => { :action => "update" }, :html => { :multipart => true, :method => :put } do |form|
+  - form_for :proposal, @proposal, :url => proposal_path(@proposal), :html => { :method => :put }  do |form|
     .main-container
-      %label{ :for => 'title'}
-        Title
-      = form.text_field :title
-      %label{ :for => 'description'}
-        Snippet
-      = form.text_area :description, "class" => 'project-box'
-      
-    .submit-container
-      = submit_tag 'Submit'
-.clear
+      %label{ :for => 'content'}
+        Code
+      = form.text_area :content, :class => 'proposal-box'
+
+      = submit_tag "Update"
