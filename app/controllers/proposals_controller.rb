@@ -4,7 +4,7 @@ class ProposalsController < ApplicationController
   before_filter :load_new_proposal, :only => [:new, :create]
 
   protected
-    def ensure_project_id
+  def ensure_project_id
     unless params[:project_id]
       flash[:error] = "You shouldn't be here without a project id."
       redirect_to "/" and return
@@ -14,6 +14,7 @@ class ProposalsController < ApplicationController
   def load_proposal
     @proposal = Proposal.find(params[:id])
   end
+
   def load_new_proposal
     @proposal = Proposal.new(params[:proposal])
     @proposal.project_id = params[:project_id]
@@ -53,8 +54,8 @@ class ProposalsController < ApplicationController
       flash[:notice] = "The proposal was deleted."
       redirect_to @project
     else
-      flash.now[:error] = "There was a problem deleting the proposal."
-      render :action => '/'
+      flash[:error] = "There was a problem deleting the proposal."
+      redirect_to "/"
     end
   end
 end

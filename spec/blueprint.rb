@@ -11,9 +11,11 @@ Inspiration.blueprint do
 end
 
 Proposal.blueprint do
-  project_id { "3" }
+  project { Project.make }
   version_number { "1" }
+  content { "stuff said" }
 end
+
 User.blueprint do
   username { 'jimbob' }
   password { 'password' }

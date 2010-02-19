@@ -4,10 +4,6 @@ class CommentsController < ApplicationController
 
   protected
 
-  def load_comment
-    @comment = Comment.find(params[:id])
-  end
-  
   def load_new_comment
     @comment = Comment.new(params[:comment])
   end
@@ -28,30 +24,6 @@ class CommentsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-    if @comment.update_attributes(params[:comment])
-      flash[:notice] = "The comment was successfully edited."
-      redirect_to @comment
-    else
-      flash.now[:notice] = "There was a problem updating the comment."
-      render :action => 'edit'
-    end
-  end
-
-  def destroy
-    @comment = Comment.find(params[:id])
-    if @comment.destroy
-      flash[:notice] = "The comment was deleted."
-      redirect_to @project
-    else
-      flash.now[:error] = "There was a problem deleting the comment."
-      render :action => '/'
-    end
-  end
-  
   private
   
   def find_commentable

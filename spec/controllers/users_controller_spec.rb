@@ -22,10 +22,16 @@ describe UsersController do
         response.should render_template(:new)
       end
     end
+    
+    describe "GET show" do
+      before :each do
+        User.stub(:show).and_return(mock_user)
+      end
 
     describe "GET edit" do
       before :each do
-        User.stub(:edit).and_return(mock_user)
+        @user = User.make
+        get :edit
       end
 
       it "assigns user as @user" do
@@ -34,7 +40,6 @@ describe UsersController do
         end
 
       it "renders the 'edit' template" do
-        get :edit
         response.should render_template(:edit)
       end
     end
@@ -42,17 +47,23 @@ describe UsersController do
     describe "posting to #create" do
       describe "with valid parameters" do
         it "should redirect to the root" do
-          post :create, { :user => { :id => "1", :login => "examplename", :email => "example@gmail.com" } }
+          post :create, { :user => { :id => "1", :username => "examplename", :email => "example@gmail.com", :password => "password", :password_confirmation => "password" } }
           response.should redirect_to(root_url)
         end
+      end
+
+      describe "with invalid parameters" do
+        before :each do
+          post :create, { :user => { :username => nil, :email => nil, :password => nil, :password_confirmation => nil } }
+        end
+
+        it { response.should render_template("users/new") }
       end
     end
 
     describe "posting to #update" do
       describe "with valid parameters" do
-        @valid_parameters = { 'login' => 'jsmith', 'email' => 'john.smith@example.com', 'password' => ' password' }
-        #User.stub(:update).with(@valid_parameters).and_return(mock_user)
-        #mock_user.stub(:save).and_return(true)
+        @valid_parameters = { 'username' => 'jsmith', 'email' => 'john.smith@example.com', 'password' => ' password' }
       end
 
       it "updates user as @user" do
@@ -63,10 +74,11 @@ describe UsersController do
 
       describe "with invalid parameters" do
         before :each do
-          post :update, { :id => @user.id, :user => { :login => nil, :email => nil } }
+          post :update, { :id => @user.id, :user => { :username => nil, :email => nil } }
         end
 
-        it { response.should render_template("users/new") }
+        it { response.should render_template("users/edit") }
       end
     end
+  end
 end
