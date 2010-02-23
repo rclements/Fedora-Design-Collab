@@ -9,10 +9,10 @@ describe RefurlHelper do
       end
     end
     
-   # describe "unsuccessfully" do
-   #   it "should redirect to the root" do
-   #     response.should redirect_to("/")
-   #   end
-   # end
+#    describe "unsuccessfully" do
+#      it "should redirect to the root" do
+#        response.should redirect_to("/")
+#      end
+#    end
   end
 end

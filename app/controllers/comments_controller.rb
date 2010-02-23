@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
   end
 
   public
+    nil
   def new
   end
 
@@ -32,6 +33,5 @@ class CommentsController < ApplicationController
         return $1.classify.constantize.find(value)
       end
     end
-    nil
   end
 end

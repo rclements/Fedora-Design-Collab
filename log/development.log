@@ -11482,3 +11482,227 @@ Migrating to CreateComments (20100218193138)
   [4;36;1mSQL (49.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100217221315')[0m
   [4;35;1mSQL (41.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100217170640')[0m
   [4;36;1mSQL (42.1ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100217160818')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-23 16:22:35) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (17.4ms)
+Completed in 65ms (View: 41, DB: 1) | 200 OK [http://localhost/users/current/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-23 16:22:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-02-23 16:22:37) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 31ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-23 16:22:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-02-23 16:22:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"projects"}
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM `projects` [0m
+  [4;36;1mProject Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+Rendering template within layouts/application
+Rendering projects/new
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Completed in 47ms (View: 34, DB: 2) | 200 OK [http://localhost/projects/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-23 16:22:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2010-02-23 16:22:41) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"BiZttiYW5QZkMX/3oMSJd2dwaKDG42sRwoRabY37asI=", "project"=>{"title"=>"nbfm,f", "description"=>"fgh,mfghk,fgh,"}, "controller"=>"projects"}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM `projects` [0m
+  [4;36;1mProject Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO `projects` (`slug`, `created_at`, `title`, `updated_at`, `creator_id`, `description`) VALUES(NULL, '2010-02-23 22:22:41', 'nbfm,f', '2010-02-23 22:22:41', NULL, 'fgh,mfghk,fgh,')[0m
+  [4;35;1mSQL (40.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/projects/4
+Completed in 60ms (DB: 43) | 302 Found [http://localhost/projects]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-02-23 16:22:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"projects"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM `projects` [0m
+  [4;36;1mProject Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering projects/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.project_id = 4) [0m
+Completed in 95ms (View: 18, DB: 3) | 200 OK [http://localhost/projects/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-23 16:22:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProposalsController#new (for 127.0.0.1 at 2010-02-23 16:22:43) [GET]
+  Parameters: {"project_id"=>"4", "action"=>"new", "controller"=>"proposals"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mProposal Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `proposals`[0m
+Rendering template within layouts/application
+Rendering proposals/new
+Completed in 42ms (View: 10, DB: 1) | 200 OK [http://localhost/proposals/new?project_id=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-23 16:22:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProposalsController#create (for 127.0.0.1 at 2010-02-23 16:22:44) [POST]
+  Parameters: {"commit"=>"Post", "project_id"=>"4", "action"=>"create", "authenticity_token"=>"BiZttiYW5QZkMX/3oMSJd2dwaKDG42sRwoRabY37asI=", "controller"=>"proposals", "proposal"=>{"content"=>"dbmdgm"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mProposal Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `proposals`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mProposal Create (0.2ms)[0m   [0;1mINSERT INTO `proposals` (`product_id`, `project_id`, `content`, `version_number`) VALUES(NULL, 4, 'dbmdgm', NULL)[0m
+  [4;35;1mSQL (69.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mProject Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (0.0ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 4) [0m
+Redirected to http://localhost:3000/projects/4
+Completed in 161ms (DB: 73) | 302 Found [http://localhost/proposals]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-02-23 16:22:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"projects"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM `projects` [0m
+  [4;36;1mProject Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (0.0ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering projects/show
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.project_id = 4) [0m
+  [4;35;1mProposal Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `proposals`[0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.commentable_id = 34 AND `comments`.commentable_type = 'Proposal') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 4) [0m
+  [4;36;1mComment Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendered comments/_comment_form (6.6ms)
+Rendered proposals/_proposal (21.6ms)
+Completed in 69ms (View: 35, DB: 5) | 200 OK [http://localhost/projects/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-23 16:22:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-02-23 16:22:48) [POST]
+  Parameters: {"comment"=>{"comment"=>"yrukrk"}, "commit"=>"Post Comment", "commentable_type"=>"Proposal", "action"=>"create", "authenticity_token"=>"BiZttiYW5QZkMX/3oMSJd2dwaKDG42sRwoRabY37asI=", "controller"=>"comments", "proposal_id"=>"34", "refurl"=>"/projects/4"}
+  [4;35;1mComment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mProposal Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `proposals`[0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 34) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO `comments` (`comment`, `created_at`, `commentable_type`, `commentable_id`, `updated_at`, `creator_id`) VALUES('yrukrk', '2010-02-23 22:22:48', 'Proposal', 34, '2010-02-23 22:22:48', NULL)[0m
+  [4;36;1mSQL (52.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/projects/4
+Completed in 74ms (DB: 56) | 302 Found [http://localhost/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-02-23 16:22:48) [GET]
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"projects"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mProject Load (0.4ms)[0m   [0;1mSELECT * FROM `projects` [0m
+  [4;35;1mProject Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering projects/show
+  [4;35;1mProposal Load (0.1ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.project_id = 4) [0m
+  [4;36;1mProposal Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `proposals`[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.commentable_id = 34 AND `comments`.commentable_type = 'Proposal') [0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendered comments/_comment (1.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 4) [0m
+Rendered comments/_comment_form (1.8ms)
+Rendered proposals/_proposal (17.5ms)
+Completed in 69ms (View: 32, DB: 8) | 200 OK [http://localhost/projects/4]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-23 16:22:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#edit (for 127.0.0.1 at 2010-02-23 16:22:54) [GET]
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"projects"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` [0m
+  [4;35;1mProject Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+Completed in 44ms (View: 13, DB: 2) | 200 OK [http://localhost/projects/4/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-23 16:22:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/base.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
