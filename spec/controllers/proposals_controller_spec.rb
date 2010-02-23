@@ -1,8 +1,25 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe ProposalsController do
+  describe "Without being logged in" do
+    describe "hitting #new" do
+      before(:each) do
+        get :new
+      end
 
-  describe "Authenticated examples" do
+      it { response.should redirect_to(new_user_session_path) }
+    end
+
+    describe "hitting #create" do
+      before(:each) do
+        post :create
+      end
+
+      it { response.should redirect_to(new_user_session_path) }
+    end
+  end
+
+  describe "A logged-in user" do
     before(:each) do
       activate_authlogic
       
@@ -10,6 +27,14 @@ describe ProposalsController do
       @password = "bobby"
       @user = User.make(:username => @username, :password => @password, :password_confirmation => @password)
       create_user_session(@user)
+    end
+
+    describe "hitting #new without a project_id" do
+      before :each do
+        get :new
+      end
+
+      it { response.should redirect_to("/") }
     end
 
     describe "hitting #new" do

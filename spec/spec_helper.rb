@@ -8,7 +8,7 @@ require 'remarkable_rails'
 require "authlogic/test_case"
 require "machinist"
 require "blueprint"
-
+require "faker"
 # Uncomment the next line to use webrat's matchers
 #require 'webrat/integrations/rspec-rails'
 
@@ -23,6 +23,8 @@ Spec::Runner.configure do |config|
   config.use_transactional_fixtures = true
   config.use_instantiated_fixtures  = false
   config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
+  config.before(:all)    { Sham.reset(:before_all)  }
+  config.before(:each)   { Sham.reset(:before_each) }
   # == Fixtures
   #
   # You can declare fixtures for each example_group like this:

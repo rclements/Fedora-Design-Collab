@@ -1,4 +1,5 @@
 class ProposalsController < ApplicationController
+  before_filter :require_user, :only => [:new, :create]
   before_filter :ensure_project_id, :only => [:new, :create]
   before_filter :load_proposal, :only => [:edit, :update, :destroy]
   before_filter :load_new_proposal, :only => [:new, :create]
@@ -7,7 +8,7 @@ class ProposalsController < ApplicationController
   def ensure_project_id
     unless params[:project_id]
       flash[:error] = "You shouldn't be here without a project id."
-      redirect_to "/" and return
+      redirect_back_or_default("/") and return
     end
   end
 

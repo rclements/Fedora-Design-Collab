@@ -1,4 +1,11 @@
 require 'machinist/active_record'
+require 'sham'
+require 'faker'
+
+Sham.define do
+  username { Faker::Internet.user_name }
+  email { Faker::Internet.email }
+end
 
 Project.blueprint do
   title { "this is a project" }
@@ -17,11 +24,12 @@ Proposal.blueprint do
 end
 
 User.blueprint do
-  username { 'jimbob' }
+  username
   password { 'password' }
   password_confirmation { 'password' }
-  email { 'email@email.com' }
+  email
 end
+
 Comment.blueprint do
   comment { "blah blah blah" }
 end

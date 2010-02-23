@@ -30,15 +30,15 @@
             <td class="left_align"><a href="app-controllers-application_controller_rb.html">app/controllers/application_controller.rb</a></td>
             <td class='right_align'><tt>58</tt></td>
             <td class='right_align'><tt>47</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>67.24%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>89.66%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:67px"></div>
-            <div class="uncovered" style="width:33px"></div>
+            <div class="covered" style="width:90px"></div>
+            <div class="uncovered" style="width:10px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>59.57%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>87.23%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:60px"></div>
-            <div class="uncovered" style="width:40px"></div>
+            <div class="covered" style="width:87px"></div>
+            <div class="uncovered" style="width:13px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -242,43 +242,43 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line32">32</a>     unless current_user</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line33">33</a>       store_location</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line34">34</a>       flash[:notice] = &quot;You must be logged in to access this page&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line35">35</a>       redirect_to new_user_session_url</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line36">36</a>       return false</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line37">37</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line38">38</a>   end</pre></td>
           </tr>
         
@@ -350,13 +350,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line50">50</a>     session[:return_to] = request.request_uri</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line51">51</a>   end</pre></td>
           </tr>
         
@@ -374,25 +374,25 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line54">54</a>     redirect_to(session[:return_to] || default)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line55">55</a>     session[:return_to] = nil</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line56">56</a>   end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line57">57</a> end</pre></td>
           </tr>
         
@@ -405,7 +405,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 19 16:22:47 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Tue Feb 23 13:29:52 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>
