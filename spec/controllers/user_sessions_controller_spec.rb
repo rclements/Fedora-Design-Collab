@@ -24,18 +24,32 @@ describe UserSessionsController do
 
   describe "when logged in" do
     before(:each) do
-      @session = create_user_session
-      @user = @session.user
+      activate_authlogic
+      
+      @username = "bob"
+      @password = "bobby"
+      @user = User.make(:username => @username, :password => @password, :password_confirmation => @password)
+      create_user_session(@user)
     end
-  
-    it "should redirect to login_path after user posts to destroy current_user_session" do
-      get :delete
-      response.should redirect_to(login_path)
+
+    describe "when deleting the current session" do
+      before(:each) do
+        post :destroy
+      end
+
+      it "should redirect to login_path after user posts to destroy current_user_session" do
+        response.should redirect_to(root_path)
+      end
+    end
+
+    describe "when attempting to hit login again" do
+      it "should redirect to the account_url" do
+        post :create, :user_session => { :username => @user.username, :password => "password" } 
+        response.should redirect_to(account_url)
+      end
     end
   end
     
-
-
   describe "GET #new" do
      before(:each) do
        get :new

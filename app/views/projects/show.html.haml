@@ -1,13 +1,9 @@
-.project-container
-  .main-container
-    %h2= @project.to_s
-    %textarea.description-container{ :readonly => "readonly" }
-      = @project.description
-    = link_to "Edit", { :controller => "projects", :action => "edit" }
+= render :partial => "projects/details", :locals => { :project => @project }
+%br
     
-    %h3 Proposals
-    - @project.proposals.each do |proposal|
-      = render :partial => "proposals/proposal", :locals => { :proposal => proposal }
+  %h3 Proposals
+  - @project.proposals.each do |proposal|
+    = render :partial => "proposals/proposal", :locals => { :proposal => proposal }
+  %br
     %br
-      %br
-    = link_to 'Create New Proposal', new_proposal_path(:project_id => @project.id)
+  = link_to 'Create New Proposal', new_proposal_path(:project_id => @project.id)

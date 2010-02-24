@@ -1,6 +1,7 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe CommentsController do
+  integrate_views
 
   describe "Authenticated examples" do
     before(:each) do
@@ -28,17 +29,30 @@ describe CommentsController do
 
     describe "posting to #create" do
       describe "with valid parameters" do
-        before(:each) do
-          @project = Project.make
-          post :create, { :project_id => @project.id, :comment => { :comment => "blah blah blah" }, :refurl => "/"}
+        describe "and a refurl param" do
+          before(:each) do
+            @project = Project.make
+            post :create, { :project_id => @project.id, :comment => { :comment => "blah blah blah" }, :refurl => "/"}
+          end
+
+          it "should redirect to the refurl path" do
+            response.should redirect_to("/")
+          end
+
+          it "should create and assign a @comment" do
+            assert assigns(:comment)
+          end
         end
 
-        it "should redirect to the project path" do
-          response.should redirect_to("/")
-        end
+        describe "and no refurl param" do
+          before(:each) do
+            @project = Project.make
+            post :create, { :project_id => @project.id, :comment => { :comment => "blah blah blah" } }
+          end
 
-        it "should create and assign a @comment" do
-          assert assigns(:comment)
+          it "should redirect to the root path" do
+            response.should redirect_to(root_path)
+          end
         end
       end
 
@@ -51,6 +65,16 @@ describe CommentsController do
         it { response.should render_template("new") }
 
       end
+    end
+  end
+
+  describe "without being logged in" do
+    describe "getting #index" do
+      before(:each) do
+        get :index
+      end
+
+      it{ response.should redirect_to(login_url) }
     end
   end
 end

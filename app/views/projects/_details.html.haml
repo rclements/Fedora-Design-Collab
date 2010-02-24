@@ -1,0 +1,13 @@
+.project-container
+  .main-container
+    .details
+      %h2= @project.to_s
+      .creator
+      = show_gravatar_for(current_user)
+      .updated
+        = @project.updated_at
+      %textarea.description-container{ :readonly => "readonly" }
+        = @project.description
+      
+      = link_to "Edit", { :controller => "projects", :action => "edit" }
+      

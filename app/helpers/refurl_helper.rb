@@ -3,7 +3,7 @@ module RefurlHelper
     if params[:refurl]
       redirect_to params[:refurl]
     else
-      redirect_to "root_path"
+      redirect_to root_path
     end
   end
 end

@@ -61,5 +61,5 @@ def create_user_session(_user = nil)
   unless _user
     _user = User.make
   end
-  UserSession.create(:username => _user.username, :password => 'password')
+  UserSession.create(:username => _user.username, :password => 'password', :password_confirmation => 'password')
 end
