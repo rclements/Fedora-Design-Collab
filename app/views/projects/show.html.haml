@@ -7,3 +7,12 @@
   %br
     %br
   = link_to 'Create New Proposal', new_proposal_path(:project_id => @project.id)
+  
+  %h3 Inspirations
+  - @project.inspirations.each do |inspiration|
+    %h2= inspiration.to_s
+    = render :partial => "inspirations/inspiration", :locals => { :inspiration => inspiration }
+  %br
+    %br
+  = link_to 'Create New Inspiration', new_inspiration_path(:project_id => @project.id)
+    

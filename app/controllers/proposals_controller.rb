@@ -3,6 +3,7 @@ class ProposalsController < ApplicationController
   before_filter :ensure_project_id, :only => [:new, :create]
   before_filter :load_proposal, :only => [:edit, :update, :destroy]
   before_filter :load_new_proposal, :only => [:new, :create]
+  before_filter :load_proposal_images, :only => [:show, :new]
 
   protected
   def ensure_project_id
@@ -20,13 +21,26 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.new(params[:proposal])
     @proposal.project_id = params[:project_id]
   end
+    
+  def load_proposal_images
+    @proposal_images = @proposal.proposal_images
+  end
 
   public
+
+  def vote
+    @proposal = Proposal.find(params[:id])
+    @vote = Vote.new(:vote => params[:vote] == "for")
+    @proposal.votes << @vote
+  end
 
   def new
   end
 
   def create
+    if params[:proposal_image].present?
+      @proposal.proposal_images.build(:image_file => params[:proposal_image])
+    end
     if @proposal.save
       flash[:notice] = "Proposal created successfully."
       redirect_to @proposal.project

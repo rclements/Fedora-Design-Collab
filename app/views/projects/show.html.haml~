@@ -1,9 +1,17 @@
 = render :partial => "projects/details", :locals => { :project => @project }
 %br
     
-    %h3 Proposals
-    - @project.proposals.each do |proposal|
-      = render :partial => "proposals/proposal", :locals => { :proposal => proposal }
+  %h3 Proposals
+  - @project.proposals.each do |proposal|
+    = render :partial => "proposals/proposal", :locals => { :proposal => proposal }
+  %br
     %br
-      %br
-    = link_to 'Create New Proposal', new_proposal_path(:project_id => @project.id)
+  = link_to 'Create New Proposal', new_proposal_path(:project_id => @project.id)
+  
+  %h3 Inspirations
+  %h2= @inspiration.to_s
+  = render :partial => "inspirations/inspiration"
+  %br
+    %br
+  = link_to 'Create New Inspiration', new_inspiration_path(:project_id => @project.id)
+    

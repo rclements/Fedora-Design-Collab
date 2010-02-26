@@ -1,13 +1,16 @@
-%h2 The Start of a New Project
+%h2 New Inspiration
 
 .form-container
-  - form_for :project, @project, :url => projects_path, :html => {:multipart => true} do |form|
+  - form_for :inspiration, @inspiration, :url => inspirations_url, :html => {:multipart => true} do |f|
     .main-container
       %label{ :for => 'title'}
         Title
-        = form.text_field :title
+        = f.text_field :title
         %label{ :for => 'description'}
           Description
-        = form.text_area :description, "class" => 'project-box'
-        .submit-container
-          = submit_tag 'Submit'
+        = f.text_area :description, "class" => 'inspiration-box'
+        = hidden_field_tag "project_id", params[:project_id]
+        %label{ :for => 'inspiration_image'}
+          Upload an Image
+        = file_field_tag "inspiration_image"
+        = f.submit 'Submit'

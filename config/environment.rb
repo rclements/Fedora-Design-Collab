@@ -19,6 +19,7 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   config.gem "authlogic"
+  config.gem "factory_girl", :source => "http://gemcutter.org"
   config.gem "giraffesoft-resource_controller", :lib => "resource_controller", :source => "git://github.com/giraffesoft/resource_controller.git"
   config.gem "will_paginate"
   # config.gem "aws-s3", :lib => "aws/s3"
@@ -26,6 +27,8 @@ Rails::Initializer.run do |config|
   config.gem "machinist"
   config.gem "avatar"
   config.gem "gravtastic"
+  config.gem "peteonrails-vote_fu", :lib => 'vote_fu', :source => 'http://gems.github.com'
+
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

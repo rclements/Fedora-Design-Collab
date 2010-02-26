@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100224215939) do
+ActiveRecord::Schema.define(:version => 20100225221332) do
 
   create_table "comments", :force => true do |t|
     t.integer  "creator_id"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(:version => 20100224215939) do
     t.datetime "updated_at"
   end
 
+  create_table "inspiration_images", :force => true do |t|
+    t.string   "image_file_file_name"
+    t.string   "image_file_content_type"
+    t.integer  "image_file_file_size"
+    t.datetime "image_file_updated_at"
+    t.integer  "inspiration_id"
+  end
+
   create_table "inspirations", :force => true do |t|
     t.string   "title"
     t.string   "description"
@@ -28,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20100224215939) do
     t.string   "image_file_content_type"
     t.integer  "image_file_file_size"
     t.datetime "image_file_updated_at"
+    t.integer  "project_id"
   end
 
   create_table "projects", :force => true do |t|
@@ -37,6 +46,14 @@ ActiveRecord::Schema.define(:version => 20100224215939) do
     t.integer  "creator_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "proposal_images", :force => true do |t|
+    t.string   "image_file_file_name"
+    t.string   "image_file_content_type"
+    t.integer  "image_file_file_size"
+    t.datetime "image_file_updated_at"
+    t.integer  "proposal_id"
   end
 
   create_table "proposals", :force => true do |t|
@@ -58,5 +75,15 @@ ActiveRecord::Schema.define(:version => 20100224215939) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "votes", :force => true do |t|
+    t.boolean  "vote",                        :default => false
+    t.datetime "created_at",                                     :null => false
+    t.string   "voteable_type", :limit => 15, :default => "",    :null => false
+    t.integer  "voteable_id",                 :default => 0,     :null => false
+    t.integer  "user_id",                     :default => 0,     :null => false
+  end
+
+  add_index "votes", ["user_id"], :name => "fk_votes_user"
 
 end

@@ -1,0 +1,1 @@
+page.replace("votes#{@post.id}", :partial=>"vote", :locals=>{:voteable=>@post})
