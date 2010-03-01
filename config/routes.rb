@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :comments
   map.resources :users
   map.resources :votes
+  map.resources :uploads
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

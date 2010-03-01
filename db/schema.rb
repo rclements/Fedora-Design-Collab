@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100301144445) do
+ActiveRecord::Schema.define(:version => 20100301193641) do
 
   create_table "comments", :force => true do |t|
     t.integer  "creator_id"
@@ -29,14 +29,10 @@ ActiveRecord::Schema.define(:version => 20100301144445) do
   end
 
   create_table "inspirations", :force => true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.string   "url"
-    t.string   "image_file_file_name"
-    t.string   "image_file_content_type"
-    t.integer  "image_file_file_size"
-    t.datetime "image_file_updated_at"
-    t.integer  "project_id"
+    t.string  "title"
+    t.string  "description"
+    t.string  "url"
+    t.integer "project_id"
   end
 
   create_table "projects", :force => true do |t|
@@ -64,6 +60,18 @@ ActiveRecord::Schema.define(:version => 20100301144445) do
     t.string  "image_file_file_name"
     t.string  "image_file_content_type"
     t.integer "image_file_file_size"
+  end
+
+  create_table "uploads", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "content_type"
+    t.string   "filename"
+    t.string   "thumbnail"
+    t.integer  "size"
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
