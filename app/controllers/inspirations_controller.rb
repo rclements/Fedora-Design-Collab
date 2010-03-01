@@ -14,10 +14,6 @@ class InspirationsController < ApplicationController
     end
   end
 
-#  def load_inspirations
-#    @inspirations = Inspirations.all
-#  end
-
   def load_inspiration
     @inspiration = Inspiration.find(params[:id])
   end
