@@ -1,4 +1,4 @@
-= render :partial => "votes/voteable", :locals => { :voteable => proposal}
+= render :partial => "votes/voteable", :locals => { :voteable => proposal, :refurl => project_path(proposal.project) }
 .proposal-container
   .main-container
     - proposal.proposal_images.each do |image|

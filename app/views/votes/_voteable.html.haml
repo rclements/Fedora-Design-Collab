@@ -1,10 +1,10 @@
 /= unless quote.user == current_user ||
 /!logged_in? ||
 /current_user.voted_on?(@voteable)
-
-= link_to_remote "Up", :url => user_voteable_votes_path(voteable, voteable, :vote => :true, :format => :rjs), :method => :post
+- opts = { :voteable_type => voteable.class.to_s, :voteable_id => voteable.id, :refurl => refurl }
+= link_to "Up", votes_path(opts.merge(:vote => :true)), :method => :post
 /
-= link_to_remote "Down", :url => user_voteable_votes_path(voteable, voteable, :vote => :false, :format => :rjs), :method => :post
+= link_to "Down", votes_path(opts.merge(:vote => :false)), :method => :post
 
 Votes: 
-=voteable.votes_for - voteable.votes_against
+= voteable.votes_for - voteable.votes_against
