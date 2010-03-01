@@ -1,2 +1,7 @@
 .comment
-  = simple_format comment.comment
+  .creator
+    = show_gravatar_for(comment.creator)
+  .time
+    = comment.created_at.to_s(:db)
+  .comment
+    = simple_format comment.comment

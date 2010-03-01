@@ -2,8 +2,10 @@
   .main-container
     .details
       %h2= @project.to_s
+      - if @project.highest_voted_proposal
+        = image_tag @project.highest_voted_proposal.proposal_images.first.image_file.url
       .creator
-      = show_gravatar_for(@project_creator_username)
+        = show_gravatar_for(@project.creator)
       Lead Designer:
       .updated
         = @project.updated_at
@@ -11,4 +13,3 @@
         = @project.description
       
       = link_to "Edit", { :controller => "projects", :action => "edit" }
-      

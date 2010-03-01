@@ -16,6 +16,7 @@ class CommentsController < ApplicationController
   def create
     @commentable = find_commentable
     @comment = @commentable.comments.build(params[:comment])
+    @comment.creator = current_user
     if @comment.save
       flash[:notice] = "Comment created successfully."
       redirect_to_ref_url

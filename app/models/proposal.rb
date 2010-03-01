@@ -1,5 +1,6 @@
 class Proposal < ActiveRecord::Base
   acts_as_voteable
+  extend VoteFuHighestExtension
   belongs_to :project
   has_many :proposal_images
   has_many :file_attachments
