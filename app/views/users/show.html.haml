@@ -1,23 +1,19 @@
 %b Login:
 = @user.username
- 
-/%b Login count:
-/= @user.username_count
- 
-/%b Last request at:
-/= @user.last_request_at
- 
-/%b Last login at:
-/= @user.last_login_at
- 
-/%b Current login at:
-/= @user.current_login_at
- 
-/%b Last login ip:
-/= @user.last_login_ip
- 
-/%b Current login ip:
-/= @user.current_login_ip
- 
- 
-= link_to 'Edit', edit_account_path
+%br
+%br
+%b Projects Submitted:
+%ul.projects
+  - @projects.each do |project|
+    = link_to project.to_s, project_path(project.id)
+%br
+%br
+%b Proposals Submitted:
+%br
+- @proposals.each do |proposal|
+  = render :partial => "proposals/proposalshow", :locals => { :proposal => proposal, :include_comments => false }
+%br
+%br
+%b Comments Submitted:
+- @comments.each do |comment|
+  = render :partial => "comments/comment", :locals => { :comment => comment }

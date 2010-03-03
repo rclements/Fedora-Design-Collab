@@ -1,6 +1,8 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe ProposalsController do
+  integrate_views
+  
   describe "Without being logged in" do
     describe "hitting #new" do
       before(:each) do

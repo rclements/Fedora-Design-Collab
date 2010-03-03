@@ -2,4 +2,8 @@
 
 %ul.project-lister
   - @projects.each do |project|
-    %li.project= link_to(project.to_s, project_path(project))
+    %li.project
+      .link
+        = link_to(project.to_s, project_path(project))
+      .image
+        = image_tag project.project_image.url

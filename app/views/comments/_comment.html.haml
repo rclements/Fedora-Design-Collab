@@ -1,6 +1,8 @@
 .comment
   .creator
     = show_gravatar_for(comment.creator)
+    = link_to comment.creator.to_s, user_path(comment.creator.id)
+
   .time
     = comment.created_at.to_s(:db)
   .comment

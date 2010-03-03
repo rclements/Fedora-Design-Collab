@@ -2,12 +2,12 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  include RefurlHelper
   before_filter :authenticate, :except => [:login, :logout, :new, :create]
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user, :redirect_to_ref_url
-  include RefurlHelper
 
   private
   def authenticate

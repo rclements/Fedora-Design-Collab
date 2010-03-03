@@ -1,7 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe InspirationsController do
-  integrate_views
 
   describe "Authenticated examples" do
     before(:each) do
@@ -40,7 +39,7 @@ describe InspirationsController do
       describe "with valid parameters" do
         before :each do
           @project = Project.make
-          post :create, { :project_id => @project.id, :inspiration => { :description => "asdf" } }
+          post :create, { :project_id => @project.id, :inspiration => { :title => "blah", :description => "asdf" } }
         end
 
         it "should redirect to the inspiration path" do
@@ -54,6 +53,61 @@ describe InspirationsController do
           post :create, { :project_id => @project.id, :inspiration => { :description => nil } }
         end
         it { response.should render_template("inspirations/new") }
+      end
+    end
+
+    describe "PUTing to #update" do
+      before(:each) do
+        @inspiration = Inspiration.make
+      end
+
+      describe "successfully" do
+        before(:each) do
+          put :update, { :id => @inspiration.id, :inspiration => { :title => "blah", :description => "stuff said about stuff" } }
+        end
+        
+        it { response.should redirect_to(project_path(@inspiration.project))}
+      end
+
+      describe "unsuccessfully" do
+        before(:each) do
+          put :update, { :id => @inspiration.id, :inspiration => { :title => nil, :description => nil } }
+        end
+
+        it { response.should render_template("edit") }
+      end
+    end
+
+    describe "DELETEing to #destroy" do
+      before(:each) do
+        @inspiration = Inspiration.make
+        @project = @inspiration.project
+      end
+
+      describe "successfully" do
+        before(:each) do
+          class Inspiration < ActiveRecord::Base
+            def destroy
+              super
+            end
+          end
+          delete :destroy, { :id => @inspiration.id }
+        end
+
+        it { response.should redirect_to(project_path(@project)) }
+      end
+
+      describe "unsuccessfully" do
+        before(:each) do
+          class Inspiration < ActiveRecord::Base
+            def destroy
+              false
+            end
+          end
+          delete :destroy, { :id => @inspiration.id }
+        end
+
+        it { response.should redirect_to("/") }
       end
     end
   end

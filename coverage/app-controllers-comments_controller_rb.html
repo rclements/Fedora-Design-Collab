@@ -28,7 +28,7 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-controllers-comments_controller_rb.html">app/controllers/comments_controller.rb</a></td>
-            <td class='right_align'><tt>37</tt></td>
+            <td class='right_align'><tt>35</tt></td>
             <td class='right_align'><tt>31</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
           <div class="percent_graph">
@@ -86,200 +86,188 @@
         
           
           
-          <tr class="inferred">
-            <td><pre><a name="line6">6</a> </pre></td>
+          <tr class="marked">
+            <td><pre><a name="line6">6</a>   def load_new_comment</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line7">7</a>   def load_new_comment</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line8">8</a>     @comment = Comment.new(params[:comment])</pre></td>
+            <td><pre><a name="line7">7</a>     @comment = Comment.new(params[:comment])</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line9">9</a>   end</pre></td>
+            <td><pre><a name="line8">8</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line10">10</a> </pre></td>
+            <td><pre><a name="line9">9</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line11">11</a>   public</pre></td>
+            <td><pre><a name="line10">10</a>   public</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line12">12</a>     nil</pre></td>
+            <td><pre><a name="line11">11</a>   def new</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line13">13</a>   def new</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line14">14</a>   end</pre></td>
+            <td><pre><a name="line12">12</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line15">15</a> </pre></td>
+            <td><pre><a name="line13">13</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line16">16</a>   def create</pre></td>
+            <td><pre><a name="line14">14</a>   def create</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line17">17</a>     @commentable = find_commentable</pre></td>
+            <td><pre><a name="line15">15</a>     @commentable = find_commentable</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line18">18</a>     @comment = @commentable.comments.build(params[:comment])</pre></td>
+            <td><pre><a name="line16">16</a>     @comment = @commentable.comments.build(params[:comment])</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line19">19</a>     if @comment.save</pre></td>
+            <td><pre><a name="line17">17</a>     @comment.creator = current_user</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line20">20</a>       flash[:notice] = &quot;Comment created successfully.&quot;</pre></td>
+            <td><pre><a name="line18">18</a>     if @comment.save</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line21">21</a>       redirect_to_ref_url</pre></td>
+            <td><pre><a name="line19">19</a>       flash[:notice] = &quot;Comment created successfully.&quot;</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line20">20</a>       redirect_to_ref_url</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line22">22</a>     else</pre></td>
+            <td><pre><a name="line21">21</a>     else</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line23">23</a>       flash.now[:error] = &quot;There was a problem creating the comment.&quot;</pre></td>
+            <td><pre><a name="line22">22</a>       flash.now[:error] = &quot;There was a problem creating the comment.&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line24">24</a>       render :action =&gt; :new</pre></td>
+            <td><pre><a name="line23">23</a>       render :action =&gt; :new</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line25">25</a>     end</pre></td>
+            <td><pre><a name="line24">24</a>     end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line26">26</a>   end</pre></td>
+            <td><pre><a name="line25">25</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line27">27</a> </pre></td>
+            <td><pre><a name="line26">26</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line28">28</a>   private</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line29">29</a>   </pre></td>
+            <td><pre><a name="line27">27</a>   private</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line30">30</a>   def find_commentable</pre></td>
+            <td><pre><a name="line28">28</a>   def find_commentable</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line31">31</a>     params.each do |name, value|</pre></td>
+            <td><pre><a name="line29">29</a>     params.each do |name, value|</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line32">32</a>       if name =~ /(.+)_id$/</pre></td>
+            <td><pre><a name="line30">30</a>       if name =~ /(.+)_id$/</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line33">33</a>         return $1.classify.constantize.find(value)</pre></td>
+            <td><pre><a name="line31">31</a>         return $1.classify.constantize.find(value)</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line34">34</a>       end</pre></td>
+            <td><pre><a name="line32">32</a>       end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line35">35</a>     end</pre></td>
+            <td><pre><a name="line33">33</a>     end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line36">36</a>   end</pre></td>
+            <td><pre><a name="line34">34</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line37">37</a> end</pre></td>
+            <td><pre><a name="line35">35</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Thu Feb 25 14:53:28 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Wed Mar 03 15:13:43 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>

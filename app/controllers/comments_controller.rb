@@ -3,13 +3,11 @@ class CommentsController < ApplicationController
   before_filter :load_new_comment, :only => [:new, :create]
 
   protected
-
   def load_new_comment
     @comment = Comment.new(params[:comment])
   end
 
   public
-    nil
   def new
   end
 
@@ -27,7 +25,6 @@ class CommentsController < ApplicationController
   end
 
   private
-  
   def find_commentable
     params.each do |name, value|
       if name =~ /(.+)_id$/

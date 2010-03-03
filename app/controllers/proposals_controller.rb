@@ -4,6 +4,7 @@ class ProposalsController < ApplicationController
   before_filter :load_proposal, :only => [:edit, :update, :destroy]
   before_filter :load_new_proposal, :only => [:new, :create]
   before_filter :load_proposal_images, :only => [:show, :new]
+  before_filter :load_file_attachments, :only => [:show, :new, :create]
 
   protected
   def ensure_project_id
@@ -20,20 +21,18 @@ class ProposalsController < ApplicationController
   def load_new_proposal
     @proposal = Proposal.new(params[:proposal])
     @proposal.project_id = params[:project_id]
+    @proposal.creator = current_user
   end
     
   def load_proposal_images
     @proposal_images = @proposal.proposal_images
   end
-
-  public
-
-  def vote
-    @proposal = Proposal.find(params[:id])
-    @vote = Vote.new(:vote => params[:vote] == "for")
-    @proposal.votes << @vote
+  
+  def load_file_attachments
+    @file_attachments = @proposal.file_attachments
   end
 
+  public
   def new
   end
 

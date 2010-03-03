@@ -1,3 +1,5 @@
+- include_comments = true unless local_assigns.has_key?(:include_comments)
+
 = render :partial => "votes/voteable", :locals => { :voteable => proposal, :refurl => project_path(proposal.project) }
 .proposal-container
   .main-container
@@ -7,11 +9,16 @@
       = proposal.content
     = link_to "Edit", edit_proposal_path(proposal)
     = link_to "Delete", proposal_path(proposal), :confirm => "Are you sure?", :method => :delete 
+    %br
+    Sources
+    -proposal.file_attachments.each do |file_attachment|
+      = link_to file_attachment_path(file_attachment.id)
+    = link_to "Add File Attachment", new_file_attachment_path( :proposal_id => proposal.id )
     %br   
-
-    %h3 Comments
-    #comments
-      - proposal.comments.each do |comment|
-        = render :partial => "comments/comment", :locals => { :comment => comment }
-      = render :partial => "comments/comment_form", :locals => { :commentable_id => proposal.id, :commentable_field => "proposal_id", :commentable_type => "Proposal", :refurl => project_path(proposal.project) }
+    - if include_comments
+      %h3 Comments
+      #comments
+        - proposal.comments.each do |comment|
+          = render :partial => "comments/comment", :locals => { :comment => comment }
+        = render :partial => "comments/comment_form", :locals => { :commentable_id => proposal.id, :commentable_field => "proposal_id", :commentable_type => "Proposal", :refurl => project_path(proposal.project) }
 .clear

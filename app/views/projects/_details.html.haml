@@ -3,10 +3,11 @@
     .details
       %h2= @project.to_s
       - if @project.highest_voted_proposal
-        = image_tag @project.highest_voted_proposal.proposal_images.first.image_file.url
+        = image_tag @project.project_image.url
       .creator
         = show_gravatar_for(@project.creator)
       Lead Designer:
+      = link_to @project.creator.to_s, user_path(@project.creator.id)
       .updated
         = @project.updated_at
       %textarea.description-container{ :readonly => "readonly" }

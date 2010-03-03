@@ -28,7 +28,7 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-controllers-application_controller_rb.html">app/controllers/application_controller.rb</a></td>
-            <td class='right_align'><tt>58</tt></td>
+            <td class='right_align'><tt>57</tt></td>
             <td class='right_align'><tt>47</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
           <div class="percent_graph">
@@ -81,37 +81,37 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line5">5</a>   before_filter :authenticate, :except =&gt; [:login, :logout, :new, :create]</pre></td>
+            <td><pre><a name="line5">5</a>   include RefurlHelper</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line6">6</a>   helper :all # include all helpers, all the time</pre></td>
+            <td><pre><a name="line6">6</a>   before_filter :authenticate, :except =&gt; [:login, :logout, :new, :create]</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line7">7</a>   protect_from_forgery # See ActionController::RequestForgeryProtection for details</pre></td>
+            <td><pre><a name="line7">7</a>   helper :all # include all helpers, all the time</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line8">8</a>   filter_parameter_logging :password, :password_confirmation</pre></td>
+            <td><pre><a name="line8">8</a>   protect_from_forgery # See ActionController::RequestForgeryProtection for details</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line9">9</a>   helper_method :current_user_session, :current_user, :redirect_to_ref_url</pre></td>
+            <td><pre><a name="line9">9</a>   filter_parameter_logging :password, :password_confirmation</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line10">10</a>   include RefurlHelper</pre></td>
+            <td><pre><a name="line10">10</a>   helper_method :current_user_session, :current_user, :redirect_to_ref_url</pre></td>
           </tr>
         
           
@@ -396,16 +396,10 @@
             <td><pre><a name="line57">57</a> end</pre></td>
           </tr>
         
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line58">58</a> </pre></td>
-          </tr>
-        
       </tbody>
     </table>
 
-    <p>Generated on Thu Feb 25 14:53:28 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Wed Mar 03 15:13:43 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>

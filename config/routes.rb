@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :votes
   map.resources :uploads
+  map.resources :file_attachments
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

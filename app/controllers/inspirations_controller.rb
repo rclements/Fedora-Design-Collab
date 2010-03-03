@@ -6,7 +6,6 @@ class InspirationsController < ApplicationController
   before_filter :load_inspiration_images, :only => [:show, :new]
 
   protected
-
   def ensure_project_id
     unless params[:project_id]
       flash[:error] = "You shouldn't be here without a project id."
@@ -28,7 +27,6 @@ class InspirationsController < ApplicationController
   end
 
   public
-
   def new
   end
 
@@ -71,7 +69,7 @@ class InspirationsController < ApplicationController
       redirect_to @project
     else
       flash.now[:error] = "There was a problem deleting the inspiration."
-      render :action => 'show'
+      redirect_to "/"
     end
   end
 end

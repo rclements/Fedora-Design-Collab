@@ -1,7 +1,14 @@
 class UsersController < ApplicationController
+  before_filter :load_user, :only => [:show]
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:destroy, :edit, :update]
 
+  protected
+  def load_user
+    @user = User.find params[:id]
+  end
+
+  public
   def new
     @user = User.new
   end
@@ -17,7 +24,9 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = @current_user
+    @projects  = @user.projects
+    @proposals = @user.proposals
+    @comments  = @user.comments
   end
  
   def edit
