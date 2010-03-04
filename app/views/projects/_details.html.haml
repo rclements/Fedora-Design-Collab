@@ -6,8 +6,8 @@
         = image_tag @project.project_image.url
       .creator
         = show_gravatar_for(@project.creator)
-      Lead Designer:
-      = link_to @project.creator.to_s, user_path(@project.id)
+        Lead Designer:
+        = link_to @project.creator.to_s, user_path(@project.creator.id)
       .updated
         = @project.updated_at
       %textarea.description-container{ :readonly => "readonly" }

@@ -25,6 +25,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    @project.creator = current_user
     if @project.save
       flash[:notice] = "Project created successfully."
       redirect_to @project

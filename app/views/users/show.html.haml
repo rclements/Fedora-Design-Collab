@@ -3,16 +3,18 @@
 %br
 %br
 %b Projects Submitted:
-%ul.projects
+%ul.project-lister
   - @projects.each do |project|
-    = link_to project.to_s, project_path(project.id)
+    %li.projects
+      .link
+        = link_to project.to_s, project_path(project.id)
 = will_paginate @projects
 %br
 %br
 %b Proposals Submitted:
-%br
 - @proposals.each do |proposal|
   = render :partial => "proposals/proposalshow", :locals => { :proposal => proposal, :include_comments => false }
+= will_paginate @proposals
 %br
 %br
 %b Comments Submitted:
