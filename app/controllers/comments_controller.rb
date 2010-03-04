@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_filter :load_comment, :only => [:edit, :update, :destroy]
+  before_filter :load_comment, :only => [:show, :edit, :update, :destroy]
   before_filter :load_new_comment, :only => [:new, :create]
 
   protected

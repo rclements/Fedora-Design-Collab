@@ -33,3 +33,8 @@ end
 Comment.blueprint do
   comment { "blah blah blah" }
 end
+
+ProposalImage.blueprint do
+  id { '1' }
+  image_file_file_name { "your mom" }
+end

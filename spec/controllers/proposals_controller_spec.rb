@@ -53,6 +53,14 @@ describe ProposalsController do
       end
     end
 
+    describe "posting to #create image" do
+      before :each do
+        @proposal = Proposal.make
+        @proposal_image = mock("proposal_image")
+        ProposalImage.stub(:new).and_return(@proposal_image)
+      end
+    end
+
     describe "posting to #create" do
       describe "with valid parameters" do
         before(:each) do

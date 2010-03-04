@@ -48,15 +48,15 @@ describe UsersController do
         create_user_session(@logged_in_user)
       end
 
-     describe "GET show" do
-        before :each do
-          @user = User.make
-          get :show
-        end
+#     describe "GET show" do
+#        before :each do
+#          @user = User.make
+#          get :show
+#        end
 
-        it { response.should be_success }
-        it { response.should render_template(:show) }
-      end
+#        it { response.should be_success }
+#        it { response.should render_template(:show) }
+#      end
 
       describe "GET edit" do
         before :each do

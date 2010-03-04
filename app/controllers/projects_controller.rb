@@ -6,6 +6,7 @@ class ProjectsController < ApplicationController
   protected
   def load_projects
     @projects = Project.all
+    @projects = @projects.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 10 
   end
 
   def load_project

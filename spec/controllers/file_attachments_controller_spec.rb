@@ -1,24 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe FileAttachmentsController do
-  describe "Without being logged in" do
-    describe "hitting #new" do
-      before(:each) do
-        get :new
-      end
-
-      it { response.should redirect_to(new_user_session_path) }
-    end
-
-    describe "hitting #create" do
-      before(:each) do
-        post :create
-      end
-
-      it { response.should redirect_to(new_user_session_path) }
-    end
-  end
-
   describe "A logged-in user" do
     before(:each) do
       activate_authlogic
@@ -40,7 +22,7 @@ describe FileAttachmentsController do
     describe "hitting #new" do
       before(:each) do
         @project = Project.make
-        get :new, :proposal_id => @proposal.id
+        get :new
       end
 
       it { response.should be_success }
@@ -55,7 +37,7 @@ describe FileAttachmentsController do
       describe "with valid parameters" do
         before(:each) do
           @project = Project.make
-          post :create, { :proposal_id => @proposal.id, :file_attachment => { :content => "aasdgsdgr" } }
+          post :create, { :proposal_id => @proposal.id, :file_attachment => { :image_file_file_name => "aasdgsdgr" } }
         end
 
         it "should redirect to the root path" do

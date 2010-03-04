@@ -6,4 +6,6 @@
       .link
         = link_to(project.to_s, project_path(project))
       .image
-        = image_tag project.project_image.url
+        /= link_to(image_tag(project.project_image.url), project_path(project))
+= will_paginate @projects
+= link_to "Start New Project", { :controller => "projects", :action => "new" }

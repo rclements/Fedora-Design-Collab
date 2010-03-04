@@ -7,7 +7,7 @@
       .creator
         = show_gravatar_for(@project.creator)
       Lead Designer:
-      = link_to @project.creator.to_s, user_path(@project.creator.id)
+      = link_to @project.creator.to_s, user_path(@project.id)
       .updated
         = @project.updated_at
       %textarea.description-container{ :readonly => "readonly" }

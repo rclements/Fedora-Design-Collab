@@ -36,6 +36,9 @@ class ProposalsController < ApplicationController
   def new
   end
 
+  def show
+  end
+
   def create
     if params[:proposal_image].present?
       @proposal.proposal_images.build(:image_file => params[:proposal_image])
