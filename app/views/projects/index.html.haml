@@ -1,11 +1,16 @@
 %h2 Project List
-
+.focus-cont.form-container.search-form
+  -form_for @search do |f|
+    = f.label :title_like, "Title"
+    = f. text_field :title_like
+    = f.submit "Submit"
 %ul.project-lister
   - @projects.each do |project|
     %li.project
       .link
         = link_to(project.to_s, project_path(project))
       .image
-        /= link_to(image_tag(project.project_image.url), project_path(project))
+        = link_to(image_tag(project.project_image.url), project_path(project.id)) if project.project_image
 = will_paginate @projects
+%br
 = link_to "Start New Project", { :controller => "projects", :action => "new" }

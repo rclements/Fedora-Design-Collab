@@ -8,16 +8,16 @@
     %li.projects
       .link
         = link_to project.to_s, project_path(project.id)
-= will_paginate @projects
+= will_paginate @projects, :param_name => 'projects_page'
 %br
 %br
 %b Proposals Submitted:
 - @proposals.each do |proposal|
   = render :partial => "proposals/proposalshow", :locals => { :proposal => proposal, :include_comments => false }
-= will_paginate @proposals
+= will_paginate @proposals, :param_name => 'proposals_page'
 %br
 %br
 %b Comments Submitted:
 - @comments.each do |comment|
   = render :partial => "comments/comment", :locals => { :comment => comment }
-= will_paginate @comments
+= will_paginate @comments, :param_name => 'comments_page'

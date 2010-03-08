@@ -9,5 +9,9 @@ class Proposal < ActiveRecord::Base
   has_many :comments, :as => :commentable
 
   validates_presence_of :content
+  validates_presence_of :title
 
+  def to_s
+    title
+  end
 end

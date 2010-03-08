@@ -4,7 +4,7 @@ class FileAttachmentsController < ApplicationController
 
   protected
   def load_new_file_attachment
-    @file_attachment = FileAttachment.new#(params[:file_attachment])
+    @file_attachment = FileAttachment.new(params[:file_attachment])
     @file_attachment.proposal_id = params[:proposal_id]
   end
 

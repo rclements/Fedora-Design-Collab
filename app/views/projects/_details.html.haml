@@ -2,7 +2,7 @@
   .main-container
     .details
       %h2= @project.to_s
-      - if @project.highest_voted_proposal
+      - if @project.project_image
         = image_tag @project.project_image.url
       .creator
         = show_gravatar_for(@project.creator)

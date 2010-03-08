@@ -28,12 +28,12 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-models-project_rb.html">app/models/project.rb</a></td>
-            <td class='right_align'><tt>20</tt></td>
+            <td class='right_align'><tt>21</tt></td>
             <td class='right_align'><tt>16</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>75.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>76.19%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:75px"></div>
-            <div class="uncovered" style="width:25px"></div>
+            <div class="covered" style="width:76px"></div>
+            <div class="uncovered" style="width:24px"></div>
           </div></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>68.75%</tt></div>
           <div class="percent_graph">
@@ -104,80 +104,86 @@
         
           
           
-          <tr class="marked">
-            <td><pre><a name="line9">9</a>   def to_s</pre></td>
+          <tr class="inferred">
+            <td><pre><a name="line9">9</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line10">10</a>     title</pre></td>
+            <td><pre><a name="line10">10</a>   def to_s</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line11">11</a>     title</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line11">11</a>   end</pre></td>
+            <td><pre><a name="line12">12</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line12">12</a> </pre></td>
+            <td><pre><a name="line13">13</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line13">13</a>   def highest_voted_proposal</pre></td>
+            <td><pre><a name="line14">14</a>   def highest_voted_proposal</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line14">14</a>     proposals.highest_tally(:limit =&gt; 1).first rescue nil</pre></td>
+            <td><pre><a name="line15">15</a>     proposals.highest_tally(:limit =&gt; 1).first rescue nil</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line15">15</a>   end</pre></td>
+            <td><pre><a name="line16">16</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line16">16</a> </pre></td>
+            <td><pre><a name="line17">17</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line17">17</a>   def project_image</pre></td>
+            <td><pre><a name="line18">18</a>   def project_image</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line18">18</a>     highest_voted_proposal.proposal_images.first.image_file rescue nil</pre></td>
+            <td><pre><a name="line19">19</a>     highest_voted_proposal.proposal_images.first.image_file rescue nil</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line19">19</a>   end</pre></td>
+            <td><pre><a name="line20">20</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line20">20</a> end</pre></td>
+            <td><pre><a name="line21">21</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Wed Mar 03 16:17:08 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Fri Mar 05 16:39:56 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>

@@ -1,7 +1,7 @@
 class ProposalsController < ApplicationController
   before_filter :require_user, :only => [:new, :create]
   before_filter :ensure_project_id, :only => [:new, :create]
-  before_filter :load_proposal, :only => [:edit, :update, :destroy]
+  before_filter :load_proposal, :only => [:show, :edit, :update, :destroy]
   before_filter :load_new_proposal, :only => [:new, :create]
   before_filter :load_proposal_images, :only => [:show, :new]
   before_filter :load_file_attachments, :only => [:show, :new, :create]
@@ -45,7 +45,7 @@ class ProposalsController < ApplicationController
     end
     if @proposal.save
       flash[:notice] = "Proposal created successfully."
-      redirect_to @proposal.project
+      redirect_to proposal_path(@proposal.project.id)
     else
       flash.now[:error] = "There was a problem creating the proposal."
       render :action => :new

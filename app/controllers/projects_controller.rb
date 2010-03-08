@@ -6,7 +6,6 @@ class ProjectsController < ApplicationController
   protected
   def load_projects
     @projects = Project.all
-    @projects = @projects.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 10 
   end
 
   def load_project
@@ -19,6 +18,9 @@ class ProjectsController < ApplicationController
 
   public
   def index
+    @search = Project.ascend_by_title.search(params[:search])
+    @projects_count = @search.count
+    @projects = @search.all.paginate(:page => params[:page], :per_page => 5)
   end
 
   def new

@@ -4,4 +4,15 @@
 = link_to "Start New Project", { :controller => "projects", :action => "new" }
 %br
   %br
-= link_to "Projects List", { :controller => "projects", :action => "index" }
+= link_to "All Projects List", { :controller => "projects", :action => "index" }
+%br
+%br
+%br
+%br
+%b My Projects
+%ul.project-lister
+  - @projects.each do |project|
+    %li.projects
+      .link
+        = link_to project.to_s, project_path(project.id)
+= will_paginate @projects, :param_name => 'projects_page'

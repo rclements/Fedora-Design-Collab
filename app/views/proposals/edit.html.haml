@@ -3,6 +3,9 @@
 .form-container
   - form_for :proposal, @proposal, :url => proposal_path(@proposal), :html => { :method => :put }  do |form|
     .main-container
+      %label{ :for => 'title'}
+        Title
+      = form.text_field :title
       %label{ :for => 'content'}
       Proposal
       = form.text_area :content, :class => 'proposal-box'

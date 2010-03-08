@@ -3,6 +3,8 @@
 .form-container
   - form_for :proposal, @proposal, :url => proposals_url, :html => {:multipart => true} do |f|
     .main-container
+      = f.label :title 
+      = f.text_field :title
       = f.error_messages
       = f.label :content
       = f.text_area :content

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100304215256) do
+ActiveRecord::Schema.define(:version => 20100305221650) do
 
   create_table "comments", :force => true do |t|
     t.integer  "creator_id"
@@ -65,11 +65,9 @@ ActiveRecord::Schema.define(:version => 20100304215256) do
     t.integer  "version_number"
     t.integer  "project_id"
     t.text     "content"
-    t.string   "image_file_file_name"
-    t.string   "image_file_content_type"
-    t.integer  "image_file_file_size"
     t.integer  "creator_id"
     t.datetime "created_at"
+    t.string   "title"
   end
 
   create_table "uploads", :force => true do |t|

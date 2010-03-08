@@ -21,6 +21,7 @@ Proposal.blueprint do
   project { Project.make }
   version_number { "1" }
   content { "stuff said" }
+  title { "woot" }
 end
 
 User.blueprint do

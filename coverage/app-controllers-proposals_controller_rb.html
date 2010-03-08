@@ -28,17 +28,17 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-controllers-proposals_controller_rb.html">app/controllers/proposals_controller.rb</a></td>
-            <td class='right_align'><tt>75</tt></td>
-            <td class='right_align'><tt>65</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>97.33%</tt></div>
+            <td class='right_align'><tt>79</tt></td>
+            <td class='right_align'><tt>68</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>94.94%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:97px"></div>
-            <div class="uncovered" style="width:3px"></div>
+            <div class="covered" style="width:95px"></div>
+            <div class="uncovered" style="width:5px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>96.92%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>94.12%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:97px"></div>
-            <div class="uncovered" style="width:3px"></div>
+            <div class="covered" style="width:94px"></div>
+            <div class="uncovered" style="width:6px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -75,7 +75,7 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line4">4</a>   before_filter :load_proposal, :only =&gt; [:edit, :update, :destroy]</pre></td>
+            <td><pre><a name="line4">4</a>   before_filter :load_proposal, :only =&gt; [:show, :edit, :update, :destroy]</pre></td>
           </tr>
         
           
@@ -285,229 +285,253 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line39">39</a>   def create</pre></td>
+            <td><pre><a name="line39">39</a>   def show</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line40">40</a>   end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line41">41</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line40">40</a>     if params[:proposal_image].present?</pre></td>
+            <td><pre><a name="line42">42</a>   def create</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line43">43</a>     if params[:proposal_image].present?</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line41">41</a>       @proposal.proposal_images.build(:image_file =&gt; params[:proposal_image])</pre></td>
+            <td><pre><a name="line44">44</a>       @proposal.proposal_images.build(:image_file =&gt; params[:proposal_image])</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line42">42</a>     end</pre></td>
+            <td><pre><a name="line45">45</a>     end</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line43">43</a>     if @proposal.save</pre></td>
+            <td><pre><a name="line46">46</a>     debugger</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line44">44</a>       flash[:notice] = &quot;Proposal created successfully.&quot;</pre></td>
+            <td><pre><a name="line47">47</a>     if @proposal.save</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
-            <td><pre><a name="line45">45</a>       redirect_to @proposal.project</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line48">48</a>       flash[:notice] = &quot;Proposal created successfully.&quot;</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line49">49</a>       redirect_to proposal_path(@proposal.project.id)</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line46">46</a>     else</pre></td>
+            <td><pre><a name="line50">50</a>     else</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line47">47</a>       flash.now[:error] = &quot;There was a problem creating the proposal.&quot;</pre></td>
+            <td><pre><a name="line51">51</a>       flash.now[:error] = &quot;There was a problem creating the proposal.&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line48">48</a>       render :action =&gt; :new</pre></td>
+            <td><pre><a name="line52">52</a>       render :action =&gt; :new</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line49">49</a>     end</pre></td>
+            <td><pre><a name="line53">53</a>     end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line50">50</a>   end</pre></td>
+            <td><pre><a name="line54">54</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line51">51</a> </pre></td>
+            <td><pre><a name="line55">55</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line52">52</a>   def edit</pre></td>
+            <td><pre><a name="line56">56</a>   def edit</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line53">53</a>   end</pre></td>
+            <td><pre><a name="line57">57</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line54">54</a> </pre></td>
+            <td><pre><a name="line58">58</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line55">55</a>   def update</pre></td>
+            <td><pre><a name="line59">59</a>   def update</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line56">56</a>     if @proposal.update_attributes(params[:proposal])</pre></td>
+            <td><pre><a name="line60">60</a>     if @proposal.update_attributes(params[:proposal])</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line57">57</a>       flash[:notice] = &quot;The proposal was successfully edited.&quot;</pre></td>
+            <td><pre><a name="line61">61</a>       flash[:notice] = &quot;The proposal was successfully edited.&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line58">58</a>       redirect_to @proposal.project</pre></td>
+            <td><pre><a name="line62">62</a>       redirect_to @proposal.project</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line59">59</a>     else</pre></td>
+            <td><pre><a name="line63">63</a>     else</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line60">60</a>       flash.now[:notice] = &quot;There was a problem updating the proposal.&quot;</pre></td>
+            <td><pre><a name="line64">64</a>       flash.now[:notice] = &quot;There was a problem updating the proposal.&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line61">61</a>       render :action =&gt; 'edit'</pre></td>
+            <td><pre><a name="line65">65</a>       render :action =&gt; 'edit'</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line62">62</a>     end</pre></td>
+            <td><pre><a name="line66">66</a>     end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line63">63</a>   end</pre></td>
+            <td><pre><a name="line67">67</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line64">64</a> </pre></td>
+            <td><pre><a name="line68">68</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line65">65</a>   def destroy</pre></td>
+            <td><pre><a name="line69">69</a>   def destroy</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line66">66</a>     @project = @proposal.project</pre></td>
+            <td><pre><a name="line70">70</a>     @project = @proposal.project</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line67">67</a>     if @proposal.destroy</pre></td>
+            <td><pre><a name="line71">71</a>     if @proposal.destroy</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line68">68</a>       flash[:notice] = &quot;The proposal was deleted.&quot;</pre></td>
+            <td><pre><a name="line72">72</a>       flash[:notice] = &quot;The proposal was deleted.&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line69">69</a>       redirect_to @project</pre></td>
+            <td><pre><a name="line73">73</a>       redirect_to @project</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line70">70</a>     else</pre></td>
+            <td><pre><a name="line74">74</a>     else</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line71">71</a>       flash[:error] = &quot;There was a problem deleting the proposal.&quot;</pre></td>
+            <td><pre><a name="line75">75</a>       flash[:error] = &quot;There was a problem deleting the proposal.&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line72">72</a>       redirect_to &quot;/&quot;</pre></td>
+            <td><pre><a name="line76">76</a>       redirect_to &quot;/&quot;</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line73">73</a>     end</pre></td>
+            <td><pre><a name="line77">77</a>     end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line74">74</a>   end</pre></td>
+            <td><pre><a name="line78">78</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line75">75</a> end</pre></td>
+            <td><pre><a name="line79">79</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Wed Mar 03 16:17:08 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Fri Mar 05 16:39:56 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>

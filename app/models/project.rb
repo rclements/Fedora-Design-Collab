@@ -6,6 +6,7 @@ class Project < ActiveRecord::Base
   has_many :inspirations
 
   validates_presence_of :title
+
   def to_s
     title
   end
