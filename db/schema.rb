@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100305221650) do
+ActiveRecord::Schema.define(:version => 20100309145543) do
 
   create_table "comments", :force => true do |t|
     t.integer  "creator_id"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20100305221650) do
     t.string  "title"
     t.string  "description"
     t.string  "url"
-    t.integer "project_id"
+    t.integer "proposal_id"
   end
 
   create_table "projects", :force => true do |t|

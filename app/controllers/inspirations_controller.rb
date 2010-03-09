@@ -1,14 +1,14 @@
 class InspirationsController < ApplicationController
   before_filter :require_user, :only => [:new, :create]
-  before_filter :ensure_project_id, :only => [:new, :create]
+  before_filter :ensure_proposal_id, :only => [:new, :create]
   before_filter :load_inspiration, :only => [:show, :edit, :update, :destroy]
   before_filter :load_new_inspiration, :only => [:new, :create]
   before_filter :load_inspiration_images, :only => [:show, :new]
 
   protected
-  def ensure_project_id
-    unless params[:project_id]
-      flash[:error] = "You shouldn't be here without a project id."
+  def ensure_proposal_id
+    unless params[:proposal_id]
+      flash[:error] = "You shouldn't be here without a proposal id."
       redirect_back_or_default("/") and return
     end
   end
@@ -19,7 +19,7 @@ class InspirationsController < ApplicationController
 
   def load_new_inspiration
     @inspiration = Inspiration.new(params[:inspiration])
-    @inspiration.project_id = params[:project_id]
+    @inspiration.proposal_id = params[:proposal_id]
   end
 
   def load_inspiration_images
@@ -36,7 +36,7 @@ class InspirationsController < ApplicationController
     end
     if @inspiration.save
       flash[:notice] = "Inspiration created successfully."
-      redirect_to @inspiration.project
+      redirect_to @inspiration.proposal
     else
       flash.now[:error] = "There was a problem creating the inspiration."
       render :action => :new
@@ -52,7 +52,7 @@ class InspirationsController < ApplicationController
     end
     if @inspiration.update_attributes(params[:inspiration])
       flash[:notice] = "The inspiration was successfully edited."
-      redirect_to @inspiration.project
+      redirect_to @inspiration.proposal
     else
       flash.now[:notice] = "There was a problem updating the project."
       render :action => 'edit'
@@ -63,10 +63,10 @@ class InspirationsController < ApplicationController
   end
 
   def destroy
-    @project = @inspiration.project
+    @proposal = @inspiration.proposal
     if @inspiration.destroy
       flash[:notice] = "The inspiration was deleted."
-      redirect_to @project
+      redirect_to @proposal
     else
       flash.now[:error] = "There was a problem deleting the inspiration."
       redirect_to "/"

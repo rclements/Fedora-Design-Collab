@@ -7,7 +7,8 @@ class Proposal < ActiveRecord::Base
   has_many :proposal_images
   has_many :file_attachments
   has_many :comments, :as => :commentable
-
+  has_many :inspirations
+  
   validates_presence_of :content
   validates_presence_of :title
 

@@ -27,3 +27,11 @@ Project:
         - @proposal.comments.each do |comment|
           = render :partial => "comments/comment", :locals => { :comment => comment }
 .clear
+  %h3 Inspirations
+  - @proposal.inspirations.each do |inspiration|
+    %h2= inspiration.to_s
+    = render :partial => "inspirations/inspiration", :locals => { :inspiration => inspiration }
+  %br
+    %br
+  = link_to 'Create New Inspiration', new_inspiration_path(:proposal_id => @proposal.id)
+    

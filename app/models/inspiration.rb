@@ -1,5 +1,5 @@
 class Inspiration < ActiveRecord::Base
-  belongs_to :project
+  belongs_to :proposal
   has_many :inspiration_images
 
   validates_presence_of :title

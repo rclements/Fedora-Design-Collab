@@ -3,7 +3,6 @@ class Project < ActiveRecord::Base
   has_many :proposals
   has_many :comments, :as => :commentable
   #has_many :collaborators
-  has_many :inspirations
 
   validates_presence_of :title
 

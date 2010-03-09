@@ -9,7 +9,7 @@
         %label{ :for => 'description'}
           Description
         = f.text_area :description, "class" => 'inspiration-box'
-        = hidden_field_tag "project_id", params[:project_id]
+        = hidden_field_tag "proposal_id", params[:proposal_id]
         %label{ :for => 'inspiration_image'}
           Upload an Image
         = file_field_tag "inspiration_image"

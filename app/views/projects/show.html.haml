@@ -1,3 +1,6 @@
+Projects
+= link_to "My Projects", root_path
+= link_to "List All Projects", projects_path
 = render :partial => "projects/details", :locals => { :project => @project }
 %br
     
@@ -7,12 +10,3 @@
   %br
     %br
   = link_to 'Create New Proposal', new_proposal_path(:project_id => @project.id)
-  
-  %h3 Inspirations
-  - @project.inspirations.each do |inspiration|
-    %h2= inspiration.to_s
-    = render :partial => "inspirations/inspiration", :locals => { :inspiration => inspiration }
-  %br
-    %br
-  = link_to 'Create New Inspiration', new_inspiration_path(:project_id => @project.id)
-    
