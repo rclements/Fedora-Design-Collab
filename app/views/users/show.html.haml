@@ -12,6 +12,7 @@
 %br
 %br
 %b Proposals Submitted:
+%br
 - @proposals.each do |proposal|
   = render :partial => "proposals/proposalshow", :locals => { :proposal => proposal, :include_comments => false }
 = will_paginate @proposals, :param_name => 'proposals_page'

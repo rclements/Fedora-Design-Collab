@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :comments,  :foreign_key => :creator_id
 
   acts_as_authentic
+  acts_as_authorization_subject
   acts_as_voter
   is_gravtastic!
 

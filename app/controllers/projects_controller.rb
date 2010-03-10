@@ -2,6 +2,12 @@ class ProjectsController < ApplicationController
   before_filter :load_projects
   before_filter :load_project, :only => [:show, :edit, :update, :destroy]
   before_filter :load_new_project, :only => [:new, :create]
+  
+  access_control do
+    #allow :admin
+    allow logged_in, :to => [:show, :new, :create, :index]
+    allow :owner, :manager, :of => :project, :to => [:create, :show, :destroy, :edit, :update]
+  end
 
   protected
   def load_projects
@@ -30,6 +36,7 @@ class ProjectsController < ApplicationController
     @project.creator = current_user
     if @project.save
       flash[:notice] = "Project created successfully."
+      current_user.has_role!(:owner, @project)
       redirect_to @project
     else
       flash.now[:error] = "There was a problem creating the project."

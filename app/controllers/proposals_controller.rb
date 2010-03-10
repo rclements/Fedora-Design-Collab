@@ -6,6 +6,12 @@ class ProposalsController < ApplicationController
   before_filter :load_proposal_images, :only => [:show, :new]
   before_filter :load_file_attachments, :only => [:show, :new, :create]
 
+  access_control do
+    #allow :admin
+    allow logged_in, :to => [:index, :show, :new, :create]
+    allow :owner, :manager, :of => :proposal, :to => [:index, :create, :show, :destroy, :edit, :update]
+  end
+
   protected
   def ensure_project_id
     unless params[:project_id]
@@ -45,7 +51,8 @@ class ProposalsController < ApplicationController
     end
     if @proposal.save
       flash[:notice] = "Proposal created successfully."
-      redirect_to proposal_path(@proposal.project.id)
+      current_user.has_role!(:owner, @proposal)
+      redirect_to @proposal
     else
       flash.now[:error] = "There was a problem creating the proposal."
       render :action => :new

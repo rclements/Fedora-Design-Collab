@@ -24,9 +24,9 @@ class UsersController < ApplicationController
   end
   
   def show
-    @projects  = @current_user.projects.paginate(:page => params[:projects_page], :order => 'created_at DESC', :per_page => 5)
-    @proposals = @current_user.proposals.paginate(:page => params[:proposals_page], :order => 'created_at DESC', :per_page => 5)
-    @comments  = @current_user.comments.paginate(:page => params[:comments_page], :order => 'created_at DESC', :per_page => 5)
+    @projects  = @user.projects.paginate(:page => params[:projects_page], :order => 'created_at DESC', :per_page => 5)
+    @proposals = @user.proposals.paginate(:page => params[:proposals_page], :order => 'created_at DESC', :per_page => 5)
+    @comments  = @user.comments.paginate(:page => params[:comments_page], :order => 'created_at DESC', :per_page => 5)
 
   end
  

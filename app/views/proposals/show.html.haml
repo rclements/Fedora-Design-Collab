@@ -1,5 +1,4 @@
-- include_comments = true unless local_assigns.has_key?(:include_comments)
-
+- include_comments = true unless local_assigns.has_key?(:include_comments) 
 Project:
 = link_to @proposal.project.to_s, project_path(@proposal.project.id)
 %br
@@ -16,9 +15,13 @@ Project:
       = image_tag image.image_file.url
     %textarea.content-container{ :readonly => "readonly" }
       = @proposal.content
+    = link_to "Edit", edit_proposal_path(@proposal)
+    = link_to "Delete", proposal_path(@proposal), :confirm => "Are you sure?", :method => :delete 
+    
     %br
     Sources
-    -@proposal.file_attachments.each do |file_attachment|
+    - @proposal.file_attachments.each do |file_attachment|
+      %br
       = link_to file_attachment_path(file_attachment.id)
     %br   
     - if include_comments

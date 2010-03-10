@@ -29,7 +29,7 @@ Rails::Initializer.run do |config|
   config.gem "gravtastic"
   config.gem "peteonrails-vote_fu", :lib => 'vote_fu', :source => 'http://gems.github.com'
   config.gem "searchlogic"
-
+  config.gem "acl9", :source => "http://gemcutter.org", :lib => "acl9"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

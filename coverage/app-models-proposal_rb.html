@@ -28,8 +28,8 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-models-proposal_rb.html">app/models/proposal.rb</a></td>
-            <td class='right_align'><tt>17</tt></td>
-            <td class='right_align'><tt>14</tt></td>
+            <td class='right_align'><tt>19</tt></td>
+            <td class='right_align'><tt>16</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
           <div class="percent_graph">
             <div class="covered" style="width:100px"></div>
@@ -69,97 +69,109 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line3">3</a>   extend VoteFuHighestExtension</pre></td>
+            <td><pre><a name="line3">3</a>   acts_as_authorization_object</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line4">4</a>   extend VoteFuHighestExtension</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line4">4</a> </pre></td>
+            <td><pre><a name="line5">5</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line5">5</a>   belongs_to :project</pre></td>
+            <td><pre><a name="line6">6</a>   belongs_to :project</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line6">6</a>   belongs_to :creator, :class_name =&gt; &quot;User&quot;</pre></td>
+            <td><pre><a name="line7">7</a>   belongs_to :creator, :class_name =&gt; &quot;User&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line7">7</a>   has_many :proposal_images</pre></td>
+            <td><pre><a name="line8">8</a>   has_many :proposal_images</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line8">8</a>   has_many :file_attachments</pre></td>
+            <td><pre><a name="line9">9</a>   has_many :file_attachments</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line9">9</a>   has_many :comments, :as =&gt; :commentable</pre></td>
+            <td><pre><a name="line10">10</a>   has_many :comments, :as =&gt; :commentable</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line11">11</a>   has_many :inspirations</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line10">10</a> </pre></td>
+            <td><pre><a name="line12">12</a>   </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line11">11</a>   validates_presence_of :content</pre></td>
+            <td><pre><a name="line13">13</a>   validates_presence_of :content</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line12">12</a>   validates_presence_of :title</pre></td>
+            <td><pre><a name="line14">14</a>   validates_presence_of :title</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line13">13</a> </pre></td>
+            <td><pre><a name="line15">15</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line14">14</a>   def to_s</pre></td>
+            <td><pre><a name="line16">16</a>   def to_s</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line15">15</a>     title</pre></td>
+            <td><pre><a name="line17">17</a>     title</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line16">16</a>   end</pre></td>
+            <td><pre><a name="line18">18</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line17">17</a> end</pre></td>
+            <td><pre><a name="line19">19</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Fri Mar 05 16:39:56 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Wed Mar 10 16:02:27 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>

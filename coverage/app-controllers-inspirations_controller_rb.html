@@ -28,17 +28,17 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-controllers-inspirations_controller_rb.html">app/controllers/inspirations_controller.rb</a></td>
-            <td class='right_align'><tt>75</tt></td>
-            <td class='right_align'><tt>65</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>94.67%</tt></div>
+            <td class='right_align'><tt>82</tt></td>
+            <td class='right_align'><tt>70</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>53.66%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:95px"></div>
-            <div class="uncovered" style="width:5px"></div>
+            <div class="covered" style="width:54px"></div>
+            <div class="uncovered" style="width:46px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>93.85%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>45.71%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:94px"></div>
-            <div class="uncovered" style="width:6px"></div>
+            <div class="covered" style="width:46px"></div>
+            <div class="uncovered" style="width:54px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -69,7 +69,7 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line3">3</a>   before_filter :ensure_project_id, :only =&gt; [:new, :create]</pre></td>
+            <td><pre><a name="line3">3</a>   before_filter :ensure_proposal_id, :only =&gt; [:new, :create]</pre></td>
           </tr>
         
           
@@ -93,421 +93,463 @@
           
           
           <tr class="inferred">
-            <td><pre><a name="line7">7</a> </pre></td>
+            <td><pre><a name="line7">7</a>   </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line8">8</a>   protected</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line9">9</a>   def ensure_project_id</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line10">10</a>     unless params[:project_id]</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line11">11</a>       flash[:error] = &quot;You shouldn't be here without a project id.&quot;</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line12">12</a>       redirect_back_or_default(&quot;/&quot;) and return</pre></td>
+            <td><pre><a name="line8">8</a>   access_control do</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line13">13</a>     end</pre></td>
+            <td><pre><a name="line9">9</a>     #allow :admin</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line10">10</a>     allow logged_in, :to =&gt; [:show, :new, :create, :index]</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line11">11</a>     allow :owner, :manager, :of =&gt; :inspiration, :to =&gt; [:index, :create, :show, :destroy, :edit, :update]</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line14">14</a>   end</pre></td>
+            <td><pre><a name="line12">12</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line15">15</a> </pre></td>
+            <td><pre><a name="line13">13</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line16">16</a>   def load_inspiration</pre></td>
+            <td><pre><a name="line14">14</a>   protected</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line17">17</a>     @inspiration = Inspiration.find(params[:id])</pre></td>
+            <td><pre><a name="line15">15</a>   def ensure_proposal_id</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line16">16</a>     unless params[:proposal_id]</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line17">17</a>       flash[:error] = &quot;You shouldn't be here without a proposal id.&quot;</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line18">18</a>       redirect_back_or_default(&quot;/&quot;) and return</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line18">18</a>   end</pre></td>
+            <td><pre><a name="line19">19</a>     end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line19">19</a> </pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line20">20</a>   def load_new_inspiration</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line21">21</a>     @inspiration = Inspiration.new(params[:inspiration])</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line22">22</a>     @inspiration.project_id = params[:project_id]</pre></td>
+            <td><pre><a name="line20">20</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line23">23</a>   end</pre></td>
+            <td><pre><a name="line21">21</a> </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line22">22</a>   def load_inspiration</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line23">23</a>     @inspiration = Inspiration.find(params[:id])</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line24">24</a> </pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line25">25</a>   def load_inspiration_images</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line26">26</a>     @inspiration_images = @inspiration.inspiration_images</pre></td>
+            <td><pre><a name="line24">24</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line27">27</a>   end</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line28">28</a> </pre></td>
+            <td><pre><a name="line25">25</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line29">29</a>   public</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line30">30</a>   def new</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line31">31</a>   end</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line32">32</a> </pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line33">33</a>   def create</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line34">34</a>     if params[:inspiration_image].present?</pre></td>
+            <td><pre><a name="line26">26</a>   def load_new_inspiration</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line35">35</a>       @inspiration.inspiration_images.build(:image_file =&gt; params[:inspiration_image])</pre></td>
+            <td><pre><a name="line27">27</a>     @inspiration = Inspiration.new(params[:inspiration])</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line36">36</a>     end</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line37">37</a>     if @inspiration.save</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line38">38</a>       flash[:notice] = &quot;Inspiration created successfully.&quot;</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line39">39</a>       redirect_to @inspiration.project</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line40">40</a>     else</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line41">41</a>       flash.now[:error] = &quot;There was a problem creating the inspiration.&quot;</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line42">42</a>       render :action =&gt; :new</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line43">43</a>     end</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line44">44</a>   end</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line45">45</a> </pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line46">46</a>   def edit</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line47">47</a>   end</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line48">48</a> </pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line49">49</a>   def update</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line50">50</a>     if params[:inspiration_image].present?</pre></td>
+            <td><pre><a name="line28">28</a>     @inspiration.proposal_id = params[:proposal_id]</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line51">51</a>       @inspiration.inspiration_images.build(:image_file =&gt; params[:inspiration_image])</pre></td>
+            <td><pre><a name="line29">29</a>   end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line30">30</a> </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line31">31</a>   def load_inspiration_images</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line52">52</a>     end</pre></td>
+            <td><pre><a name="line32">32</a>     @inspiration_images = @inspiration.inspiration_images</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
-            <td><pre><a name="line53">53</a>     if @inspiration.update_attributes(params[:inspiration])</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line54">54</a>       flash[:notice] = &quot;The inspiration was successfully edited.&quot;</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line55">55</a>       redirect_to @inspiration.project</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line33">33</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line56">56</a>     else</pre></td>
+            <td><pre><a name="line34">34</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line57">57</a>       flash.now[:notice] = &quot;There was a problem updating the project.&quot;</pre></td>
+            <td><pre><a name="line35">35</a>   public</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line58">58</a>       render :action =&gt; 'edit'</pre></td>
+            <td><pre><a name="line36">36</a>   def new</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
+            <td><pre><a name="line37">37</a>   end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line38">38</a> </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line39">39</a>   def create</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line40">40</a>     if params[:inspiration_image].present?</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line41">41</a>       @inspiration.inspiration_images.build(:image_file =&gt; params[:inspiration_image])</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line42">42</a>     end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line43">43</a>     if @inspiration.save</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line44">44</a>       flash[:notice] = &quot;Inspiration created successfully.&quot;</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line45">45</a>       current_user.has_role!(:owner, @inspiration)</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line46">46</a>       redirect_to @inspiration.proposal</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line47">47</a>     else</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line48">48</a>       flash.now[:error] = &quot;There was a problem creating the inspiration.&quot;</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line49">49</a>       render :action =&gt; :new</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line50">50</a>     end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line51">51</a>   end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line52">52</a> </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line53">53</a>   def edit</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line54">54</a>   end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line55">55</a> </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line56">56</a>   def update</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line57">57</a>     if params[:inspiration_image].present?</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line58">58</a>       @inspiration.inspiration_images.build(:image_file =&gt; params[:inspiration_image])</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
             <td><pre><a name="line59">59</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
-            <td><pre><a name="line60">60</a>   end</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line60">60</a>     if @inspiration.update_attributes(params[:inspiration])</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line61">61</a>       flash[:notice] = &quot;The inspiration was successfully edited.&quot;</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line62">62</a>       redirect_to @inspiration.proposal</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line63">63</a>     else</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line64">64</a>       flash.now[:notice] = &quot;There was a problem updating the project.&quot;</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line65">65</a>       render :action =&gt; 'edit'</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line66">66</a>     end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line67">67</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line61">61</a> </pre></td>
+            <td><pre><a name="line68">68</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line62">62</a>   def show</pre></td>
+            <td><pre><a name="line69">69</a>   def show</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line63">63</a>   end</pre></td>
+            <td><pre><a name="line70">70</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line64">64</a> </pre></td>
+            <td><pre><a name="line71">71</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line65">65</a>   def destroy</pre></td>
+            <td><pre><a name="line72">72</a>   def destroy</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
-            <td><pre><a name="line66">66</a>     @project = @inspiration.project</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line73">73</a>     @proposal = @inspiration.proposal</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
-            <td><pre><a name="line67">67</a>     if @inspiration.destroy</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line74">74</a>     if @inspiration.destroy</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
-            <td><pre><a name="line68">68</a>       flash[:notice] = &quot;The inspiration was deleted.&quot;</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line75">75</a>       flash[:notice] = &quot;The inspiration was deleted.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
-            <td><pre><a name="line69">69</a>       redirect_to @project</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line76">76</a>       redirect_to @proposal</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
-            <td><pre><a name="line70">70</a>     else</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line77">77</a>     else</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
-            <td><pre><a name="line71">71</a>       flash.now[:error] = &quot;There was a problem deleting the inspiration.&quot;</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line78">78</a>       flash.now[:error] = &quot;There was a problem deleting the inspiration.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
-            <td><pre><a name="line72">72</a>       redirect_to &quot;/&quot;</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line79">79</a>       redirect_to &quot;/&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
-            <td><pre><a name="line73">73</a>     end</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line80">80</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
-            <td><pre><a name="line74">74</a>   end</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line81">81</a>   end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
-            <td><pre><a name="line75">75</a> end</pre></td>
+          <tr class="uncovered">
+            <td><pre><a name="line82">82</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Fri Mar 05 16:39:56 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Wed Mar 10 16:02:27 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>

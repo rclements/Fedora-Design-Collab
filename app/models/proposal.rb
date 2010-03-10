@@ -1,5 +1,6 @@
 class Proposal < ActiveRecord::Base
   acts_as_voteable
+  acts_as_authorization_object
   extend VoteFuHighestExtension
 
   belongs_to :project

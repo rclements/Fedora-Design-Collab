@@ -4,6 +4,12 @@ class InspirationsController < ApplicationController
   before_filter :load_inspiration, :only => [:show, :edit, :update, :destroy]
   before_filter :load_new_inspiration, :only => [:new, :create]
   before_filter :load_inspiration_images, :only => [:show, :new]
+  
+  access_control do
+    #allow :admin
+    allow logged_in, :to => [:show, :new, :create, :index]
+    allow :owner, :manager, :of => :inspiration, :to => [:index, :create, :show, :destroy, :edit, :update]
+  end
 
   protected
   def ensure_proposal_id
@@ -36,6 +42,7 @@ class InspirationsController < ApplicationController
     end
     if @inspiration.save
       flash[:notice] = "Inspiration created successfully."
+      current_user.has_role!(:owner, @inspiration)
       redirect_to @inspiration.proposal
     else
       flash.now[:error] = "There was a problem creating the inspiration."

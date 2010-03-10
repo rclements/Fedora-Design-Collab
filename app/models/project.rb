@@ -2,8 +2,9 @@ class Project < ActiveRecord::Base
   belongs_to :creator, :class_name => "User"
   has_many :proposals
   has_many :comments, :as => :commentable
-  #has_many :collaborators
-
+  acts_as_authorization_object
+  # has_many :collaborators
+  
   validates_presence_of :title
 
   def to_s
