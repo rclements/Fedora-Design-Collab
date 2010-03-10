@@ -27,12 +27,11 @@ class FileAttachmentsController < ApplicationController
   end
 
   def show
-    debugger
-    send_file("#{RAILS_ROOT}/public/system/attachment_files/"+@file_attachment.attachment_file_file_name, :disposition => 'attachment', :encoding => 'utf8', :type => @file_attachment.attachment_file_file_content_type, :filename => URI.encode(@file_attachment.attachment_file_file_name))
+    send_file(@file_attachment.attachment_file.path, :disposition => 'attachment')
   end
 
   def save_upload(upload)
-    self.origial_filename = sanitize_file_name(upload.original_filename)
+    self.original_filename = sanitize_file_name(upload.original_filename)
     self.new_filename = unique_filename
     File.open(absolute_path, "wb") { |f| f.write(upload.read) }
   end
