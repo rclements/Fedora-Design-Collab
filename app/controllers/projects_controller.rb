@@ -24,9 +24,14 @@ class ProjectsController < ApplicationController
 
   public
   def index
-    @search = Project.ascend_by_title.search(params[:search])
+    if params[:sort_by]  == "oldest"
+      @search = Project.ascend_by_created_at.search(params[:search])
+    else
+      @search = Project.descend_by_created_at.search(params[:search])
+    end
     @projects_count = @search.count
     @projects = @search.all.paginate(:page => params[:page], :per_page => 5)
+    @sort_message = params[:sort_by].capitalize if params[:sort_by]
   end
 
   def new
