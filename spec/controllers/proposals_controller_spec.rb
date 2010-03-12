@@ -2,7 +2,8 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe ProposalsController do
   integrate_views
-  
+
+
   describe "Without being logged in" do
     describe "hitting #new" do
       before(:each) do
@@ -24,12 +25,14 @@ describe ProposalsController do
   describe "A logged-in user" do
     before(:each) do
       activate_authlogic
-      
-      @username = "bob"
-      @password = "bobby"
-      @user = User.make(:username => @username, :password => @password, :password_confirmation => @password)
       create_user_session(@user)
     end
+      it "should assign the role" do
+        inc_ary = create_proposal_with_owner
+        @proposal = inc_ary[0]
+        @user = inc_ary[1]
+      end
+
 
     describe "hitting #new without a project_id" do
       before :each do

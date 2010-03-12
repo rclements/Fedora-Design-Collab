@@ -1,15 +1,15 @@
 .copy-container
-  %h2
-    Welcome to the FDC homepage.
-= link_to "Start New Project", { :controller => "projects", :action => "new" }
+%h2
+Welcome to the FDC homepage.
 %br
+#ProjectLinks
+%ul.project-links
+  = link_to "Start New Project", { :controller => "projects", :action => "new" }
   %br
-= link_to "All Projects List", { :controller => "projects", :action => "index" }
-%br
-%br
-%br
-%br
-%b My Projects
+  %br
+  = link_to "All Projects List", { :controller => "projects", :action => "index" }
+%p
+#MyProjects>My Projects
 %ul.project-lister
   - @projects.each do |project|
     %li.projects

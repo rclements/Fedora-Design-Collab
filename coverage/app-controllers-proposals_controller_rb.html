@@ -30,15 +30,15 @@
             <td class="left_align"><a href="app-controllers-proposals_controller_rb.html">app/controllers/proposals_controller.rb</a></td>
             <td class='right_align'><tt>85</tt></td>
             <td class='right_align'><tt>72</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>72.94%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>47.06%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:73px"></div>
-            <div class="uncovered" style="width:27px"></div>
+            <div class="covered" style="width:47px"></div>
+            <div class="uncovered" style="width:53px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>68.06%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>37.50%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:68px"></div>
-            <div class="uncovered" style="width:32px"></div>
+            <div class="covered" style="width:38px"></div>
+            <div class="uncovered" style="width:62px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -152,31 +152,31 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line17">17</a>     unless params[:project_id]</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line18">18</a>       flash[:error] = &quot;You shouldn't be here without a project id.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line19">19</a>       redirect_back_or_default(&quot;/&quot;) and return</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line20">20</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line21">21</a>   end</pre></td>
           </tr>
         
@@ -194,13 +194,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line24">24</a>     @proposal = Proposal.find(params[:id])</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line25">25</a>   end</pre></td>
           </tr>
         
@@ -218,25 +218,25 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line28">28</a>     @proposal = Proposal.new(params[:proposal])</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line29">29</a>     @proposal.project_id = params[:project_id]</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line30">30</a>     @proposal.creator = current_user</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line31">31</a>   end</pre></td>
           </tr>
         
@@ -254,13 +254,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line34">34</a>     @proposal_images = @proposal.proposal_images</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line35">35</a>   end</pre></td>
           </tr>
         
@@ -278,13 +278,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line38">38</a>     @file_attachments = @proposal.file_attachments</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line39">39</a>   end</pre></td>
           </tr>
         
@@ -308,7 +308,7 @@
         
           
           
-          <tr class="marked">
+          <tr class="inferred">
             <td><pre><a name="line43">43</a>   end</pre></td>
           </tr>
         
@@ -344,7 +344,7 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line49">49</a>     if params[:proposal_image].present?</pre></td>
           </tr>
         
@@ -362,7 +362,7 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line52">52</a>     if @proposal.save</pre></td>
           </tr>
         
@@ -386,31 +386,31 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line56">56</a>     else</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line57">57</a>       flash.now[:error] = &quot;There was a problem creating the proposal.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line58">58</a>       render :action =&gt; :new</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line59">59</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line60">60</a>   end</pre></td>
           </tr>
         
@@ -567,7 +567,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Wed Mar 10 16:02:27 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
+    <p>Generated on Thu Mar 11 15:51:17 -0600 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.7.1</a></p>
 
   </body>
 </html>

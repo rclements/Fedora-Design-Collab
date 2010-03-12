@@ -1,11 +1,18 @@
 - include_comments = true unless local_assigns.has_key?(:include_comments)
 
-= render :partial => "votes/voteable", :locals => { :voteable => proposal, :refurl => project_path(proposal.project) }
 .proposal-container
   .main-container
     %h2= proposal.to_s
+    .creator
+      = show_gravatar_for(@proposal.creator)
+    %dl
+      %dt Collaborator:
+      %dd= link_to @proposal.creator.to_s, user_path(@proposal.creator.id)
+    = render :partial => "votes/voteable", :locals => { :voteable => proposal, :refurl => project_path(proposal.project) }
+    %br
     - proposal.proposal_images.each do |image|
       = link_to image_tag(image.image_file.url), proposal_path(proposal.id)
+      %br
     %textarea.content-container{ :readonly => "readonly" }
       = proposal.content
     %br

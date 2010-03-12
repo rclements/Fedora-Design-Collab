@@ -1,4 +1,6 @@
 %h2 Project List 
+%ul.new-project
+  = link_to "Start New Project", { :controller => "projects", :action => "new" }
 = "(#{@sort_message})" if @sort_message
 .focus-cont.form-container.search-form
   -form_for @search do |f|
@@ -8,7 +10,8 @@
 %ul.project-lister
   = link_to "Newest Projects", projects_path(:sort_by => "newest")
   = link_to "Oldest Projects", projects_path(:sort_by => "oldest")
-      
+  %br      
+  %br
   - @projects.each do |project|
     %li.project
       .link
@@ -17,4 +20,3 @@
         = link_to(image_tag(project.project_image.url), project_path(project.id)) if project.project_image
 = will_paginate @projects
 %br
-= link_to "Start New Project", { :controller => "projects", :action => "new" }

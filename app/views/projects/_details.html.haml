@@ -1,16 +1,29 @@
-.project-container
-  .main-container
-    .details
-      %h2= @project.to_s
-      - if @project.project_image
-        = image_tag @project.project_image.url
-      .creator
-        = show_gravatar_for(@project.creator)
-        Lead Designer:
-        = link_to @project.creator.to_s, user_path(@project.creator.id)
-      .updated
-        = @project.updated_at
-      %textarea.description-container{ :readonly => "readonly" }
-        = @project.description
+#project-nav
+  .project-container
+    .main-container
+      .details
+        %h4= @project.to_s
+        - if @project.project_image
+          = image_tag @project.project_image.url
+          %br
+          %br
+        .creator
+          = show_gravatar_for(@project.creator)
+          %dl
+            %dt Lead Designer:
+            %dd= link_to @project.creator.to_s, user_path(@project.creator.id)
+          %br
+          Collaborators:
+          %ul.collaborator-lister
+          /  - @proposal.creator.each do |collab|
+          /    %li.collab
+          /      .link
+          /        = link_to collab.to_s, user_path(proposal.id)
+          %br
+          %br
+        .updated
+          = @project.updated_at
+        %textarea.description-container{ :readonly => "readonly" }
+          = @project.description
       
-      = link_to "Edit", { :controller => "projects", :action => "edit" }
+        = link_to "Edit", { :controller => "projects", :action => "edit" }

@@ -63,3 +63,13 @@ def create_user_session(_user = nil)
   end
   UserSession.create(:username => _user.username, :password => 'password', :password_confirmation => 'password')
 end
+def create_proposal_with_owner(user=nil, proposal=nil)
+  unless user
+    user = User.make
+  end
+  unless proposal
+  proposal = Proposal.make
+  end
+  user.has_role!(:owner, proposal)
+  [proposal, user]
+end
