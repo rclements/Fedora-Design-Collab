@@ -5,22 +5,14 @@
         %h4= @project.to_s
         - if @project.project_image
           = image_tag @project.project_image.url
-          %br
-          %br
         .creator
           = show_gravatar_for(@project.creator)
           %dl
             %dt Lead Designer:
             %dd= link_to @project.creator.to_s, user_path(@project.creator.id)
-          %br
-          Collaborators:
-          %ul.collaborator-lister
-          /  - @proposal.creator.each do |collab|
-          /    %li.collab
-          /      .link
-          /        = link_to collab.to_s, user_path(proposal.id)
-          %br
-          %br
+          %dl
+            %dt Collaborators:
+            %dd= link_to @proposal.creator.to_s, user_path(@proposal.creator.id)
         .updated
           = @project.updated_at
         %textarea.description-container{ :readonly => "readonly" }

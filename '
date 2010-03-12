@@ -3,6 +3,7 @@
 .proposal-container
   .main-container
     %h2= proposal.to_s
+    %br
     .creator
       = show_gravatar_for(@proposal.creator)
     %dl

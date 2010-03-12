@@ -5,14 +5,14 @@
     %meta{ :content => "application/xhtml+xml; charset=UTF-8", "http-equiv" => "content-type" }
     %title Fedora Design Collab
     %link{ :href => "/stylesheets/designhub-css-11032010.css", :rel => "stylesheet", :type => "text/css" }
-    = javascript_include_tag "prototype"
+    = javascript_include_tag "jquery"
   %body
     #wrapper
       #header
         %h1
           %a{ :href => '/'}
             %span
-              Fedora Design Collab
+              Design-Hub
         = show_gravatar_for(current_user)
         %ul.utility-nav
           - if current_user
