@@ -553,7 +553,7 @@ span.run100 {
 </style>
     </head>
   <body><h3>C0 code coverage information</h3>
-    <p>Generated on Sat Mar 13 12:27:32 -0600 2010 with <a href='http://github.com/spicycode/rcov'>rcov 0.8.2.1</a>
+    <p>Generated on Sat Mar 13 16:06:20 -0600 2010 with <a href='http://github.com/spicycode/rcov'>rcov 0.8.2.1</a>
       </p>
     <hr/>
     <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
@@ -598,91 +598,91 @@ span.run100 {
       </tr>
     </tbody>
   </table>
-<pre><span class="marked1"><a name="line1"></a> 1 class ProposalsController &lt; ApplicationController
-</span><span class="marked0"><a name="line2"></a> 2   before_filter :require_user, :only =&gt; [:new, :create]
-</span><span class="marked1"><a name="line3"></a> 3   before_filter :ensure_project_id, :only =&gt; [:new, :create]
-</span><span class="marked0"><a name="line4"></a> 4   before_filter :load_proposal, :only =&gt; [:show, :edit, :update, :destroy]
-</span><span class="marked1"><a name="line5"></a> 5   before_filter :load_new_proposal, :only =&gt; [:new, :create]
-</span><span class="marked0"><a name="line6"></a> 6   before_filter :load_proposal_images, :only =&gt; [:show, :new]
-</span><span class="marked1"><a name="line7"></a> 7   before_filter :load_file_attachments, :only =&gt; [:show, :new, :create]
-</span><span class="inferred0"><a name="line8"></a> 8 
-</span><span class="marked1"><a name="line9"></a> 9   access_control do
-</span><span class="inferred0"><a name="line10"></a>10     #allow :admin
-</span><span class="marked1"><a name="line11"></a>11     allow logged_in, :to =&gt; [:index, :show, :new, :create]
-</span><span class="marked0"><a name="line12"></a>12     allow :owner, :manager, :of =&gt; :proposal, :to =&gt; [:index, :create, :show, :destroy, :edit, :update]
-</span><span class="inferred1"><a name="line13"></a>13   end
-</span><span class="inferred0"><a name="line14"></a>14 
-</span><span class="marked1"><a name="line15"></a>15   protected
-</span><span class="marked0"><a name="line16"></a>16   def ensure_project_id
-</span><span class="marked1"><a name="line17"></a>17     unless params[:project_id]
-</span><span class="marked0"><a name="line18"></a>18       flash[:error] = &quot;You shouldn't be here without a project id.&quot;
-</span><span class="marked1"><a name="line19"></a>19       redirect_back_or_default(&quot;/&quot;) and return
-</span><span class="inferred0"><a name="line20"></a>20     end
-</span><span class="inferred1"><a name="line21"></a>21   end
-</span><span class="inferred0"><a name="line22"></a>22 
-</span><span class="marked1"><a name="line23"></a>23   def load_proposal
-</span><span class="marked0"><a name="line24"></a>24     @proposal = Proposal.find(params[:id])
-</span><span class="inferred1"><a name="line25"></a>25   end
-</span><span class="inferred0"><a name="line26"></a>26 
-</span><span class="marked1"><a name="line27"></a>27   def load_new_proposal
-</span><span class="marked0"><a name="line28"></a>28     @proposal = Proposal.new(params[:proposal])
-</span><span class="marked1"><a name="line29"></a>29     @proposal.project_id = params[:project_id]
-</span><span class="marked0"><a name="line30"></a>30     @proposal.creator = current_user
-</span><span class="inferred1"><a name="line31"></a>31   end
-</span><span class="inferred0"><a name="line32"></a>32     
-</span><span class="marked1"><a name="line33"></a>33   def load_proposal_images
-</span><span class="marked0"><a name="line34"></a>34     @proposal_images = @proposal.proposal_images
-</span><span class="inferred1"><a name="line35"></a>35   end
-</span><span class="inferred0"><a name="line36"></a>36   
-</span><span class="marked1"><a name="line37"></a>37   def load_file_attachments
-</span><span class="marked0"><a name="line38"></a>38     @file_attachments = @proposal.file_attachments
-</span><span class="inferred1"><a name="line39"></a>39   end
-</span><span class="inferred0"><a name="line40"></a>40 
-</span><span class="marked1"><a name="line41"></a>41   public
-</span><span class="marked0"><a name="line42"></a>42   def new
-</span><span class="marked1"><a name="line43"></a>43   end
-</span><span class="inferred0"><a name="line44"></a>44 
-</span><span class="marked1"><a name="line45"></a>45   def show
-</span><span class="inferred0"><a name="line46"></a>46   end
-</span><span class="inferred1"><a name="line47"></a>47 
-</span><span class="marked0"><a name="line48"></a>48   def create
-</span><span class="marked1"><a name="line49"></a>49     if params[:proposal_image].present?
-</span><span class="uncovered0"><a name="line50"></a>50       @proposal.proposal_images.build(:image_file =&gt; params[:proposal_image])
-</span><span class="uncovered1"><a name="line51"></a>51     end
-</span><span class="marked0"><a name="line52"></a>52     if @proposal.save
-</span><span class="marked1"><a name="line53"></a>53       flash[:notice] = &quot;Proposal created successfully.&quot;
-</span><span class="marked0"><a name="line54"></a>54       current_user.has_role!(:owner, @proposal)
-</span><span class="marked1"><a name="line55"></a>55       redirect_to @proposal
-</span><span class="inferred0"><a name="line56"></a>56     else
-</span><span class="marked1"><a name="line57"></a>57       flash.now[:error] = &quot;There was a problem creating the proposal.&quot;
-</span><span class="marked0"><a name="line58"></a>58       render :action =&gt; :new
-</span><span class="inferred1"><a name="line59"></a>59     end
-</span><span class="inferred0"><a name="line60"></a>60   end
-</span><span class="inferred1"><a name="line61"></a>61 
-</span><span class="marked0"><a name="line62"></a>62   def edit
-</span><span class="inferred1"><a name="line63"></a>63   end
-</span><span class="inferred0"><a name="line64"></a>64 
-</span><span class="marked1"><a name="line65"></a>65   def update
-</span><span class="marked0"><a name="line66"></a>66     if @proposal.update_attributes(params[:proposal])
-</span><span class="marked1"><a name="line67"></a>67       flash[:notice] = &quot;The proposal was successfully edited.&quot;
-</span><span class="marked0"><a name="line68"></a>68       redirect_to @proposal.project
-</span><span class="inferred1"><a name="line69"></a>69     else
-</span><span class="marked0"><a name="line70"></a>70       flash.now[:notice] = &quot;There was a problem updating the proposal.&quot;
-</span><span class="marked1"><a name="line71"></a>71       render :action =&gt; 'edit'
-</span><span class="inferred0"><a name="line72"></a>72     end
-</span><span class="inferred1"><a name="line73"></a>73   end
-</span><span class="inferred0"><a name="line74"></a>74 
-</span><span class="marked1"><a name="line75"></a>75   def destroy
-</span><span class="marked0"><a name="line76"></a>76     @project = @proposal.project
-</span><span class="marked1"><a name="line77"></a>77     if @proposal.destroy
-</span><span class="marked0"><a name="line78"></a>78       flash[:notice] = &quot;The proposal was deleted.&quot;
-</span><span class="marked1"><a name="line79"></a>79       redirect_to @project
-</span><span class="inferred0"><a name="line80"></a>80     else
-</span><span class="marked1"><a name="line81"></a>81       flash[:error] = &quot;There was a problem deleting the proposal.&quot;
-</span><span class="marked0"><a name="line82"></a>82       redirect_to &quot;/&quot;
-</span><span class="inferred1"><a name="line83"></a>83     end
-</span><span class="inferred0"><a name="line84"></a>84   end
-</span><span class="inferred1"><a name="line85"></a>85 end
+<pre><span class="marked0"><a name="line1"></a> 1 class ProposalsController &lt; ApplicationController
+</span><span class="marked1"><a name="line2"></a> 2   before_filter :require_user, :only =&gt; [:new, :create]
+</span><span class="marked0"><a name="line3"></a> 3   before_filter :ensure_project_id, :only =&gt; [:new, :create]
+</span><span class="marked1"><a name="line4"></a> 4   before_filter :load_proposal, :only =&gt; [:show, :edit, :update, :destroy]
+</span><span class="marked0"><a name="line5"></a> 5   before_filter :load_new_proposal, :only =&gt; [:new, :create]
+</span><span class="marked1"><a name="line6"></a> 6   before_filter :load_proposal_images, :only =&gt; [:show, :new]
+</span><span class="marked0"><a name="line7"></a> 7   before_filter :load_file_attachments, :only =&gt; [:show, :new, :create]
+</span><span class="inferred1"><a name="line8"></a> 8 
+</span><span class="marked0"><a name="line9"></a> 9   access_control do
+</span><span class="inferred1"><a name="line10"></a>10     #allow :admin
+</span><span class="marked0"><a name="line11"></a>11     allow logged_in, :to =&gt; [:index, :show, :new, :create]
+</span><span class="marked1"><a name="line12"></a>12     allow :owner, :manager, :of =&gt; :proposal, :to =&gt; [:index, :create, :show, :destroy, :edit, :update]
+</span><span class="inferred0"><a name="line13"></a>13   end
+</span><span class="inferred1"><a name="line14"></a>14 
+</span><span class="marked0"><a name="line15"></a>15   protected
+</span><span class="marked1"><a name="line16"></a>16   def ensure_project_id
+</span><span class="marked0"><a name="line17"></a>17     unless params[:project_id]
+</span><span class="marked1"><a name="line18"></a>18       flash[:error] = &quot;You shouldn't be here without a project id.&quot;
+</span><span class="marked0"><a name="line19"></a>19       redirect_back_or_default(&quot;/&quot;) and return
+</span><span class="inferred1"><a name="line20"></a>20     end
+</span><span class="inferred0"><a name="line21"></a>21   end
+</span><span class="inferred1"><a name="line22"></a>22 
+</span><span class="marked0"><a name="line23"></a>23   def load_proposal
+</span><span class="marked1"><a name="line24"></a>24     @proposal = Proposal.find(params[:id])
+</span><span class="inferred0"><a name="line25"></a>25   end
+</span><span class="inferred1"><a name="line26"></a>26 
+</span><span class="marked0"><a name="line27"></a>27   def load_new_proposal
+</span><span class="marked1"><a name="line28"></a>28     @proposal = Proposal.new(params[:proposal])
+</span><span class="marked0"><a name="line29"></a>29     @proposal.project_id = params[:project_id]
+</span><span class="marked1"><a name="line30"></a>30     @proposal.creator = current_user
+</span><span class="inferred0"><a name="line31"></a>31   end
+</span><span class="inferred1"><a name="line32"></a>32     
+</span><span class="marked0"><a name="line33"></a>33   def load_proposal_images
+</span><span class="marked1"><a name="line34"></a>34     @proposal_images = @proposal.proposal_images
+</span><span class="inferred0"><a name="line35"></a>35   end
+</span><span class="inferred1"><a name="line36"></a>36   
+</span><span class="marked0"><a name="line37"></a>37   def load_file_attachments
+</span><span class="marked1"><a name="line38"></a>38     @file_attachments = @proposal.file_attachments
+</span><span class="inferred0"><a name="line39"></a>39   end
+</span><span class="inferred1"><a name="line40"></a>40 
+</span><span class="marked0"><a name="line41"></a>41   public
+</span><span class="marked1"><a name="line42"></a>42   def new
+</span><span class="marked0"><a name="line43"></a>43   end
+</span><span class="inferred1"><a name="line44"></a>44 
+</span><span class="marked0"><a name="line45"></a>45   def show
+</span><span class="inferred1"><a name="line46"></a>46   end
+</span><span class="inferred0"><a name="line47"></a>47 
+</span><span class="marked1"><a name="line48"></a>48   def create
+</span><span class="marked0"><a name="line49"></a>49     if params[:proposal_image].present?
+</span><span class="uncovered1"><a name="line50"></a>50       @proposal.proposal_images.build(:image_file =&gt; params[:proposal_image])
+</span><span class="uncovered0"><a name="line51"></a>51     end
+</span><span class="marked1"><a name="line52"></a>52     if @proposal.save
+</span><span class="marked0"><a name="line53"></a>53       flash[:notice] = &quot;Proposal created successfully.&quot;
+</span><span class="marked1"><a name="line54"></a>54       current_user.has_role!(:owner, @proposal)
+</span><span class="marked0"><a name="line55"></a>55       redirect_to @proposal
+</span><span class="inferred1"><a name="line56"></a>56     else
+</span><span class="marked0"><a name="line57"></a>57       flash.now[:error] = &quot;There was a problem creating the proposal.&quot;
+</span><span class="marked1"><a name="line58"></a>58       render :action =&gt; :new
+</span><span class="inferred0"><a name="line59"></a>59     end
+</span><span class="inferred1"><a name="line60"></a>60   end
+</span><span class="inferred0"><a name="line61"></a>61 
+</span><span class="marked1"><a name="line62"></a>62   def edit
+</span><span class="inferred0"><a name="line63"></a>63   end
+</span><span class="inferred1"><a name="line64"></a>64 
+</span><span class="marked0"><a name="line65"></a>65   def update
+</span><span class="marked1"><a name="line66"></a>66     if @proposal.update_attributes(params[:proposal])
+</span><span class="marked0"><a name="line67"></a>67       flash[:notice] = &quot;The proposal was successfully edited.&quot;
+</span><span class="marked1"><a name="line68"></a>68       redirect_to @proposal.project
+</span><span class="inferred0"><a name="line69"></a>69     else
+</span><span class="marked1"><a name="line70"></a>70       flash.now[:notice] = &quot;There was a problem updating the proposal.&quot;
+</span><span class="marked0"><a name="line71"></a>71       render :action =&gt; 'edit'
+</span><span class="inferred1"><a name="line72"></a>72     end
+</span><span class="inferred0"><a name="line73"></a>73   end
+</span><span class="inferred1"><a name="line74"></a>74 
+</span><span class="marked0"><a name="line75"></a>75   def destroy
+</span><span class="marked1"><a name="line76"></a>76     @project = @proposal.project
+</span><span class="marked0"><a name="line77"></a>77     if @proposal.destroy
+</span><span class="marked1"><a name="line78"></a>78       flash[:notice] = &quot;The proposal was deleted.&quot;
+</span><span class="marked0"><a name="line79"></a>79       redirect_to @project
+</span><span class="inferred1"><a name="line80"></a>80     else
+</span><span class="marked0"><a name="line81"></a>81       flash[:error] = &quot;There was a problem deleting the proposal.&quot;
+</span><span class="marked1"><a name="line82"></a>82       redirect_to &quot;/&quot;
+</span><span class="inferred0"><a name="line83"></a>83     end
+</span><span class="inferred1"><a name="line84"></a>84   end
+</span><span class="inferred0"><a name="line85"></a>85 end
 </span></pre><hr/>
     <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
    version 0.8.2.1.</p>

@@ -553,7 +553,7 @@ span.run100 {
 </style>
     </head>
   <body><h3>C0 code coverage information</h3>
-    <p>Generated on Sat Mar 13 12:27:32 -0600 2010 with <a href='http://github.com/spicycode/rcov'>rcov 0.8.2.1</a>
+    <p>Generated on Sat Mar 13 16:06:19 -0600 2010 with <a href='http://github.com/spicycode/rcov'>rcov 0.8.2.1</a>
       </p>
     <hr/>
     <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
@@ -598,84 +598,84 @@ span.run100 {
       </tr>
     </tbody>
   </table>
-<pre><span class="marked1"><a name="line1"></a> 1 class ProjectsController &lt; ApplicationController
-</span><span class="marked0"><a name="line2"></a> 2   before_filter :load_projects
-</span><span class="marked1"><a name="line3"></a> 3   before_filter :load_project, :only =&gt; [:show, :edit, :update, :destroy]
-</span><span class="marked0"><a name="line4"></a> 4   before_filter :load_new_project, :only =&gt; [:new, :create]
-</span><span class="inferred1"><a name="line5"></a> 5   
-</span><span class="marked0"><a name="line6"></a> 6   access_control do
-</span><span class="inferred1"><a name="line7"></a> 7     #allow :admin
-</span><span class="marked0"><a name="line8"></a> 8     allow logged_in, :to =&gt; [:show, :new, :create, :index]
-</span><span class="marked1"><a name="line9"></a> 9     allow :owner, :manager, :of =&gt; :project, :to =&gt; [:create, :show, :destroy, :edit, :update]
-</span><span class="inferred0"><a name="line10"></a>10   end
-</span><span class="inferred1"><a name="line11"></a>11 
-</span><span class="marked0"><a name="line12"></a>12   protected
-</span><span class="marked1"><a name="line13"></a>13   def load_projects
-</span><span class="marked0"><a name="line14"></a>14     @projects = Project.all
-</span><span class="inferred1"><a name="line15"></a>15   end
-</span><span class="inferred0"><a name="line16"></a>16 
-</span><span class="marked1"><a name="line17"></a>17   def load_project
-</span><span class="marked0"><a name="line18"></a>18     @project = Project.find(params[:id])
-</span><span class="inferred1"><a name="line19"></a>19   end
-</span><span class="inferred0"><a name="line20"></a>20 
-</span><span class="marked1"><a name="line21"></a>21   def load_new_project
-</span><span class="marked0"><a name="line22"></a>22     @project = Project.new(params[:project])
-</span><span class="inferred1"><a name="line23"></a>23   end
-</span><span class="inferred0"><a name="line24"></a>24 
-</span><span class="marked1"><a name="line25"></a>25   public
-</span><span class="marked0"><a name="line26"></a>26   def index
-</span><span class="marked1"><a name="line27"></a>27     if params[:sort_by]  == &quot;oldest&quot;
-</span><span class="uncovered0"><a name="line28"></a>28       @search = Project.ascend_by_created_at.search(params[:search])
-</span><span class="inferred1"><a name="line29"></a>29     else
-</span><span class="marked0"><a name="line30"></a>30       @search = Project.descend_by_created_at.search(params[:search])
-</span><span class="inferred1"><a name="line31"></a>31     end
-</span><span class="marked0"><a name="line32"></a>32     @projects_count = @search.count
-</span><span class="marked1"><a name="line33"></a>33     @projects = @search.all.paginate(:page =&gt; params[:page], :per_page =&gt; 5)
-</span><span class="marked0"><a name="line34"></a>34     @sort_message = params[:sort_by].capitalize if params[:sort_by]
-</span><span class="inferred1"><a name="line35"></a>35   end
-</span><span class="inferred0"><a name="line36"></a>36 
-</span><span class="marked1"><a name="line37"></a>37   def new
-</span><span class="marked0"><a name="line38"></a>38   end
-</span><span class="inferred1"><a name="line39"></a>39 
-</span><span class="marked0"><a name="line40"></a>40   def create
-</span><span class="marked1"><a name="line41"></a>41     @project.creator = current_user
-</span><span class="marked0"><a name="line42"></a>42     if @project.save
-</span><span class="marked1"><a name="line43"></a>43       flash[:notice] = &quot;Project created successfully.&quot;
-</span><span class="marked0"><a name="line44"></a>44       current_user.has_role!(:owner, @project)
-</span><span class="marked1"><a name="line45"></a>45       redirect_to @project
-</span><span class="inferred0"><a name="line46"></a>46     else
-</span><span class="marked1"><a name="line47"></a>47       flash.now[:error] = &quot;There was a problem creating the project.&quot;
-</span><span class="marked0"><a name="line48"></a>48       render :action =&gt; :new
-</span><span class="inferred1"><a name="line49"></a>49     end
-</span><span class="inferred0"><a name="line50"></a>50   end
-</span><span class="inferred1"><a name="line51"></a>51 
-</span><span class="marked0"><a name="line52"></a>52   def edit
-</span><span class="inferred1"><a name="line53"></a>53   end
-</span><span class="inferred0"><a name="line54"></a>54 
-</span><span class="marked1"><a name="line55"></a>55   def update
-</span><span class="marked0"><a name="line56"></a>56     if @project.update_attributes(params[:project])
-</span><span class="marked1"><a name="line57"></a>57       flash[:notice] = &quot;The project was successfully edited.&quot;
-</span><span class="marked0"><a name="line58"></a>58       redirect_to :action =&gt; 'show', :id =&gt; @project
-</span><span class="inferred1"><a name="line59"></a>59     else
-</span><span class="marked0"><a name="line60"></a>60       flash.now[:notice] = &quot;There was a problem updating the project.&quot;
-</span><span class="marked1"><a name="line61"></a>61       render :action =&gt; 'edit'
-</span><span class="inferred0"><a name="line62"></a>62     end
-</span><span class="inferred1"><a name="line63"></a>63   end
-</span><span class="inferred0"><a name="line64"></a>64 
-</span><span class="marked1"><a name="line65"></a>65   def destroy
-</span><span class="marked0"><a name="line66"></a>66     if @project.destroy
-</span><span class="marked1"><a name="line67"></a>67       flash[:notice] = &quot;The project was deleted.&quot;
-</span><span class="marked0"><a name="line68"></a>68       redirect_to projects_path
-</span><span class="inferred1"><a name="line69"></a>69     else
-</span><span class="marked0"><a name="line70"></a>70       flash.now[:error] = &quot;There was a problem deleting the project.&quot;
-</span><span class="marked1"><a name="line71"></a>71       render :action =&gt; 'show'
-</span><span class="inferred0"><a name="line72"></a>72     end
-</span><span class="inferred1"><a name="line73"></a>73   end
-</span><span class="inferred0"><a name="line74"></a>74 
-</span><span class="marked1"><a name="line75"></a>75   def show
-</span><span class="inferred0"><a name="line76"></a>76     #@proposal = Proposal.find(params[:id])
-</span><span class="marked1"><a name="line77"></a>77   end
-</span><span class="inferred0"><a name="line78"></a>78 end
+<pre><span class="marked0"><a name="line1"></a> 1 class ProjectsController &lt; ApplicationController
+</span><span class="marked1"><a name="line2"></a> 2   before_filter :load_projects
+</span><span class="marked0"><a name="line3"></a> 3   before_filter :load_project, :only =&gt; [:show, :edit, :update, :destroy]
+</span><span class="marked1"><a name="line4"></a> 4   before_filter :load_new_project, :only =&gt; [:new, :create]
+</span><span class="inferred0"><a name="line5"></a> 5   
+</span><span class="marked1"><a name="line6"></a> 6   access_control do
+</span><span class="inferred0"><a name="line7"></a> 7     #allow :admin
+</span><span class="marked1"><a name="line8"></a> 8     allow logged_in, :to =&gt; [:show, :new, :create, :index]
+</span><span class="marked0"><a name="line9"></a> 9     allow :owner, :manager, :of =&gt; :project, :to =&gt; [:create, :show, :destroy, :edit, :update]
+</span><span class="inferred1"><a name="line10"></a>10   end
+</span><span class="inferred0"><a name="line11"></a>11 
+</span><span class="marked1"><a name="line12"></a>12   protected
+</span><span class="marked0"><a name="line13"></a>13   def load_projects
+</span><span class="marked1"><a name="line14"></a>14     @projects = Project.all
+</span><span class="inferred0"><a name="line15"></a>15   end
+</span><span class="inferred1"><a name="line16"></a>16 
+</span><span class="marked0"><a name="line17"></a>17   def load_project
+</span><span class="marked1"><a name="line18"></a>18     @project = Project.find(params[:id])
+</span><span class="inferred0"><a name="line19"></a>19   end
+</span><span class="inferred1"><a name="line20"></a>20 
+</span><span class="marked0"><a name="line21"></a>21   def load_new_project
+</span><span class="marked1"><a name="line22"></a>22     @project = Project.new(params[:project])
+</span><span class="inferred0"><a name="line23"></a>23   end
+</span><span class="inferred1"><a name="line24"></a>24 
+</span><span class="marked0"><a name="line25"></a>25   public
+</span><span class="marked1"><a name="line26"></a>26   def index
+</span><span class="marked0"><a name="line27"></a>27     if params[:sort_by]  == &quot;oldest&quot;
+</span><span class="uncovered1"><a name="line28"></a>28       @search = Project.ascend_by_created_at.search(params[:search])
+</span><span class="inferred0"><a name="line29"></a>29     else
+</span><span class="marked1"><a name="line30"></a>30       @search = Project.descend_by_created_at.search(params[:search])
+</span><span class="inferred0"><a name="line31"></a>31     end
+</span><span class="marked1"><a name="line32"></a>32     @projects_count = @search.count
+</span><span class="marked0"><a name="line33"></a>33     @projects = @search.all.paginate(:page =&gt; params[:page], :per_page =&gt; 5)
+</span><span class="marked1"><a name="line34"></a>34     @sort_message = params[:sort_by].capitalize if params[:sort_by]
+</span><span class="inferred0"><a name="line35"></a>35   end
+</span><span class="inferred1"><a name="line36"></a>36 
+</span><span class="marked0"><a name="line37"></a>37   def new
+</span><span class="marked1"><a name="line38"></a>38   end
+</span><span class="inferred0"><a name="line39"></a>39 
+</span><span class="marked1"><a name="line40"></a>40   def create
+</span><span class="marked0"><a name="line41"></a>41     @project.creator = current_user
+</span><span class="marked1"><a name="line42"></a>42     if @project.save
+</span><span class="marked0"><a name="line43"></a>43       flash[:notice] = &quot;Project created successfully.&quot;
+</span><span class="marked1"><a name="line44"></a>44       current_user.has_role!(:owner, @project)
+</span><span class="marked0"><a name="line45"></a>45       redirect_to @project
+</span><span class="inferred1"><a name="line46"></a>46     else
+</span><span class="marked0"><a name="line47"></a>47       flash.now[:error] = &quot;There was a problem creating the project.&quot;
+</span><span class="marked1"><a name="line48"></a>48       render :action =&gt; :new
+</span><span class="inferred0"><a name="line49"></a>49     end
+</span><span class="inferred1"><a name="line50"></a>50   end
+</span><span class="inferred0"><a name="line51"></a>51 
+</span><span class="marked1"><a name="line52"></a>52   def edit
+</span><span class="inferred0"><a name="line53"></a>53   end
+</span><span class="inferred1"><a name="line54"></a>54 
+</span><span class="marked0"><a name="line55"></a>55   def update
+</span><span class="marked1"><a name="line56"></a>56     if @project.update_attributes(params[:project])
+</span><span class="marked0"><a name="line57"></a>57       flash[:notice] = &quot;The project was successfully edited.&quot;
+</span><span class="marked1"><a name="line58"></a>58       redirect_to :action =&gt; 'show', :id =&gt; @project
+</span><span class="inferred0"><a name="line59"></a>59     else
+</span><span class="marked1"><a name="line60"></a>60       flash.now[:notice] = &quot;There was a problem updating the project.&quot;
+</span><span class="marked0"><a name="line61"></a>61       render :action =&gt; 'edit'
+</span><span class="inferred1"><a name="line62"></a>62     end
+</span><span class="inferred0"><a name="line63"></a>63   end
+</span><span class="inferred1"><a name="line64"></a>64 
+</span><span class="marked0"><a name="line65"></a>65   def destroy
+</span><span class="marked1"><a name="line66"></a>66     if @project.destroy
+</span><span class="marked0"><a name="line67"></a>67       flash[:notice] = &quot;The project was deleted.&quot;
+</span><span class="marked1"><a name="line68"></a>68       redirect_to projects_path
+</span><span class="inferred0"><a name="line69"></a>69     else
+</span><span class="marked1"><a name="line70"></a>70       flash.now[:error] = &quot;There was a problem deleting the project.&quot;
+</span><span class="marked0"><a name="line71"></a>71       render :action =&gt; 'show'
+</span><span class="inferred1"><a name="line72"></a>72     end
+</span><span class="inferred0"><a name="line73"></a>73   end
+</span><span class="inferred1"><a name="line74"></a>74 
+</span><span class="marked0"><a name="line75"></a>75   def show
+</span><span class="inferred1"><a name="line76"></a>76     #@proposal = Proposal.find(params[:id])
+</span><span class="marked0"><a name="line77"></a>77   end
+</span><span class="inferred1"><a name="line78"></a>78 end
 </span></pre><hr/>
     <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
    version 0.8.2.1.</p>

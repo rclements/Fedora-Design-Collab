@@ -553,7 +553,7 @@ span.run100 {
 </style>
     </head>
   <body><h3>C0 code coverage information</h3>
-    <p>Generated on Sat Mar 13 12:27:32 -0600 2010 with <a href='http://github.com/spicycode/rcov'>rcov 0.8.2.1</a>
+    <p>Generated on Sat Mar 13 16:06:20 -0600 2010 with <a href='http://github.com/spicycode/rcov'>rcov 0.8.2.1</a>
       </p>
     <hr/>
     <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
@@ -571,9 +571,9 @@ span.run100 {
     </thead>
   <tbody><tr class='light'><td><a href='app-models-file_attachment_rb.html'>app/models/file_attachment.rb</a>
         </td>
-      <td class='lines_total'><tt>4</tt>
+      <td class='lines_total'><tt>5</tt>
         </td>
-      <td class='lines_code'><tt>4</tt>
+      <td class='lines_code'><tt>5</tt>
         </td>
       <td><table cellspacing='0' align='right' cellpadding='0'><tr><td><tt class='coverage_total'>100.0%</tt>
               &nbsp;</td>
@@ -598,10 +598,11 @@ span.run100 {
       </tr>
     </tbody>
   </table>
-<pre><span class="marked1"><a name="line1"></a>1 class FileAttachment &lt; ActiveRecord::Base
-</span><span class="marked0"><a name="line2"></a>2   belongs_to :proposal
-</span><span class="marked1"><a name="line3"></a>3   has_attached_file :attachment_file
-</span><span class="inferred0"><a name="line4"></a>4 end
+<pre><span class="marked0"><a name="line1"></a>1 class FileAttachment &lt; ActiveRecord::Base
+</span><span class="marked1"><a name="line2"></a>2   belongs_to :proposal
+</span><span class="marked0"><a name="line3"></a>3   has_attached_file :attachment_file
+</span><span class="marked1"><a name="line4"></a>4   validates_attachment_presence :attachment_file
+</span><span class="inferred0"><a name="line5"></a>5 end
 </span></pre><hr/>
     <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
    version 0.8.2.1.</p>

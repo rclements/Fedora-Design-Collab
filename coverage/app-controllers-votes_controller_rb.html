@@ -553,7 +553,7 @@ span.run100 {
 </style>
     </head>
   <body><h3>C0 code coverage information</h3>
-    <p>Generated on Sat Mar 13 12:27:32 -0600 2010 with <a href='http://github.com/spicycode/rcov'>rcov 0.8.2.1</a>
+    <p>Generated on Sat Mar 13 16:06:20 -0600 2010 with <a href='http://github.com/spicycode/rcov'>rcov 0.8.2.1</a>
       </p>
     <hr/>
     <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
@@ -571,24 +571,24 @@ span.run100 {
     </thead>
   <tbody><tr class='light'><td><a href='app-controllers-votes_controller_rb.html'>app/controllers/votes_controller.rb</a>
         </td>
-      <td class='lines_total'><tt>33</tt>
+      <td class='lines_total'><tt>34</tt>
         </td>
       <td class='lines_code'><tt>25</tt>
         </td>
-      <td><table cellspacing='0' align='right' cellpadding='0'><tr><td><tt class='coverage_total'>24.2%</tt>
+      <td><table cellspacing='0' align='right' cellpadding='0'><tr><td><tt class='coverage_total'>100.0%</tt>
               &nbsp;</td>
-            <td><table class='percent_graph' cellspacing='0' width='100' cellpadding='0'><tr><td class='covered' width='24'/>
-                  <td class='uncovered' width='76'/>
+            <td><table class='percent_graph' cellspacing='0' width='100' cellpadding='0'><tr><td class='covered' width='100'/>
+                  <td class='uncovered' width='0'/>
                   </tr>
                 </table>
               </td>
             </tr>
           </table>
         </td>
-      <td><table cellspacing='0' align='right' cellpadding='0'><tr><td><tt class='coverage_code'>24.0%</tt>
+      <td><table cellspacing='0' align='right' cellpadding='0'><tr><td><tt class='coverage_code'>100.0%</tt>
               &nbsp;</td>
-            <td><table class='percent_graph' cellspacing='0' width='100' cellpadding='0'><tr><td class='covered' width='24'/>
-                  <td class='uncovered' width='76'/>
+            <td><table class='percent_graph' cellspacing='0' width='100' cellpadding='0'><tr><td class='covered' width='100'/>
+                  <td class='uncovered' width='0'/>
                   </tr>
                 </table>
               </td>
@@ -603,34 +603,35 @@ span.run100 {
 </span><span class="inferred1"><a name="line3"></a> 3 
 </span><span class="marked0"><a name="line4"></a> 4   protected
 </span><span class="marked1"><a name="line5"></a> 5   def load_voteable
-</span><span class="uncovered0"><a name="line6"></a> 6     # We require these three params to handle a vote
-</span><span class="uncovered1"><a name="line7"></a> 7     unless params[:voteable_type] &amp;&amp; params[:voteable_id] &amp;&amp; params[:vote]
-</span><span class="uncovered0"><a name="line8"></a> 8       flash[:error] = &quot;Something went wrong.&quot;
-</span><span class="uncovered1"><a name="line9"></a> 9       redirect_back_or_default(&quot;/&quot;)
-</span><span class="uncovered0"><a name="line10"></a>10     end
-</span><span class="uncovered1"><a name="line11"></a>11     # We require that the vote param be either &quot;true&quot; or &quot;false&quot;
-</span><span class="uncovered0"><a name="line12"></a>12     # &quot;true&quot; is a vote for, &quot;false&quot; is a vote against
-</span><span class="uncovered1"><a name="line13"></a>13     unless %w(true false).include?(params[:vote])
-</span><span class="uncovered0"><a name="line14"></a>14       flash[:error] = &quot;Something went wrong.&quot;
-</span><span class="uncovered1"><a name="line15"></a>15       redirect_back_or_default(&quot;/&quot;)
-</span><span class="uncovered0"><a name="line16"></a>16     end
-</span><span class="uncovered1"><a name="line17"></a>17     @vote = params[:vote].downcase == &quot;true&quot;
-</span><span class="uncovered0"><a name="line18"></a>18     # This will turn &quot;proposal&quot; into Proposal
-</span><span class="uncovered1"><a name="line19"></a>19     klass = params[:voteable_type].camelize.constantize
-</span><span class="uncovered0"><a name="line20"></a>20     @voteable = klass.find params[:voteable_id]
-</span><span class="uncovered1"><a name="line21"></a>21   end
-</span><span class="inferred0"><a name="line22"></a>22 
-</span><span class="marked1"><a name="line23"></a>23   public
-</span><span class="marked0"><a name="line24"></a>24   def create
-</span><span class="uncovered1"><a name="line25"></a>25     # First, we kill this user's other votes for this voteable
-</span><span class="uncovered0"><a name="line26"></a>26     current_user_votes = Vote.for_voter(current_user).for_voteable(@voteable)
-</span><span class="uncovered1"><a name="line27"></a>27     current_user_votes.map(&amp;:destroy)
-</span><span class="uncovered0"><a name="line28"></a>28     # Then, we vote with the new vote
-</span><span class="uncovered1"><a name="line29"></a>29     current_user.vote(@voteable, @vote)
-</span><span class="uncovered0"><a name="line30"></a>30     flash[:notice] = &quot;Your vote has been cast.&quot;
-</span><span class="uncovered1"><a name="line31"></a>31     redirect_to_ref_url 
-</span><span class="uncovered0"><a name="line32"></a>32   end
-</span><span class="uncovered1"><a name="line33"></a>33 end
+</span><span class="inferred0"><a name="line6"></a> 6     # We require these three params to handle a vote
+</span><span class="marked1"><a name="line7"></a> 7     if !(params[:voteable_type] &amp;&amp; params[:voteable_id] &amp;&amp; params[:vote])
+</span><span class="marked0"><a name="line8"></a> 8       flash[:error] = &quot;Something went wrong.&quot;
+</span><span class="marked1"><a name="line9"></a> 9       redirect_back_or_default(&quot;/&quot;)
+</span><span class="marked0"><a name="line10"></a>10     elsif !%w(true false).include?(params[:vote])
+</span><span class="inferred1"><a name="line11"></a>11       # We require that the vote param be either &quot;true&quot; or &quot;false&quot;
+</span><span class="inferred0"><a name="line12"></a>12       # &quot;true&quot; is a vote for, &quot;false&quot; is a vote against
+</span><span class="marked1"><a name="line13"></a>13       flash[:error] = &quot;Something went wrong.&quot;
+</span><span class="marked0"><a name="line14"></a>14       redirect_back_or_default(&quot;/&quot;)
+</span><span class="inferred1"><a name="line15"></a>15     else
+</span><span class="inferred0"><a name="line16"></a>16       # We have all the params we need
+</span><span class="marked1"><a name="line17"></a>17       @vote = params[:vote].downcase == &quot;true&quot;
+</span><span class="inferred0"><a name="line18"></a>18       # This will turn &quot;proposal&quot; into Proposal
+</span><span class="marked1"><a name="line19"></a>19       klass = params[:voteable_type].camelize.constantize
+</span><span class="marked0"><a name="line20"></a>20       @voteable = klass.find params[:voteable_id]
+</span><span class="inferred1"><a name="line21"></a>21     end
+</span><span class="inferred0"><a name="line22"></a>22   end
+</span><span class="inferred1"><a name="line23"></a>23 
+</span><span class="marked0"><a name="line24"></a>24   public
+</span><span class="marked1"><a name="line25"></a>25   def create
+</span><span class="inferred0"><a name="line26"></a>26     # First, we kill this user's other votes for this voteable
+</span><span class="marked1"><a name="line27"></a>27     current_user_votes = Vote.for_voter(current_user).for_voteable(@voteable)
+</span><span class="marked0"><a name="line28"></a>28     current_user_votes.map(&amp;:destroy)
+</span><span class="inferred1"><a name="line29"></a>29     # Then, we vote with the new vote
+</span><span class="marked0"><a name="line30"></a>30     current_user.vote(@voteable, @vote)
+</span><span class="marked1"><a name="line31"></a>31     flash[:notice] = &quot;Your vote has been cast.&quot;
+</span><span class="marked0"><a name="line32"></a>32     redirect_to_ref_url 
+</span><span class="inferred1"><a name="line33"></a>33   end
+</span><span class="inferred0"><a name="line34"></a>34 end
 </span></pre><hr/>
     <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
    version 0.8.2.1.</p>

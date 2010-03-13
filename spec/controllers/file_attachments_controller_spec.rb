@@ -21,8 +21,8 @@ describe FileAttachmentsController do
 
     describe "hitting #new" do
       before(:each) do
-        @project = Project.make
-        get :new
+        @proposal = Proposal.make
+        get :new, :proposal_id => @proposal.id
       end
 
       it { response.should be_success }
@@ -36,8 +36,8 @@ describe FileAttachmentsController do
     describe "posting to #create" do
       describe "with valid parameters" do
         before(:each) do
-          @project = Project.make
-          post :create, { :proposal_id => @proposal.id, :file_attachment => { :image_file_file_name => "aasdgsdgr" } }
+          @proposal = Proposal.make
+          post :create, { :proposal_id => @proposal.id, :file_attachment => { :attachment_file_file_name => "aasdgsdgr" } }
         end
 
         it "should redirect to the root path" do
@@ -52,8 +52,8 @@ describe FileAttachmentsController do
 
       describe "with invalid parameters" do
         before(:each) do
-          @project = Project.make
-          post :create, { :proposal_id => @proposal.id, :file_attachment => {:image_file_file_name => nil } }
+          @proposal = Proposal.make
+          post :create, { :proposal_id => @proposal.id, :file_attachment => {:attachment_file_file_name => nil } }
         end
         it { response.should render_template("file_attachments/new") }
       end
