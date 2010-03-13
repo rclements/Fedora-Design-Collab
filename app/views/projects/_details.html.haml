@@ -10,9 +10,8 @@
           %dl
             %dt Lead Designer:
             %dd= link_to @project.creator.to_s, user_path(@project.creator.id)
-          %dl
-            %dt Collaborators:
-            %dd= link_to @proposal.creator.to_s, user_path(@proposal.creator.id)
+            Collaborators:
+            /%dd= link_to @proposal.creator.to_s, user_path(@proposal.creator.id)
         .updated
           = @project.updated_at
         %textarea.description-container{ :readonly => "readonly" }

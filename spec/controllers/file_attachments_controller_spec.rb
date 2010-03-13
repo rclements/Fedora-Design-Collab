@@ -53,7 +53,7 @@ describe FileAttachmentsController do
       describe "with invalid parameters" do
         before(:each) do
           @project = Project.make
-          post :create, { :proposal_id => @proposal.id, :file_attachment => {:content => nil } }
+          post :create, { :proposal_id => @proposal.id, :file_attachment => {:image_file_file_name => nil } }
         end
         it { response.should render_template("file_attachments/new") }
       end

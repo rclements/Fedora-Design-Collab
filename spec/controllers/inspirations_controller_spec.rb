@@ -1,14 +1,31 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe InspirationsController do
+  describe "Without being logged in" do
+    describe "hitting #new" do
+      before(:each) do
+        get :new
+      end
 
-  describe "Authenticated examples" do
+      it { response.should redirect_to(new_user_session_path) }
+    end
+
+    describe "hitting #create" do
+      before(:each) do
+        post :create
+      end
+
+      it { response.should redirect_to(new_user_session_path) }
+    end
+  end
+
+
+  describe "A logged-in user" do
     before(:each) do
       activate_authlogic
-      
-      @username = "bob"
-      @password = "bobby"
-      @user = User.make(:username => @username, :password => @password, :password_confirmation => @password)
+      inc_ary = create_inspiration_with_owner
+      @inspiration = inc_ary[0]
+      @user = inc_ary[1]
       create_user_session(@user)
     end
 
@@ -23,7 +40,7 @@ describe InspirationsController do
 
     describe "hitting #new" do
       before(:each) do
-        @project = Project .make
+        @project = Project.make
         get :new, :project_id => @project.id
       end
 
@@ -46,11 +63,17 @@ describe InspirationsController do
           response.should redirect_to(project_path(assigns(:inspiration).project))
         end
       end
+
+      it "should create and assign a @inspiration" do
+          assert assigns(:inspiration)
+        end
+
+
       
       describe "with invalid parameters" do
         before :each do
           @project = Project.make
-          post :create, { :project_id => @project.id, :inspiration => { :description => nil } }
+          post :create, { :project_id => @project.id, :inspiration => { :title => nil, :description => nil } }
         end
         it { response.should render_template("inspirations/new") }
       end
@@ -58,7 +81,7 @@ describe InspirationsController do
 
     describe "PUTing to #update" do
       before(:each) do
-        @inspiration = Inspiration.make
+        #@inspiration = Inspiration.make
       end
 
       describe "successfully" do
@@ -80,7 +103,7 @@ describe InspirationsController do
 
     describe "DELETEing to #destroy" do
       before(:each) do
-        @inspiration = Inspiration.make
+        #@inspiration = Inspiration.make
         @project = @inspiration.project
       end
 

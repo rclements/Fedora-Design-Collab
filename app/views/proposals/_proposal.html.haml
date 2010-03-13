@@ -7,7 +7,6 @@
       = show_gravatar_for(@proposal.creator)
     %dl
       %dt Collaborator:
-      %dd= link_to @proposal.creator.to_s, user_path(@proposal.creator.id)
     %ul.vote
       = render :partial => "votes/voteable", :locals => { :voteable => proposal, :refurl => project_path(proposal.project) }
     %ul.proposal-image
