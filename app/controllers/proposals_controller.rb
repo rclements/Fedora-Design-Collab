@@ -52,6 +52,7 @@ class ProposalsController < ApplicationController
     if @proposal.save
       flash[:notice] = "Proposal created successfully."
       current_user.has_role!(:owner, @proposal)
+      current_user.has_role!(:collaborator, @proposal.project)
       redirect_to @proposal
     else
       flash.now[:error] = "There was a problem creating the proposal."

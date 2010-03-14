@@ -12,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :votes
   map.resources :uploads
   map.resources :file_attachments
+  map.resources :watches
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
