@@ -73,3 +73,23 @@ def create_proposal_with_owner(user=nil, proposal=nil)
   user.has_role!(:owner, proposal)
   [proposal, user]
 end
+def create_project_with_owner(user=nil, project=nil)
+  unless user
+    user = User.make
+  end
+  unless project
+  project = Project.make
+  end
+  user.has_role!(:owner, project)
+  [project, user]
+end
+def create_inspiration_with_owner(user=nil, inspiration=nil)
+  unless user
+    user = User.make
+  end
+  unless inspiration
+  inspiration = Inspiration.make
+  end
+  user.has_role!(:owner, inspiration)
+  [inspiration, user]
+end

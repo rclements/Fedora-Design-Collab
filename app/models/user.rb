@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   def to_s
     username
   end
+
+  def project_watches
+    role_objects.for_authorizable_type("Project").for_name("watcher")
+  end
 end

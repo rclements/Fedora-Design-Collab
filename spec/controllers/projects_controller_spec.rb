@@ -1,14 +1,12 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe ProjectsController do
-
-  describe "Authenticated examples" do
+  describe "A logged-in user" do
     before(:each) do
       activate_authlogic
-      
-      @username = "bob"
-      @password = "bobby"
-      @user = User.make(:username => @username, :password => @password, :password_confirmation => @password)
+      inc_ary = create_project_with_owner
+      @project = inc_ary[0]
+      @user = inc_ary[1]
       create_user_session(@user)
     end
 
@@ -26,7 +24,7 @@ describe ProjectsController do
 
     describe "hitting #show with an id" do
       before(:each) do
-        @project = Project.make
+        #@project = Project.make
         get :show, { :id => @project.id }
       end
 
@@ -91,7 +89,7 @@ describe ProjectsController do
 
     describe "PUTing to #update" do
       before(:each) do
-        @project = Project.make
+        #@project = Project.make
       end
 
       describe "successfully" do
@@ -113,7 +111,7 @@ describe ProjectsController do
 
     describe "DELETEing to #destroy" do
       before(:each) do
-        @project = Project.make
+        #@project = Project.make
       end
 
       describe "successfully" do

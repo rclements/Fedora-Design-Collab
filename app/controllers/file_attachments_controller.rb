@@ -1,8 +1,15 @@
 class FileAttachmentsController < ApplicationController
+  before_filter :redirect_if_no_proposal, :only => [:new, :create]
   before_filter :load_new_file_attachment, :only => [:new, :create]
   before_filter :load_file_attachment, :only => [:show]
 
   protected
+  def redirect_if_no_proposal
+    unless params[:proposal_id]
+      redirect_to "/"
+    end
+  end
+
   def load_new_file_attachment
     @file_attachment = FileAttachment.new(params[:file_attachment])
     @file_attachment.proposal_id = params[:proposal_id]
@@ -13,6 +20,10 @@ class FileAttachmentsController < ApplicationController
   end
 
   public
+  def show
+    send_file(@file_attachment.attachment_file.path, :disposition => 'attachment')
+  end
+
   def new
   end
 
@@ -24,35 +35,5 @@ class FileAttachmentsController < ApplicationController
       flash.now[:error] = "There was a problem saving the image."
       render :action => :new
     end
-  end
-
-  def show
-    send_file(@file_attachment.attachment_file.path, :disposition => 'attachment')
-  end
-
-  def save_upload(upload)
-    self.original_filename = sanitize_file_name(upload.original_filename)
-    self.new_filename = unique_filename
-    File.open(absolute_path, "wb") { |f| f.write(upload.read) }
-  end
-
-  def save_file
-    if params[:file_attachment] != nil
-      file_attachment = FileAttachment.new
-      file_attachment.save_upload(params[:file_attachment])
-    end
-  end
-
-  private
-  def absolute_path
-    File.join(Rails.root, 'public/system/attachment_files', self.new_filename)
-  end
-
-  def sanitize_filename(filename)
-    File.basename(filename).gsub(/[^\w\.\_]/,'_')
-  end
-
-  def unique_filename
-    Time.now.strftime("%m%d%Y%H%M%S").to_s + "-#{self.original_filename}"
   end
 end

@@ -1,18 +1,16 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe InspirationsController do
-
-  describe "Authenticated examples" do
+  describe "A logged-in user" do
     before(:each) do
       activate_authlogic
-      
-      @username = "bob"
-      @password = "bobby"
-      @user = User.make(:username => @username, :password => @password, :password_confirmation => @password)
+      inc_ary = create_inspiration_with_owner
+      @inspiration = inc_ary[0]
+      @user = inc_ary[1]
       create_user_session(@user)
     end
 
-    describe "hitting #new without a project_id" do
+    describe "hitting #new without a proposal_id" do
       before :each do
         get :new
       end
@@ -23,8 +21,8 @@ describe InspirationsController do
 
     describe "hitting #new" do
       before(:each) do
-        @project = Project .make
-        get :new, :project_id => @project.id
+        @proposal = Proposal.make
+        get :new, :proposal_id => @proposal.id
       end
 
       it { response.should be_success }
@@ -38,19 +36,25 @@ describe InspirationsController do
     describe "posting to #create" do
       describe "with valid parameters" do
         before :each do
-          @project = Project.make
-          post :create, { :project_id => @project.id, :inspiration => { :title => "blah", :description => "asdf" } }
+          @proposal = Proposal.make
+          post :create, { :proposal_id => @proposal.id, :inspiration => { :title => "blah", :description => "asdf" } }
         end
 
         it "should redirect to the inspiration path" do
-          response.should redirect_to(project_path(assigns(:inspiration).project))
+          response.should redirect_to(proposal_path(assigns(:inspiration).proposal))
         end
       end
+
+      #it "should create and assign a @inspiration" do
+         # assert assigns(:inspiration)
+       # end
+
+
       
       describe "with invalid parameters" do
         before :each do
-          @project = Project.make
-          post :create, { :project_id => @project.id, :inspiration => { :description => nil } }
+          @proposal = Proposal.make
+          post :create, { :proposal_id => @proposal.id, :inspiration => { :title => nil, :description => nil } }
         end
         it { response.should render_template("inspirations/new") }
       end
@@ -58,7 +62,7 @@ describe InspirationsController do
 
     describe "PUTing to #update" do
       before(:each) do
-        @inspiration = Inspiration.make
+        #@inspiration = Inspiration.make
       end
 
       describe "successfully" do
@@ -66,7 +70,7 @@ describe InspirationsController do
           put :update, { :id => @inspiration.id, :inspiration => { :title => "blah", :description => "stuff said about stuff" } }
         end
         
-        it { response.should redirect_to(project_path(@inspiration.project))}
+        it { response.should redirect_to(proposal_path(@inspiration.proposal))}
       end
 
       describe "unsuccessfully" do
@@ -80,8 +84,7 @@ describe InspirationsController do
 
     describe "DELETEing to #destroy" do
       before(:each) do
-        @inspiration = Inspiration.make
-        @project = @inspiration.project
+        @proposal = @inspiration.proposal
       end
 
       describe "successfully" do
@@ -94,7 +97,7 @@ describe InspirationsController do
           delete :destroy, { :id => @inspiration.id }
         end
 
-        it { response.should redirect_to(project_path(@project)) }
+        it { response.should redirect_to(proposal_path(@proposal)) }
       end
 
       describe "unsuccessfully" do

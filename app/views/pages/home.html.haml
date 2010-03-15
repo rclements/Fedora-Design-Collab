@@ -9,10 +9,19 @@ Welcome to the FDC homepage.
   %br
   = link_to "All Projects List", { :controller => "projects", :action => "index" }
 %p
-#MyProjects>My Projects
+#my-projects My Projects
 %ul.project-lister
-  - @projects.each do |project|
+  - @my_projects.each do |project|
     %li.projects
       .link
         = link_to project.to_s, project_path(project.id)
-= will_paginate @projects, :param_name => 'projects_page'
+= will_paginate @my_projects, :param_name => 'my_projects_page'
+%p
+#watched-projects Watched Projects
+%ul.project-lister
+  - @project_watches.each do |project_watch|
+    - project = project_watch.authorizable
+    %li.projects
+      .link
+        = link_to project.to_s, project_path(project.id)
+= will_paginate @project_watches, :param_name => 'project_watches_page'

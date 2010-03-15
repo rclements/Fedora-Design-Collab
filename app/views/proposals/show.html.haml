@@ -8,8 +8,8 @@ Project:
     .creator
       = show_gravatar_for(@proposal.creator)
       %br
-      Collaborator:
-    = link_to @proposal.creator.to_s, user_path(@proposal.creator.id)
+      Proposal Creator:
+      = link_to @proposal.creator.to_s, user_path(@proposal.creator.id)
     %h2= @proposal.to_s
     = render :partial => "votes/voteable", :locals => { :voteable => @proposal, :refurl => project_path(@proposal.project) }
     %br
