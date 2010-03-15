@@ -5,6 +5,8 @@
         %h4= @project.to_s
         - if @project.project_image
           = image_tag @project.project_image.url
+          %br
+          %br
         .creator
           = show_gravatar_for(@project.creator)
           %dl

@@ -1,16 +1,18 @@
 %h2 Project List 
-%ul.new-project
-  = link_to "Start New Project", { :controller => "projects", :action => "new" }
+= link_to "Start New Project", { :controller => "projects", :action => "new" }
+%br
+%br
 = "(#{@sort_message})" if @sort_message
 .focus-cont.form-container.search-form
   -form_for @search do |f|
     = f.label :title_like, "Title"
     = f. text_field :title_like
     = f.submit "Submit"
-%ul.project-sort
+%ul.project-lister
   = link_to "Newest Projects", projects_path(:sort_by => "newest")
   = link_to "Oldest Projects", projects_path(:sort_by => "oldest")
-%ul.projects
+  %br      
+  %br
   - @projects.each do |project|
     %li.project
       .link
