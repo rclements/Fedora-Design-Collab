@@ -11,6 +11,11 @@ describe WatchesController do
     end
   
     describe "posting to create" do
+      before :each do
+        @project = Project.make
+      end
+      it "should assign the role" do
+      end
     end
   end
 end
