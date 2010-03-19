@@ -1,0 +1,13 @@
+%h2 The Start of a New Project
+
+.form-container
+  - form_for :project, @project, :url => projects_path, :html => {:multipart => true} do |form|
+    .main-container
+      %label{ :for => 'title'}
+        Title
+        = form.text_field :title
+        %label{ :for => 'description'}
+          Description
+        = form.text_area :description, "class" => 'project-box'
+        .submit-container
+          = submit_tag 'Submit'

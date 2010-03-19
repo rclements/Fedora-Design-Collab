@@ -1,0 +1,9 @@
+.inspiration-container
+  .main-container
+    - inspiration.inspiration_images.each do |image|
+      = image_tag image.image_file.url
+    %textarea.description-container{ :readonly => "readonly" }
+      = inspiration.description
+      
+    = link_to "Edit", edit_inspiration_path(inspiration.id)
+    = link_to "Delete", inspiration_path(inspiration.id), :confirm => "Are you sure?", :method => :delete

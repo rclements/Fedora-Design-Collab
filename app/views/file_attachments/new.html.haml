@@ -1,0 +1,6 @@
+= error_messages_for(:file_attachment)
+
+- form_for :file_attachment, @file_attachment, :url => file_attachments_path, :html => { :multipart => true } do |form|
+  = form.file_field :attachment_file
+  = hidden_field_tag :proposal_id, params[:proposal_id]
+  = submit_tag 'Submit'

@@ -1,0 +1,27 @@
+.copy-container
+%h2
+Welcome to the FDC homepage.
+%br
+#ProjectLinks
+%ul.project-links
+  = link_to "Start New Project", { :controller => "projects", :action => "new" }
+  %br
+  %br
+  = link_to "All Projects List", { :controller => "projects", :action => "index" }
+%p
+#my-projects My Projects
+%ul.project-lister
+  - @my_projects.each do |project|
+    %li.projects
+      .link
+        = link_to project.to_s, project_path(project.id)
+= will_paginate @my_projects, :param_name => 'my_projects_page'
+%p
+#watched-projects Watched Projects
+%ul.project-lister
+  - @project_watches.each do |project_watch|
+    - project = project_watch.authorizable
+    %li.projects
+      .link
+        = link_to project.to_s, project_path(project.id)
+= will_paginate @project_watches, :param_name => 'project_watches_page'

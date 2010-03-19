@@ -1,0 +1,27 @@
+#project-nav
+  .project-container
+    .main-container
+      .details
+        %h4= @project.to_s
+        - if @project.project_image
+          = image_tag @project.project_image.url
+          %br
+          %br
+        .creator
+          = show_gravatar_for(@project.creator)
+          %dl
+            %dt Lead Designer:
+            %dd= link_to @project.creator.to_s, user_path(@project.creator.id)
+            Collaborators:
+            - @project.collaborators.each do |collaborator|
+              %dd= link_to collaborator.to_s, user_path(collaborator.id)
+        .updated
+          = @project.updated_at
+        %textarea.description-container{ :readonly => "readonly" }
+          = @project.description
+      
+        = link_to "Edit", { :controller => "projects", :action => "edit" }
+        - if current_user.has_role?(:watcher, @project)
+          = link_to "Remove watch", watch_path(:id => @project.id, :refurl => project_path(@project)), :method => :delete
+        - else
+          = link_to "Watch this project", watches_path(:id => @project.id, :refurl => project_path(@project)), :method => :post

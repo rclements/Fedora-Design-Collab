@@ -1,0 +1,32 @@
+Searchlogic
+
+
+view
+
+ .focus-cont.form-container.search-form
+    - form_for @search do |f|
+      = f.label :first_name_like, "First Name:"
+      = f.text_field :first_name_like
+      = f.label :last_name_like, "Last Name:"
+      = f.text_field :last_name_like
+      %br
+      = f.label :sin_equals, "SID:"
+      = f.text_field :sin_equals
+      = f.label :representative_rin_equals, "RID:"
+      = f.text_field :representative_rin_equals
+      = f.submit "Submit"
+
+
+
+controller
+
+  def index
+    if current_user && current_user.admin?
+      @search = User.ascend_by_last_name.search(params[:search])
+      @users_count = @search.count
+      @users = @search.all.paginate(:page => params[:page], :per_page => 25)
+    else
+      flash[:notice]  = "You must be an admin to view this page"
+      redirect_to '/'
+    end
+  end

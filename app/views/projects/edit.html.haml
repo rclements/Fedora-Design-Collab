@@ -1,0 +1,14 @@
+%h2 Edit
+.form-container
+  - form_for :project, @project, :url => { :action => "update" }, :html => { :multipart => true, :method => :put } do |form|
+    .main-container
+      %label{ :for => 'title'}
+        Title
+      = form.text_field :title
+      %label{ :for => 'description'}
+        Snippet
+      = form.text_area :description, "class" => 'project-box'
+      
+    .submit-container
+      = submit_tag 'Submit'
+.clear
