@@ -41,7 +41,7 @@ describe FileAttachmentsController do
         end
 
         it "should redirect to the root path" do
-          response.should redirect_to("/")
+          response.should redirect_to projects_path
         end
 
         it "should create and assign a @file_attachment" do

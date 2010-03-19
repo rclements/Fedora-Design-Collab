@@ -44,12 +44,6 @@ describe InspirationsController do
           response.should redirect_to(proposal_path(assigns(:inspiration).proposal))
         end
       end
-
-      #it "should create and assign a @inspiration" do
-         # assert assigns(:inspiration)
-       # end
-
-
       
       describe "with invalid parameters" do
         before :each do
@@ -62,7 +56,6 @@ describe InspirationsController do
 
     describe "PUTing to #update" do
       before(:each) do
-        #@inspiration = Inspiration.make
       end
 
       describe "successfully" do

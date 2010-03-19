@@ -9,6 +9,7 @@ require "authlogic/test_case"
 require "machinist"
 require "blueprint"
 require "faker"
+
 # Uncomment the next line to use webrat's matchers
 #require 'webrat/integrations/rspec-rails'
 
@@ -92,4 +93,14 @@ def create_inspiration_with_owner(user=nil, inspiration=nil)
   end
   user.has_role!(:owner, inspiration)
   [inspiration, user]
+end
+def watch_with_watcher(user=nil, project=nil)
+  unless user
+    user = User.make
+  end
+  unless project
+  project = Project.make
+  end
+  user.has_role!(:watcher, project)
+  [project, user]
 end
