@@ -31,5 +31,6 @@
       #comments
         - proposal.comments.each do |comment|
           = render :partial => "comments/comment", :locals => { :comment => comment }
-        = render :partial => "comments/comment_form", :locals => { :commentable_id => proposal.id, :commentable_field => "proposal_id", :commentable_type => "Proposal", :refurl => project_path(proposal.project) }
+        = render :partial => "comments/comment_form", :locals => { :commentable_id => proposal.id, :commentable_field => "proposal_id", :commentable_type => "Proposal", :refurl => project_path(proposal.project), :comment_num => proposal.id }
+        /= will_paginate @comments, :param_name => 'page'
 .clear

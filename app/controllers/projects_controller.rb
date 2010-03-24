@@ -1,7 +1,9 @@
 class ProjectsController < ApplicationController
   before_filter :load_projects
   before_filter :load_project, :only => [:show, :edit, :update, :destroy]
+  before_filter :load_proposals, :only => [:show]
   before_filter :load_new_project, :only => [:new, :create]
+  before_filter :load_comments, :only => [:show]
   
   access_control do
     #allow :admin
@@ -16,6 +18,18 @@ class ProjectsController < ApplicationController
 
   def load_project
     @project = Project.find(params[:id])
+  end
+
+  def load_proposals
+    if params[:sort_by]  == "oldest"
+      @proposals = @project.proposals.ascend_by_created_at
+    else
+      @proposals = @project.proposals.descend_by_created_at
+    end
+  end
+
+  def load_comments
+#    @comments  = @project.proposals.paginate(:page => params[:page], :order => 'created_at DESC', :per_page => 5)
   end
 
   def load_new_project
@@ -73,6 +87,5 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    #@proposal = Proposal.find(params[:id])
   end
 end
