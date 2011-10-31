@@ -9,12 +9,12 @@ describe UserSessionsController do
       before(:each) do
         @user = User.make
       end
-        
+
       it "should redirect to root" do
-        post :create, :user_session => { :username => @user.username, :password => "password" } 
+        post :create, :user_session => { :username => @user.username, :password => "password" }
         response.should redirect_to(root_url)
       end
-       
+
       describe "should redirect to :new if it fails" do
         post :create, :user_session => { :username => nil, :password => nil }
         it { response.should render_template(:new) }
@@ -25,7 +25,7 @@ describe UserSessionsController do
   describe "when logged in" do
     before(:each) do
       activate_authlogic
-      
+
       @username = "bob"
       @password = "bobby"
       @user = User.make(:username => @username, :password => @password, :password_confirmation => @password)
@@ -44,12 +44,12 @@ describe UserSessionsController do
 
     describe "when attempting to hit login again" do
       it "should redirect to the account_url" do
-        post :create, :user_session => { :username => @user.username, :password => "password" } 
+        post :create, :user_session => { :username => @user.username, :password => "password" }
         response.should redirect_to(account_url)
       end
     end
   end
-    
+
   describe "GET #new" do
      before(:each) do
        get :new

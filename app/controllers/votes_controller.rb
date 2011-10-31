@@ -29,6 +29,6 @@ class VotesController < ApplicationController
     # Then, we vote with the new vote
     current_user.vote(@voteable, @vote)
     flash[:notice] = "Your vote has been cast."
-    redirect_to_ref_url 
+    redirect_to_ref_url
   end
 end

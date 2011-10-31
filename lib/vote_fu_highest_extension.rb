@@ -7,7 +7,7 @@ module VoteFuHighestExtension
     find(:all, options_for_highest_tally(options.merge({:order =>"vote DESC" })))
   end
 
-  # 
+  #
   # Options:
   #  :start_at    - Restrict the votes to those created after a certain time
   #  :end_at      - Restrict the votes to those created before a certain time
@@ -43,10 +43,10 @@ module VoteFuHighestExtension
       group_by  = "#{Vote.table_name}.voteable_id HAVING COUNT(#{Vote.table_name}.id) > 0"
       group_by << " AND #{having}" unless having.blank?
 
-      { :select     => "#{table_name}.*, SUM(#{Vote.table_name}.vote) AS vote", 
+      { :select     => "#{table_name}.*, SUM(#{Vote.table_name}.vote) AS vote",
         :joins      => joins.join(" "),
         :conditions => conditions,
         :group      => group_by
-      }.update(options)          
+      }.update(options)
   end
 end

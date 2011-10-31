@@ -44,7 +44,7 @@ describe InspirationsController do
           response.should redirect_to(proposal_path(assigns(:inspiration).proposal))
         end
       end
-      
+
       describe "with invalid parameters" do
         before :each do
           @proposal = Proposal.make
@@ -62,7 +62,7 @@ describe InspirationsController do
         before(:each) do
           put :update, { :id => @inspiration.id, :inspiration => { :title => "blah", :description => "stuff said about stuff" } }
         end
-        
+
         it { response.should redirect_to(proposal_path(@inspiration.proposal))}
       end
 

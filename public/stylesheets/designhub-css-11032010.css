@@ -55,9 +55,9 @@ ul.utility-nav li {
   height: 42px;
   float: left;
   font-size: 80%;
-} 
+}
 
-ul.utility-nav li:hover, 
+ul.utility-nav li:hover,
 ul.utility-nav a:hover {
   background-color: #51b0d8;
 }

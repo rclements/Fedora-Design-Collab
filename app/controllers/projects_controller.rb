@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   before_filter :load_proposals, :only => [:show]
   before_filter :load_new_project, :only => [:new, :create]
   before_filter :load_comments, :only => [:show]
-  
+
   access_control do
     #allow :admin
     allow logged_in, :to => [:show, :new, :create, :index]

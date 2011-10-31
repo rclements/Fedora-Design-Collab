@@ -9,7 +9,7 @@ describe WatchesController do
       @user = inc_ary[1]
       create_user_session(@user)
     end
-  
+
     describe "posting to create" do
       before :each do
         @project = Project.make
@@ -19,4 +19,4 @@ describe WatchesController do
     end
   end
 end
- 
+

@@ -5,7 +5,7 @@ describe InspirationsController do
   describe "Authenticated examples" do
     before(:each) do
       activate_authlogic
-      
+
       @username = "bob"
       @password = "bobby"
       @user = User.make(:username => @username, :password => @password, :password_confirmation => @password)

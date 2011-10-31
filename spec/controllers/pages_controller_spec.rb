@@ -17,5 +17,5 @@ describe PagesController do
 
       it { response.should be_success }
     end
-  end 
-end 
+  end
+end

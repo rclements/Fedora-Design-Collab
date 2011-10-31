@@ -29,11 +29,11 @@ class ProposalsController < ApplicationController
     @proposal.project_id = params[:project_id]
     @proposal.creator = current_user
   end
-    
+
   def load_proposal_images
     @proposal_images = @proposal.proposal_images
   end
-  
+
   def load_file_attachments
     @file_attachments = @proposal.file_attachments
   end
@@ -41,7 +41,7 @@ class ProposalsController < ApplicationController
   public
   def new
   end
-  
+
   def show
   end
 

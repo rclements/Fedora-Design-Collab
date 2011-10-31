@@ -7,7 +7,7 @@
       = link_to image_tag(image.image_file.url), proposal_path(proposal.id)
     %textarea.content-container{ :readonly => "readonly" }
       = proposal.content
-    %br   
+    %br
     - if include_comments
       %h3 Comments
       #comments

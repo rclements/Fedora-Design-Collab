@@ -7,11 +7,11 @@
     background-color: #F4F2ED;
     padding: 1em;
   }
-  
+
   a:link {
     color: #191919;
   }
-  
+
   a:visited {
     color: #191919;
   }
@@ -31,32 +31,32 @@
     margin: 0em 0em 1em 0em;
     color: #666666;
   }
-  
-  h1 { 
+
+  h1 {
     display: block;
     font-size: 2em;
     letter-spacing: -1px;
   }
-  
+
   h2 {
-    margin-top: -1em;	
+    margin-top: -1em;
   }
-  
+
   fieldset {
     display: inline;
     border: 0px;
     padding: 0px;
     margin-right: 1em;
   }
-  
+
   div.filters {
-    margin-bottom: 1em;	
+    margin-bottom: 1em;
   }
-  
+
   .hidden {
     display: none;
   }
-  
+
 /* @end */
 
 /* @group Cross-References */
@@ -64,11 +64,11 @@
   span.cross-ref-title {
     font-size: 140%;
   }
-  
+
   span.cross-ref a {
     text-decoration: none;
   }
-  
+
   span.cross-ref {
     background-color:#f3f7fa;
     border: 1px dashed #333;
@@ -76,7 +76,7 @@
     padding: 0.5em;
     overflow: hidden;
   }
-  
+
   a.crossref-toggle {
     text-decoration: none;
   }
@@ -95,11 +95,11 @@
     width: 100%;
     margin-bottom: 1em;
   }
-  
+
   table.report tr {
     line-height: 1.75em;
   }
-  
+
   table.report th {
     background: #666666;
     color: #ffffff;
@@ -117,19 +117,19 @@
     padding: .5em;
     border: 1px solid #666666;
   }
-  
+
   th.left_align, td.left_align {
     text-align: left !important;
   }
-  
+
   th.right_align, td.right_align {
     text-align: right;
     padding-right: 2em !important;
   }
-  
+
   table.report th.header:hover {
     cursor:	pointer;
-    text-decoration: underline; 
+    text-decoration: underline;
   }
 
   table.report th.headerSortUp:after{
@@ -152,7 +152,7 @@
     color: #333333;
     font-weight: bold;
   }
-  
+
   table.report td {
     padding: .2em .5em .2em .5em;
   }
@@ -160,11 +160,11 @@
   table.report td a {
     text-decoration: none;
   }
-  
+
   table.report tbody tr:hover {
     background: #cccccc !important;
   }
-  
+
   table.report tr.summary_row td {
     border-bottom: 1px solid #aaaaaa;
   }
@@ -188,7 +188,7 @@
     height: 1em;
     line-height: 1em;
   }
-  
+
   div.percent_graph {
     height: 1em;
     border: #333333 1px solid;
@@ -204,20 +204,20 @@
   	float: left;
     height: 1em;
     padding: 0px !important;
-  }  
+  }
 
   div.percent_graph div.covered {
     background: #649632;
   }
-  
+
   div.percent_graph div.uncovered {
     background: #a92730;
   }
-  
+
   div.percent_graph div.NA {
     background: #eaeaea;
   }
-  
+
 /* @end */
 
 /* @group Details page */
@@ -228,7 +228,7 @@
     width: 100%;
     border: 1px solid #666666;
   }
-  
+
   table.details tr {
   	line-height: 1.75em;
 	}
@@ -241,23 +241,23 @@
     display: block;
     padding: .25em;
   }
-  
+
   tr.inferred td, span.inferred {
     background-color: #e0dedb;
   }
-  
+
   tr.inferred1 td, span.inferred1 {
     background-color: #e0dedb;
   }
-  
+
   tr.marked td, span.marked, span.marked1 {
     background-color: #bed2be;
   }
-  
+
   tr.uncovered td, span.uncovered {
     background-color: #ce8b8c;
   }
-  
+
   tr.uncovered1 td, span.uncovered1 {
     background-color: #ce8b8c;
   }
