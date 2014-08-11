@@ -90,7 +90,7 @@ describe ProposalsController do
         before(:each) do
           put :update, { :id => @proposal.id, :proposal => { :content => "stuff said" } }
         end
-        
+
         it { response.should redirect_to(project_path(@proposal.project))}
       end
 

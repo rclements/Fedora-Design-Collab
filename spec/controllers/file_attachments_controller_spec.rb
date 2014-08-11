@@ -4,13 +4,13 @@ describe FileAttachmentsController do
   describe "A logged-in user" do
     before(:each) do
       activate_authlogic
-      
+
       @username = "bob"
       @password = "bobby"
       @user = User.make(:username => @username, :password => @password, :password_confirmation => @password)
       create_user_session(@user)
     end
-   
+
     describe "hitting #new without a proposal_id" do
       before :each do
         get :new

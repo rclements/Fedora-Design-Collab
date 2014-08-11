@@ -6,7 +6,7 @@ function toggleCode( id ) {
   } else {
     return false;
   }
-  
+
   elemStyle = elem.style;
 
   if ( elemStyle.display != "block" ) {

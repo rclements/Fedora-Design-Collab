@@ -4,7 +4,7 @@ class Project < ActiveRecord::Base
   has_many :comments, :as => :commentable
   acts_as_authorization_object
   has_many :collaborators
-  
+
   validates_presence_of :title
 
   def to_s

@@ -6,7 +6,7 @@ Projects:
   = link_to "List All Projects", projects_path
 = render :partial => "projects/details", :locals => { :project => @project }
 %br
-    
+
   %h3 Proposals
   = link_to 'Create New Proposal', new_proposal_path(:project_id => @project.id)
   %br

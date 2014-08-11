@@ -4,7 +4,7 @@ class InspirationsController < ApplicationController
   before_filter :load_inspiration, :only => [:show, :edit, :update, :destroy]
   before_filter :load_new_inspiration, :only => [:new, :create]
   before_filter :load_inspiration_images, :only => [:show, :new]
-  
+
   access_control do
     #allow :admin
     allow logged_in, :to => [:show, :new, :create, :index]

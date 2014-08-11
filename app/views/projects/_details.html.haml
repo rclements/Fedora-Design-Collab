@@ -19,7 +19,7 @@
           = @project.updated_at
         %textarea.description-container{ :readonly => "readonly" }
           = @project.description
-      
+
         = link_to "Edit", { :controller => "projects", :action => "edit" }
         - if current_user.has_role?(:watcher, @project)
           = link_to "Remove watch", watch_path(:id => @project.id, :refurl => project_path(@project)), :method => :delete

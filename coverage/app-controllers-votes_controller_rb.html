@@ -4,7 +4,7 @@
     <title>app/controllers/votes_controller.rb</title>
     <link href="screen.css" media="all" rel="stylesheet" type="text/css" />
     <link href="print.css" media="print" rel="stylesheet" type="text/css" />
-    
+
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <script type="text/javascript" src="rcov.js"></script>
   </head>
@@ -12,7 +12,7 @@
     <h1>Fedora Collab C0 Coverage Information - RCov</h1>
     <h2>app/controllers/votes_controller.rb</h2>
 
-    
+
 
     <div class="report_table_wrapper">
       <table class='report' id='report_table'>
@@ -44,220 +44,220 @@
         </tbody>
       </table>
     </div>
-    
+
     <h3>Key</h3>
-    
+
     <div class="key"><pre><span class='marked'>Code reported as executed by Ruby looks like this...</span><span class='marked1'>and this: this line is also marked as covered.</span><span class='inferred'>Lines considered as run by rcov, but not reported by Ruby, look like this,</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).</span><span class='uncovered'>Finally, here's a line marked as not executed.</span></pre></div>
 
     <h3>Coverage Details</h3>
 
     <table class="details">
       <tbody>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line1">1</a> class VotesController &lt; ApplicationController</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line2">2</a>   before_filter :load_voteable, :only =&gt; [:create]</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line3">3</a> </pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line4">4</a>   protected</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line5">5</a>   def load_voteable</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line6">6</a>     # We require these three params to handle a vote</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line7">7</a>     if !(params[:voteable_type] &amp;&amp; params[:voteable_id] &amp;&amp; params[:vote])</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line8">8</a>       flash[:error] = &quot;Something went wrong.&quot;</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line9">9</a>       redirect_back_or_default(&quot;/&quot;)</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line10">10</a>     elsif !%w(true false).include?(params[:vote])</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line11">11</a>       # We require that the vote param be either &quot;true&quot; or &quot;false&quot;</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line12">12</a>       # &quot;true&quot; is a vote for, &quot;false&quot; is a vote against</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line13">13</a>       flash[:error] = &quot;Something went wrong.&quot;</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line14">14</a>       redirect_back_or_default(&quot;/&quot;)</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line15">15</a>     else</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line16">16</a>       # We have all the params we need</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line17">17</a>       @vote = params[:vote].downcase == &quot;true&quot;</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line18">18</a>       # This will turn &quot;proposal&quot; into Proposal</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line19">19</a>       klass = params[:voteable_type].camelize.constantize</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line20">20</a>       @voteable = klass.find params[:voteable_id]</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line21">21</a>     end</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line22">22</a>   end</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line23">23</a> </pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line24">24</a>   public</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line25">25</a>   def create</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line26">26</a>     # First, we kill this user's other votes for this voteable</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line27">27</a>     current_user_votes = Vote.for_voter(current_user).for_voteable(@voteable)</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line28">28</a>     current_user_votes.map(&amp;:destroy)</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line29">29</a>     # Then, we vote with the new vote</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line30">30</a>     current_user.vote(@voteable, @vote)</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line31">31</a>     flash[:notice] = &quot;Your vote has been cast.&quot;</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="marked">
             <td><pre><a name="line32">32</a>     redirect_to_ref_url </pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line33">33</a>   end</pre></td>
           </tr>
-        
-          
-          
+
+
+
           <tr class="inferred">
             <td><pre><a name="line34">34</a> end</pre></td>
           </tr>
-        
+
       </tbody>
     </table>
 
